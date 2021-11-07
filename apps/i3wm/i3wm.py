@@ -16,6 +16,14 @@ mod.setting(
     desc="The default key to use for i3wm commands",
 )
 
+@mod.capture(rule="(grow|shrink)")
+def window_resize_mode(m) -> str:
+    return m
+
+@mod.capture(rule="(up|down|left|right|width|height)")
+
+def window_resize_direction(m) -> str:
+    return m
 
 @mod.action_class
 class Actions:

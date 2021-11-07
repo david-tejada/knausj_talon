@@ -93,3 +93,18 @@ new scratch (shell|window):
     sleep(200ms)
     user.system_command("i3-msg move scratchpad")
     user.system_command("i3-msg scratchpad show")
+
+# Custom
+scratch fox: user.system_command('i3-msg [title="Firefox"] scratchpad show')
+scratch brain: user.system_command('i3-msg [title="Brain"] scratchpad show')
+(win|window) grow:
+    user.system_command("i3-msg resize grow width 100 px or 10 ppt")
+    user.system_command("i3-msg resize grow height 100 px or 10 ppt")
+    user.system_command("i3-msg move position center")
+(win|window) shrink:
+    user.system_command("i3-msg resize shrink width 100 px or 10 ppt")
+    user.system_command("i3-msg resize shrink height 100 px or 10 ppt")
+    user.system_command("i3-msg move position center")
+(win|window) <user.window_resize_mode> <user.window_resize_direction>:
+    user.system_command("i3-msg resize {window_resize_mode} {window_resize_direction} 100 px or 10 ppt")
+    user.system_command("i3-msg move position center")
