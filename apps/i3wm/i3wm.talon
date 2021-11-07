@@ -3,7 +3,6 @@ os: linux
 tag: user.i3wm
 -
 port <number_small>: user.system_command("i3-msg workspace {number_small}")
-port ten: user.system_command("i3-msg workspace 10")
 (port flip|flipper): user.system_command("i3-msg workspace back_and_forth")
 port right: user.system_command("i3-msg workspace next")
 port left: user.system_command("i3-msg workspace prev")
@@ -21,35 +20,20 @@ reload i three config: user.system_command("i3-msg reload")
 restart i three: user.system_command("i3-msg restart")
 
 (full screen|scuba): user.system_command("i3-msg fullscreen")
-toggle floating: user.system_command("i3-msg floating toggle")
+window float: user.system_command("i3-msg floating toggle")
 focus floating: user.system_command("i3-msg focus mode_toggle")
-center window: user.system_command("i3-msg move position center")
-resize mode: user.system_command('i3-msg mode "resize"')
+window center: user.system_command("i3-msg move position center")
+window resize: user.system_command('i3-msg mode "resize"')
 focus parent: user.system_command("i3-msg focus parent")
 focus child: user.system_command("i3-msg focus child")
 
 # resize helpers
-grow window:
-    user.system_command('i3-msg mode "resize"')
-    key(right:10)
-    key(down:10)
-    # escape resize mode
-    key(escape)
-    # center window
-    sleep(200ms)
-    user.system_command("i3-msg move position center")
-
-
-# resize helpers
-shrink window:
-    user.system_command('i3-msg mode "resize"')
-    key(left:10)
-    key(up:10)
-    # escape resize mode
-    key(escape)
-    # center window
-    sleep(200ms)
-    user.system_command("i3-msg move position center")
+(win|window) grow: user.i3wm_resize_window("grow", "both")
+(win|window) shrink: user.i3wm_resize_window("shrink", "both")
+(win|window) wider: user.i3wm_resize_window("grow", "width")
+(win|window) slimmer: user.i3wm_resize_window("shrink", "width")
+(win|window) taller: user.i3wm_resize_window("grow", "height")
+(win|window) shorter: user.i3wm_resize_window("shrink", "height")
 
 horizontal (shell|terminal):
     user.system_command("i3-msg split h")
@@ -74,7 +58,7 @@ vertical (shell|terminal):
 
 make scratch: user.system_command("i3-msg move scratchpad")
 [(show|hide)] scratch: user.system_command("i3-msg scratchpad show")
-next scratch:
+scratch next:
     user.system_command("i3-msg scratchpad show")
     user.system_command("i3-msg scratchpad show")
 
@@ -97,14 +81,3 @@ new scratch (shell|window):
 # Custom
 scratch fox: user.system_command('i3-msg [title="Firefox"] scratchpad show')
 scratch brain: user.system_command('i3-msg [title="Brain"] scratchpad show')
-(win|window) grow:
-    user.system_command("i3-msg resize grow width 100 px or 10 ppt")
-    user.system_command("i3-msg resize grow height 100 px or 10 ppt")
-    user.system_command("i3-msg move position center")
-(win|window) shrink:
-    user.system_command("i3-msg resize shrink width 100 px or 10 ppt")
-    user.system_command("i3-msg resize shrink height 100 px or 10 ppt")
-    user.system_command("i3-msg move position center")
-(win|window) <user.window_resize_mode> <user.window_resize_direction>:
-    user.system_command("i3-msg resize {window_resize_mode} {window_resize_direction} 100 px or 10 ppt")
-    user.system_command("i3-msg move position center")

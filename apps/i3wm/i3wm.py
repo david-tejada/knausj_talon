@@ -1,6 +1,11 @@
 from talon import Context, Module, actions, settings, ui
 
 mod = Module()
+ctx = Context()
+
+ctx.matches = r"""
+tag: user.i3wm
+"""
 
 mod.tag("i3wm", desc="tag for loading i3wm related files")
 mod.setting(
@@ -15,15 +20,6 @@ mod.setting(
     default="super",
     desc="The default key to use for i3wm commands",
 )
-
-@mod.capture(rule="(grow|shrink)")
-def window_resize_mode(m) -> str:
-    return m
-
-@mod.capture(rule="(up|down|left|right|width|height)")
-
-def window_resize_direction(m) -> str:
-    return m
 
 @mod.action_class
 class Actions:
@@ -41,3 +37,12 @@ class Actions:
         """Trigger the lock screen"""
         key = settings.get("user.i3_mod_key")
         actions.key(f"{key}-shift-x")
+    def i3wm_resize_window(mode: str, dir: str):
+        """Resize a window/container"""
+        if dir == "width" or dir == "both":
+            actions.user.system_command(f"i3-msg resize {mode} width 100 px or 10 ppt")
+        if dir == "height" or dir == "both":
+            actions.user.system_command(f"i3-msg resize {mode} height 100 px or 10 ppt")
+        actions.user.system_command("i3-msg move position center")
+
+        
