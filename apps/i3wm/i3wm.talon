@@ -57,6 +57,7 @@ vertical (shell|terminal):
 (win|window) vertical: user.system_command("i3-msg split v")
 
 make scratch: user.system_command("i3-msg move scratchpad")
+scratch <user.text>: user.system_command('i3-msg [title="(?i){text}"] scratchpad show')
 [(show|hide)] scratch: user.system_command("i3-msg scratchpad show")
 scratch next:
     user.system_command("i3-msg scratchpad show")
@@ -73,11 +74,7 @@ lock screen: user.i3wm_launch()
 (launch shell|koopa): user.i3wm_shell()
 
 new scratch (shell|window):
-    user.i3wm_shell()
+    user.system_command("i3-msg exec i3-sensible-terminal")
     sleep(200ms)
     user.system_command("i3-msg move scratchpad")
     user.system_command("i3-msg scratchpad show")
-
-# Custom
-scratch fox: user.system_command('i3-msg [title="Firefox"] scratchpad show')
-scratch brain: user.system_command('i3-msg [title="Brain"] scratchpad show')

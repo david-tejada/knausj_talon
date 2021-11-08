@@ -28,15 +28,11 @@ class Actions:
         key = settings.get("user.i3_mod_key")
         actions.key(f"{key}-d")
 
-    def i3wm_shell():
-        """Launch a shell"""
-        key = settings.get("user.i3_mod_key")
-        actions.key(f"{key}-enter")
-
     def i3wm_lock():
         """Trigger the lock screen"""
         key = settings.get("user.i3_mod_key")
         actions.key(f"{key}-shift-x")
+        
     def i3wm_resize_window(mode: str, dir: str):
         """Resize a window/container"""
         if dir == "width" or dir == "both":
@@ -44,5 +40,4 @@ class Actions:
         if dir == "height" or dir == "both":
             actions.user.system_command(f"i3-msg resize {mode} height 100 px or 10 ppt")
         actions.user.system_command("i3-msg move position center")
-
         
