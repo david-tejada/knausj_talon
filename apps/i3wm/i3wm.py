@@ -21,6 +21,8 @@ mod.setting(
     desc="The default key to use for i3wm commands",
 )
 
+mod.list("applications", desc="List of applications to launch")
+
 @mod.action_class
 class Actions:
     def i3wm_launch():
@@ -34,10 +36,20 @@ class Actions:
         actions.key(f"{key}-shift-x")
         
     def i3wm_resize_window(mode: str, dir: str):
-        """Resize a window/container"""
-        if dir == "width" or dir == "both":
+        """Resize a window"""
+        if dir == "both":
             actions.user.system_command(f"i3-msg resize {mode} width 100 px or 10 ppt")
-        if dir == "height" or dir == "both":
             actions.user.system_command(f"i3-msg resize {mode} height 100 px or 10 ppt")
-        actions.user.system_command("i3-msg move position center")
-        
+        else:
+            actions.user.system_command(f"i3-msg resize {mode} {dir} 100 px or 10 ppt")
+        actions.user.system_command(f"i3-msg move position center")
+
+ctx.lists["user.applications"] = {
+    "firefox": "firefox",
+    "thunar": "thunar",
+    "spotify": "spotify",
+    "code": "code",
+    "transmission": "transmission-gtk",
+    "alacritty": "alacritty",
+    "pavucontrol": "pavucontrol"
+}
