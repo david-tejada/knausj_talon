@@ -51,27 +51,27 @@ inside (double quotes | dubquotes):
 inside (graves | back ticks):
 	insert("``")
 	key(left)
-angle that:
+angle it:
     text = edit.selected_text()
     user.paste("<{text}>")
-brack that:
+brack it:
     text = edit.selected_text()
     user.paste("[{text}]")
-brace that:
+brace it:
     text = edit.selected_text()
     user.paste("{{{text}}}")
-paren that:
+paren it:
     text = edit.selected_text()
     user.paste("({text})")
-percent that:
+percent it:
     text = edit.selected_text()
     user.paste("%{text}%")
-quote that:
+quote it:
     text = edit.selected_text()
     user.paste("'{text}'")
-double that:
+double it:
     text = edit.selected_text()
     user.paste('"{text}"')
-(grave | back tick) that:
+(grave | back tick) it:
     text = edit.selected_text()
     user.paste('`{text}`')
