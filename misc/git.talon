@@ -112,3 +112,22 @@ git commit highlighted:
     insert("git add ")
     edit.paste()
     insert("\ngit commit\n")
+
+# Commands to manage my dotfiles
+# https://www.atlassian.com/git/tutorials/dotfiles
+config add: "config add "
+config commit message <user.text>: "config commit -m '{text}'"
+config commit:
+    "config commit -m ''"
+    key(left)
+config diff (colour|color) words: "config diff --color-words "
+config diff: "config diff "
+config diff cached: "config diff --cached\n"
+config log all: "config log\n"
+config log all changes: "config log -c\n"
+config log: "config log "
+config log changes: "config log -c "
+config pull: "config pull\n"
+config push: "config push\n"
+config status: "config status\n"
+config list: "config log --pretty=format: --name-only --diff-filter=A | sort - | sed '/^$/d'\n"
