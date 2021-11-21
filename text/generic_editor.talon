@@ -4,22 +4,22 @@ find it:
 next one:
     edit.find_next()
 
-go word left:
+recoil:
     edit.word_left()
 
-go word right:
+advance:
     edit.word_right()
 
-go left:
+west:
     edit.left()
 
-go right:
+east:
     edit.right()
 
-go up:
+north:
     edit.up()
 
-go down:
+south:
     edit.down()
 
 go line start:
@@ -118,22 +118,22 @@ clear down:
     edit.extend_line_down()
     edit.delete()
 
-clear word:
+blast:
     edit.delete_word()
 
-clear word left:
+cleft:
     edit.extend_word_left()
     edit.delete()
 
-clear word right:
+cright:
     edit.extend_word_right()
     edit.delete()
 
-clear way left:
+cleft all:
     edit.extend_line_start()
     edit.delete()
 
-clear way right:
+cright all:
     edit.extend_line_end()
     edit.delete()
 
