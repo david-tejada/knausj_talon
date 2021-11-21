@@ -18,3 +18,6 @@ copy paste:
     edit.copy()
     sleep(50ms)
     edit.paste()
+
+# Open with vscode
+code this: 'code .\n'
