@@ -3,7 +3,7 @@ from typing import Set
 from talon import Module, Context, actions, app
 import sys
 
-default_alphabet = "air bat cap drum each fine gust harp sit jury crunch look made near odd pit quench red sun trap urge vest whale plex yank zip".split(
+default_alphabet = "air bat cap drum each fine gust harp ice jane kiss look made near ox pit quench rip sun trap urge vest whale plex yank zip".split(
     " "
 )
 letters_string = "abcdefghijklmnopqrstuvwxyz"
@@ -113,7 +113,7 @@ def letters(m) -> str:
 ctx = Context()
 modifier_keys = {
     # If you find 'alt' is often misrecognized, try using 'alter'.
-    "alt": "alt",  #'alter': 'alt',
+    "alt": "alt",
     "control": "ctrl",  #'troll':   'ctrl',
     "shift": "shift",  #'sky':     'shift',
     "super": "super",
@@ -161,35 +161,24 @@ symbol_key_words = {
     "quote": "'",
     "apostrophe": "'",
     "L square": "[",
-    "left square": "[",
-    "square": "[",
-    "R square": "]",
-    "right square": "]",
+    "brack": "[",
+    "square": "]",
     "slash": "/",
-    "backslash": "\\",
+    "blash": "\\",
     "minus": "-",
     "dash": "-",
     "equals": "=",
     "plus": "+",
     "tilde": "~",
     "bang": "!",
-    "down score": "_",
-    "under score": "_",
+    "score": "_",
     "paren": "(",
-    "L paren": "(",
-    "left paren": "(",
-    "R paren": ")",
-    "right paren": ")",
+    "round": ")",
     "brace": "{",
-    "left brace": "{",
-    "R brace": "}",
-    "right brace": "}",
+    "curly": "}",
     "angle": "<",
-    "left angle": "<",
     "less than": "<",
     "rangle": ">",
-    "R angle": ">",
-    "right angle": ">",
     "greater than": ">",
     "star": "*",
     "hash": "#",
@@ -197,12 +186,11 @@ symbol_key_words = {
     "caret": "^",
     "amper": "&",
     "pipe": "|",
-    "dubquote": '"',
-    "double quote": '"',
-
+    "double": '"',
     # Currencies
     "dollar": "$",
     "pound": "£",
+    "euro": "€"
 }
 
 # make punctuation words also included in {user.symbol_keys}
@@ -230,8 +218,8 @@ simple_keys = [
 ]
 
 alternate_keys = {
-    "delete": "backspace",
-    "forward delete": "delete",
+    "shave": "backspace",
+    "trim": "delete",
     #'junk': 'backspace',
     "page up": "pageup",
     "page down": "pagedown",
