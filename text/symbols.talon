@@ -1,8 +1,6 @@
 question [mark]: "?"
 (downscore | underscore): "_"
 double dash: "--"
-(bracket | brack | left bracket): "{"
-(rbrack | are bracket | right bracket): "}"
 triple quote: "'''"
 (triple grave | triple back tick | gravy):
     insert("```")
@@ -29,15 +27,18 @@ empty escaped string:
     "\\'\\'"
     key(left)
     key(left)
-(inside parens | args):
+inside paren:
 	insert("()")
 	key(left)
-inside (squares | square brackets | list):
+inside brack:
 	insert("[]")
 	key(left)
-inside (bracket | braces):
+inside brace:
 	insert("{}")
 	key(left)
+inside angle:
+    insert("<>")
+    key(left)
 inside percent:
 	insert("%%")
 	key(left)
@@ -53,13 +54,13 @@ inside (graves | back ticks):
 angle that:
     text = edit.selected_text()
     user.paste("<{text}>")
-(square | square bracket) that:
+brack that:
     text = edit.selected_text()
     user.paste("[{text}]")
-(bracket | brace) that:
+brace that:
     text = edit.selected_text()
     user.paste("{{{text}}}")
-(parens | args) that:
+paren that:
     text = edit.selected_text()
     user.paste("({text})")
 percent that:
@@ -68,7 +69,7 @@ percent that:
 quote that:
     text = edit.selected_text()
     user.paste("'{text}'")
-(double quote | dubquote) that:
+double that:
     text = edit.selected_text()
     user.paste('"{text}"')
 (grave | back tick) that:
