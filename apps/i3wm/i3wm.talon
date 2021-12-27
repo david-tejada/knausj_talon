@@ -57,10 +57,6 @@ next scratch:
 # these rely on the user settings for the mod key. see i3wm.py Actions class
 launch: user.i3wm_launch()
 launch {user.applications}: user.system_command_nb("{applications}")
-launch <user.text>:
-    user.i3wm_launch()
-    sleep(100ms)
-    insert("{text}")
 lock screen: user.i3wm_lock()
 
 (launch shell|koopa): user.system_command_nb("i3-sensible-terminal")    
