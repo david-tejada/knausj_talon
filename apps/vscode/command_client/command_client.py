@@ -367,4 +367,4 @@ class MacUserActions:
 @linux_ctx.action_class("user")
 class LinuxUserActions:
     def trigger_command_server_command_execution():
-        actions.key("ctrl-shift-alt-p")
+        actions.key("ctrl-shift-9")
