@@ -23,7 +23,6 @@ paste match: edit.paste_match_style()
 keeper: edit.save()
 wipe: key(backspace)    
 pace: key(space)
-on: key(s)
 padding: 
 	insert("  ") 
 	key(left)
