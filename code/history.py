@@ -26,7 +26,7 @@ def on_phrase(j):
         history.append(text)
         history = history[-setting_command_history_size.get() :]
         with open(LOGFILE, "a") as file_object:
-            file_object.write(val + "\n")
+            file_object.write(text + "\n")
 
 
 # todo: dynamic rect?
