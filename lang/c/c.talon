@@ -7,7 +7,7 @@ and code.language: c
 tag(): user.code_imperative
 
 tag(): user.code_comment_line
-tag(): user.code_comment_block
+tag(): user.code_comment_block_c_like
 tag(): user.code_data_bool
 tag(): user.code_data_null
 tag(): user.code_functions
@@ -94,6 +94,7 @@ cast to <user.c_cast>: "{c_cast}"
 standard cast to <user.stdint_cast>: "{stdint_cast}"
 <user.c_types>: "{c_types}"
 <user.c_pointers>: "{c_pointers}"
+<user.c_keywords>: "{c_keywords}"
 <user.c_signed>: "{c_signed}"
 standard <user.stdint_types>: "{stdint_types}"
 int main:

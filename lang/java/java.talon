@@ -1,12 +1,14 @@
-mode: user.java
-mode: user.auto_lang
+mode: command
+and mode: user.java
+mode: command
+and mode: user.auto_lang
 and code.language: java
 -
 tag(): user.code_imperative
 tag(): user.code_object_oriented
 
 tag(): user.code_comment_line
-tag(): user.code_comment_block
+tag(): user.code_comment_block_c_like
 tag(): user.code_data_bool
 tag(): user.code_data_null
 tag(): user.code_functions
@@ -27,12 +29,12 @@ settings():
     user.code_public_variable_formatter = "PRIVATE_CAMEL_CASE"
 
 # Types Commands
-boxed [type] {user.java_boxed_types}:
-    insert(user.java_boxed_types)
+boxed [type] {user.java_boxed_type}:
+    insert(user.java_boxed_type)
     key("space")
 
-generic [type] {user.java_generic_data_structures}:
-    insert(java_generic_data_structures)
+generic [type] {user.java_generic_data_structure}:
+    insert(java_generic_data_structure)
     insert("<>")
     key("left")
 
@@ -41,12 +43,8 @@ type {user.code_type} array:
     insert(user.code_type)
     user.code_operator_subscript()
 
-[state] {user.java_access_modifiers}:
-    insert(user.java_access_modifiers)
-    key("space")
-
-[state] {user.java_modifiers}:
-    insert(user.java_modifiers)
+[state] {user.java_modifier}:
+    insert(user.java_modifier)
     key("space")
 
 op array:
