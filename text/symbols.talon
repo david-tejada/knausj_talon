@@ -7,10 +7,23 @@ triple quote: "'''"
 (dot dot | dotdot): ".."
 ellipses: "..."
 (comma and | spamma): ", "
+slink:
+    key(right)
+    ", "
+coalgap: ": "
+punch:
+    edit.line_end()
+    ": "
+puncher:
+    edit.line_end()
+    ":\n"
+kick:
+    edit.line_end()
+    ",\n"
 plus: "+"
 arrow: "->"
 dub arrow: "=>"
-new line: "\\n"
+new liner: "\\n"
 carriage return: "\\r"
 line feed: "\\r\\n"
 empty dubstring:

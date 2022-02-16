@@ -1,7 +1,10 @@
 -
 settings():
+    user.context_sensitive_dictation = 1
+    
+    speech.timeout = 0.500
     # Adjust the scale of the imgui to my liking
-    imgui.scale = 1.3
+    imgui.scale = 1.1
 
     # Enable if you'd like the picker gui to automatically appear when explorer has focus
     user.file_manager_auto_show_pickers = 0
@@ -10,7 +13,7 @@ settings():
     user.help_max_command_lines_per_page = 50
 
     # Set the max number of contexts display per page in help
-    user.help_max_contexts_per_page = 20
+    user.help_max_contexts_per_page = 43
 
     # The default amount used when scrolling continuously
     user.mouse_continuous_scroll_amount = 80

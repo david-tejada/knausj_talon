@@ -29,3 +29,9 @@ class Actions:
 
     def terminal_kill_all():
         """kills the running command"""
+
+    def terminal_make_directory(path: str):
+        """Creates a new directory"""
+
+    def terminal_open_recent_directory(path: str):
+        """Opens a recent directory using z"""

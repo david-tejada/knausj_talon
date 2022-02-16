@@ -21,6 +21,12 @@ ctx.matches = r"""
 app: firefox
 """
 
+@ctx.action_class("user")
+class user_actions:
+    def tab_close_wrapper():
+        actions.sleep("300ms")
+        actions.app.tab_close()
+
 @ctx.action_class('browser')
 class BrowserActions:
     # TODO

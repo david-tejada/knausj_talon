@@ -4,10 +4,10 @@ find it:
 next one:
     edit.find_next()
 
-recoil:
+pets:
     edit.word_left()
 
-advance:
+step:
     edit.word_right()
 
 west:
@@ -22,13 +22,13 @@ north:
 south:
     edit.down()
 
-go line start:
+bend:
     edit.line_start()
 
-go line end:
+lend:
     edit.line_end()
 
-go way left:
+lend all:
     edit.line_start()
     edit.line_start()
 
@@ -118,14 +118,14 @@ clear down:
     edit.extend_line_down()
     edit.delete()
 
-blast:
+clear word:
     edit.delete_word()
 
 cleft:
     edit.extend_word_left()
     edit.delete()
 
-cright:
+crimp:
     edit.extend_word_right()
     edit.delete()
 
@@ -133,9 +133,14 @@ cleft all:
     edit.extend_line_start()
     edit.delete()
 
-cright all:
+crimp all:
     edit.extend_line_end()
     edit.delete()
+
+squash:
+    edit.word_left()
+    edit.delete()
+    edit.word_right()
 
 clear way up:
     edit.extend_file_start()

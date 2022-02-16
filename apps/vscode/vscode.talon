@@ -7,6 +7,12 @@ tag(): user.multiple_cursors
 tag(): user.snippets
 tag(): user.splits
 tag(): user.tabs
+
+settings():
+    # This is here to fix a weird issue in dendron were names
+    # get cut off
+    key_wait = 2
+
 window reload: user.vscode("workbench.action.reloadWindow")
 window close: user.vscode("workbench.action.closeWindow")
 #multiple_cursor.py support end
@@ -50,10 +56,32 @@ wrap switch: user.vscode("editor.action.toggleWordWrap")
 zen switch: user.vscode("workbench.action.toggleZenMode")
 
 # File Commands
-file hunt [<user.text>]:
+list dock [<user.text>] [{user.file_extension}] [halt]:
     user.vscode("workbench.action.quickOpen")
-    sleep(50ms)
+    sleep(400ms)
     insert(text or "")
+    insert(file_extension or "")
+    sleep(300ms)
+pop dock <user.text> [{user.file_extension}] [halt]:
+    user.vscode("workbench.action.quickOpen")
+    sleep(400ms)
+    insert(text or "")
+    insert(file_extension or "")
+    sleep(300ms)
+    key(enter)
+    sleep(150ms)
+pop work <user.text>:
+    user.vscode("workbench.action.openRecent")
+    sleep(400ms)
+    insert(text)
+    sleep(300ms)
+    key(enter)
+    sleep(150ms)
+list work [<user.text>]:
+    user.vscode("workbench.action.openRecent")
+    sleep(400ms)
+    insert(text or "")
+pop dock: user.vscode("workbench.action.openPreviousRecentlyUsedEditorInGroup")
 file copy path: user.vscode("copyFilePath")
 file create sibling: user.vscode_and_wait("explorer.newFile")
 file create: user.vscode("workbench.action.files.newUntitledFile")
@@ -151,7 +179,7 @@ change next: key(alt-f5)
 change last: key(shift-alt-f5)
 
 #Debugging
-break point: user.vscode("editor.debug.action.toggleBreakpoint")
+# break point: user.vscode("editor.debug.action.toggleBreakpoint")
 step over: user.vscode("workbench.action.debug.stepOver")
 debug step into: user.vscode("workbench.action.debug.stepInto")
 debug step out [of]: user.vscode("workbench.action.debug.stepOut")
@@ -206,6 +234,12 @@ skip word: user.vscode("editor.action.moveSelectionToNextFindMatch")
 cell next: user.vscode("jupyter.gotoNextCellInFile")
 cell last: user.vscode("jupyter.gotoPrevCellInFile")
 cell run above: user.vscode("jupyter.runallcellsabove.palette")
-cell run: user.vscode("jupyter.runcurrentcell")
 
+cell run: user.vscode("jupyter.runcurrentcell")
 install local: user.vscode("workbench.extensions.action.installVSIX")
+
+# quokka
+toggle quokka: user.vscode("quokka.toggle")
+
+# dendron
+paste link: user.vscode("dendron.pasteLink")

@@ -3,7 +3,7 @@ from typing import Set
 from talon import Module, Context, actions, app
 import sys
 
-default_alphabet = "air bat cap drum each fine gust harp inch jane kiss look made near ox pit quench rip sun trap urge vest whale plex yank zip".split(
+default_alphabet = "air bat cap drum each fine gust harp ice jane krunch look made near ox pit quench rip sun trap urch vest whale plex yank zip".split(
     " "
 )
 letters_string = "abcdefghijklmnopqrstuvwxyz"
@@ -133,14 +133,14 @@ punctuation_words = {
     "`": "`",
     ",": ",",  # <== these things
     "back tick": "`",
-    "grave": "`",
+    "ski": "`",
     "comma": ",",
     "period": ".",
     "full stop": ".",
-    "semicolon": ";",
+    "semi": ";",
     "colon": ":",
     "forward slash": "/",
-    "question mark": "?",
+    "question": "?",
     "exclamation mark": "!",
     "exclamation point": "!",
     "asterisk": "*",
@@ -150,6 +150,8 @@ punctuation_words = {
     "at sign": "@",
     "and sign": "&",
     "ampersand": "&",
+    "hyphen": "-",
+    "score": "_",
 
     # Currencies
     "dollar sign": "$",
@@ -158,13 +160,18 @@ punctuation_words = {
 symbol_key_words = {
     "dot": ".",
     "point": ".",
-    "quote": "'",
+    "twin": "'",
     "apostrophe": "'",
-    "L square": "[",
-    "brack": "[",
-    "square": "]",
+    "round": "(",
+    "rounder": ")",
+    "beam": "[",
+    "beamer": "]",
+    "wave": "{",
+    "waiver": "}",
+    "pack": "<",
+    "packer": ">",
     "slash": "/",
-    "blash": "\\",
+    "backslash": "\\",
     "minus": "-",
     "dash": "-",
     "equals": "=",
@@ -172,25 +179,19 @@ symbol_key_words = {
     "tilde": "~",
     "bang": "!",
     "score": "_",
-    "paren": "(",
-    "round": ")",
-    "brace": "{",
-    "curly": "}",
-    "angle": "<",
     "less than": "<",
-    "rangle": ">",
     "greater than": ">",
     "star": "*",
     "hash": "#",
     "percent": "%",
-    "caret": "^",
+    "tender": "^",
     "amper": "&",
     "pipe": "|",
-    "double": '"',
+    "quad": '"',
     # Currencies
     "dollar": "$",
-    "pound": "£",
-    "euro": "€"
+    "pound sign": "£",
+    "euro sign": "€"
 }
 
 # make punctuation words also included in {user.symbol_keys}
@@ -219,7 +220,7 @@ simple_keys = [
 
 alternate_keys = {
     "shave": "backspace",
-    "trim": "delete",
+    "trimer": "delete",
     #'junk': 'backspace',
     "page up": "pageup",
     "page down": "pagedown",

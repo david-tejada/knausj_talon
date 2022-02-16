@@ -35,6 +35,11 @@ class Actions:
         key = settings.get("user.i3_mod_key")
         actions.key(f"{key}-shift-x")
         
+    def i3wm_shell():
+        """Launch a shell"""
+        key = settings.get("user.i3_mod_key")
+        actions.key(f"{key}-enter")
+
     def i3wm_resize_window(mode: str, dir: str):
         """Resize a window"""
         if dir == "both":
@@ -42,7 +47,7 @@ class Actions:
             actions.user.system_command(f"i3-msg resize {mode} height 100 px or 10 ppt")
         else:
             actions.user.system_command(f"i3-msg resize {mode} {dir} 100 px or 10 ppt")
-        actions.user.system_command(f"i3-msg move position center")
+            actions.user.system_command(f"i3-msg move position center")
 
 ctx.lists["user.applications"] = {
     "firefox": "firefox",
@@ -51,5 +56,8 @@ ctx.lists["user.applications"] = {
     "code": "code",
     "transmission": "transmission-gtk",
     "alacritty": "alacritty",
-    "pavucontrol": "pavucontrol"
+    "pavucontrol": "pavucontrol",
+    "libreoffice": "libreoffice",
+    "peek": "peek",
+    "google chrome": "google-chrome"
 }

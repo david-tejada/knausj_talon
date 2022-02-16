@@ -26,6 +26,10 @@ class Actions:
         if path:
             actions.key("enter")
 
+    def terminal_make_directory(path: str):
+        """Creates a new directory"""
+        actions.insert("mkdir {}".format(path))
+
     def terminal_change_directory_root():
         """Root of current drive"""
         actions.insert("cd /")
@@ -50,3 +54,9 @@ class Actions:
         actions.key("ctrl-c")
         actions.insert("y")
         actions.key("enter")
+
+    def terminal_open_recent_directory(path: str):
+        """Opens a recent directory using z"""
+        actions.insert("z {}".format(path))
+        if path:
+            actions.key("enter")

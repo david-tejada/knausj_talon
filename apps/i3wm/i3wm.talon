@@ -2,11 +2,15 @@
 os: linux
 tag: user.i3wm
 -
-portal <number_small>: user.system_command("i3-msg workspace {number_small}")
-(portal flip|flipper): user.system_command("i3-msg workspace back_and_forth")
-portal right: user.system_command("i3-msg workspace next")
-portal left: user.system_command("i3-msg workspace prev")
-
+bay <number_small>: user.system_command("i3-msg workspace {number_small}")
+(beone|bione): user.system_command("i3-msg workspace 1")
+basix: user.system_command("i3-msg workspace 6")
+besev: user.system_command("i3-msg workspace 7")
+beto: user.system_command("i3-msg workspace 2")
+be eleven: user.system_command("i3-msg workspace 11")
+(bay flip|flipper): user.system_command("i3-msg workspace back_and_forth")
+bay right: user.system_command("i3-msg workspace next")
+bay left: user.system_command("i3-msg workspace prev")
 
 win <user.arrow_keys>: user.system_command("i3-msg focus {user.arrow_keys}")
 glide: user.system_command("i3-msg focus right")
@@ -43,6 +47,16 @@ vertical (shell|terminal):
 shuffle <number_small>:  user.system_command("i3-msg move container to workspace {number_small}")
 shuffle: user.system_command("i3-msg move container to workspace back_and_forth")
 shuffle <user.arrow_keys>: user.system_command("i3-msg move {user.arrow_keys}")
+report <number_small>:
+    user.system_command("i3-msg move container to workspace {number_small}")
+    user.system_command("i3-msg workspace {number_small}")
+detach:
+    key(ctrl-alt-n)
+detach <number_small>:
+    key(ctrl-alt-n)
+    sleep(300ms)
+    user.system_command("i3-msg move container to workspace {number_small}")
+    user.system_command("i3-msg workspace {number_small}")
 
 win horizontal: user.system_command("i3-msg split h")
 win vertical: user.system_command("i3-msg split v")
@@ -54,15 +68,18 @@ next scratch:
     user.system_command("i3-msg scratchpad show")
     user.system_command("i3-msg scratchpad show")
 
+window <user.text>: user.system_command('i3-msg [title="(?i){text}"] focus')
+
 # these rely on the user settings for the mod key. see i3wm.py Actions class
+
 launch: user.i3wm_launch()
 launch {user.applications}: user.system_command_nb("{applications}")
 lock screen: user.i3wm_lock()
 
-(launch shell|koopa): user.system_command_nb("i3-sensible-terminal")    
+(launch shell|koopa): user.i3wm_shell()
 
 (poppy|scratch (shell|window)):
-    user.system_command_nb("i3-sensible-terminal")
+    user.i3wm_shell()
     sleep(300ms)
     user.system_command("i3-msg mark __scratchpad")
     user.system_command("i3-msg move scratchpad")
@@ -70,3 +87,6 @@ lock screen: user.i3wm_lock()
     user.system_command("i3-msg unmark __scratchpad")
 
 system tray: key("super-shift-s")
+
+keyboard spanish: user.system_command("setxkbmap es")
+keyboard english: user.system_command("setxkbmap us")

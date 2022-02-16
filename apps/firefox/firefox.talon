@@ -12,3 +12,4 @@ tab search <user.text>$:
 
 # Vimium
 blink: key(ctrl-alt-f)
+blink new: key(ctrl-alt-F)

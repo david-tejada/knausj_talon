@@ -1,13 +1,13 @@
-low: user.mouse_scroll_down(0.75)
-low here:
+lower: user.mouse_scroll_down(0.75)
+lower here:
     user.mouse_move_center_active_window()
     user.mouse_scroll_down(0.75)
 wheel downer: user.mouse_scroll_down_continuous()
 wheel downer here:
     user.mouse_move_center_active_window()
     user.mouse_scroll_down_continuous()
-high: user.mouse_scroll_up(0.75)
-high here:
+higher: user.mouse_scroll_up(0.75)
+higher here:
     user.mouse_move_center_active_window()
     user.mouse_scroll_up(0.75)
 wheel upper: user.mouse_scroll_up_continuous()

@@ -7,3 +7,6 @@ https://en.wikipedia.org/w/index.php?search=%s,wiki
 https://www.subdivx.com/index.php?accion=5&masdesc=&buscar=%s&oxfecha=2,sub
 https://eztv.re/search/%s,series
 https://www.wordreference.com/es/translation.asp?tranword=%s,english
+https://www.npmjs.com/search?q=%s,node
+https://forvo.com/search/%s/,forvo
+https://www.youtube.com/results?search_query=%s,YouTube

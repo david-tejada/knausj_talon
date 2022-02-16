@@ -1,10 +1,11 @@
 tag: user.tabs
 -
-tab (open | new): app.tab_open()
-(tab (last | left)|pull): app.tab_previous()
-(tab (next | right)|push): app.tab_next()
+tab new: app.tab_open()
+pull: app.tab_previous()
+push: app.tab_next()
 tab close: user.tab_close_wrapper()
 tab (reopen|restore): app.tab_reopen()
-go tab <number>: user.tab_jump(number)
-go tab final: user.tab_final()
+tab <number>: user.tab_jump(number)
+tab last: user.tab_final()
 tab duplicate: user.tab_duplicate()
+pick up <number_small>: key("up:{number_small} enter")

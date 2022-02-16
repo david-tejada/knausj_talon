@@ -31,10 +31,19 @@ settings():
 (op | is) strict not equal: " !== "
 
 state const: "const "
+const <user.text>:
+    "const "
+    user.insert_formatted(text,"PRIVATE_CAMEL_CASE")
 
 state let: "let "
-
+let <user.text>:
+    "let "
+    user.insert_formatted(text,"PRIVATE_CAMEL_CASE")
+    
 state var: "var "
+var <user.text>:
+    "var "
+    user.insert_formatted(text,"PRIVATE_CAMEL_CASE")
 
 state async: "async "
 
@@ -57,3 +66,22 @@ state spread: "..."
 from import:
     insert(' from  ""')
     key("left")
+
+console log:
+    "console.log()"
+    key("left")
+
+new <user.text>:
+    "new "
+    user.insert_formatted(text,"PUBLIC_CAMEL_CASE")
+    "()"
+    key("left")
+
+require <user.text>:
+    "const "
+    user.insert_formatted(text,"PRIVATE_CAMEL_CASE")
+    " = require(\""
+    user.insert_formatted(text,"DASH_SEPARATED")
+    "\")"
+    key("left")
+    
