@@ -36,17 +36,17 @@ settings():
 ^static funky <user.text>$: user.code_private_static_function(text)
 
 # NOTE: migrated from generic, as they were only used here, though once cpp support is added, perhaps these should be migrated to a tag together with the commands below
-state include:
+make include:
     insert('#include ')
-state include system:
+make include system:
     insert('#include <>')
     edit.left()
-state include local:
+make include local:
     insert('#include ""')
     edit.left()
-state type deaf:
+make type deaf:
     insert('typedef ')
-state type deaf struct:
+make type deaf struct:
     insert('typedef struct')
     insert('{\n\n}')
     edit.up()
@@ -54,17 +54,17 @@ state type deaf struct:
 
 
 # XXX - create a preprocessor tag for these, as they will match cpp, etc
-state define: "#define "
-state undefine: "#undef "
-state if define: "#ifdef "
+make define: "#define "
+make undefine: "#undef "
+make if define: "#ifdef "
 
 # XXX - preprocessor instead of pre?
-state pre if: "#if "
-state error: "#error "
-state pre else if: "#elif "
-state pre end: "#endif "
-state pragma: "#pragma "
-state default: "default:\nbreak;"
+make pre if: "#if "
+make error: "#error "
+make pre else if: "#elif "
+make pre end: "#endif "
+make pragma: "#pragma "
+make default: "default:\nbreak;"
 
 #control flow
 #best used with a push like command

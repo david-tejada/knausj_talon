@@ -35,10 +35,10 @@ args pipe:
 dock string:
     user.code_comment_documentation()
 
-state end: "end"
-state begin: "begin"
-state rescue: "rescue "
-state module: "module "
+make end: "end"
+make begin: "begin"
+make rescue: "rescue "
+make module: "module "
 
 ^instance <user.text>$:
     insert("@")

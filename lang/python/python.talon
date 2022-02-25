@@ -30,13 +30,13 @@ settings():
 
 #python-specific grammars
 dunder in it: "__init__"
-state (def | deaf | deft): "def "
-state try: "try:\n"
-state except: "except "
-state raise: "raise "
+make (def | deaf | deft): "def "
+make try: "try:\n"
+make except: "except "
+make raise: "raise "
 self taught: "self."
 pie test: "pytest"
-state past: "pass"
+make past: "pass"
 
 raise {user.python_exception}: user.insert_cursor("raise {python_exception}([|])")
 except {user.python_exception}: "except {python_exception}:"

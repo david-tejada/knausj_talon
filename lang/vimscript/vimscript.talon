@@ -35,9 +35,9 @@ assign [<user.vimscript_scope>] (variable|var) [<user.text>] [over]:
     insert("{vimscript_functions} ")
 
 # XXX - possibly overlap with some programming.talon
-state command: "command! "
-state end if: "endif"
-state end for: "endfor"
-state end while: "endwhile"
-state end function: "endfunction"
-state continue: "continue"
+make command: "command! "
+make end if: "endif"
+make end for: "endfor"
+make end while: "endwhile"
+make end function: "endfunction"
+make continue: "continue"

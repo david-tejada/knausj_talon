@@ -5,8 +5,8 @@ self dot:
       user.code_self()
       user.code_operator_object_accessor()
 
-state self:
+make self:
       user.code_self()
 
-state class:
+make class:
       user.code_define_class()

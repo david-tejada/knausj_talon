@@ -24,43 +24,43 @@ settings():
     user.code_protected_variable_formatter = "PRIVATE_CAMEL_CASE"
     user.code_public_variable_formatter = "PRIVATE_CAMEL_CASE"
 
-(op | is) strict equal: " === "
-(op | is) strict not equal: " !== "
+is strict equal: " === "
+is strict not equal: " !== "
 
-state const: "const "
+make const: "const "
 const <user.text>:
     "const "
     user.insert_formatted(text,"PRIVATE_CAMEL_CASE")
 
-state let: "let "
+make let: "let "
 let <user.text>:
     "let "
     user.insert_formatted(text,"PRIVATE_CAMEL_CASE")
     
-state var: "var "
+make var: "var "
 var <user.text>:
     "var "
     user.insert_formatted(text,"PRIVATE_CAMEL_CASE")
 
-state export: "export "
+make export: "export "
 
-state async: "async "
+make async: "async "
 
-state await: "await "
+make await: "await "
 
-state map:
+make map:
     insert(".map()")
     key(left)
 
-state filter:
+make filter:
     insert(".filter()")
     key(left)
 
-state reduce:
+make reduce:
     insert(".reduce()")
     key(left)
 
-state spread: "..."
+make spread: "..."
 
 from import:
     insert(' from  ""')
@@ -84,3 +84,7 @@ require <user.text>:
     "\")"
     key("left")
 
+blocker:
+    edit.line_end()
+    " "
+    user.code_block()
