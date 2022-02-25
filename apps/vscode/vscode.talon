@@ -91,6 +91,8 @@ file rename:
 file move:
     user.vscode("fileutils.moveFile")
     sleep(150ms)
+file remove:
+    user.vscode("fileutils.removeFile")
 file open folder: user.vscode("revealFileInOS")
 file reveal: user.vscode("workbench.files.action.showActiveFileInExplorer")
 save ugly: user.vscode("workbench.action.files.saveWithoutFormatting")
@@ -243,3 +245,9 @@ toggle quokka: user.vscode("quokka.toggle")
 
 # dendron
 paste link: user.vscode("dendron.pasteLink")
+make note [<user.text>]: user.convert_to_dendron_note("{text or ''}")
+dendron preview: user.vscode("dendron.showPreview")
+list note [<user.text>]:
+    user.vscode("dendron.lookupNote")
+    sleep(400ms)
+    insert(text or "")

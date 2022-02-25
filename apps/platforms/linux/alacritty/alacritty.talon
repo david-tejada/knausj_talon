@@ -7,15 +7,16 @@ tag(): user.git
 tag(): user.npm
 tag(): user.apt
 tag(): user.pip
+tag(): user.file_manager
 
 cleft: key('alt-backspace')
 crimp: key('ctrl-delete')
 
 # Fix weird scrolling behavior in alacritty
-lower:
+ceil:
     user.mouse_move_center_active_window()
     user.mouse_scroll_down(0.75)
-higher:
+floor:
     user.mouse_move_center_active_window()
     user.mouse_scroll_up(0.75)
 

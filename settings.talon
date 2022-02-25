@@ -4,16 +4,16 @@ settings():
     
     speech.timeout = 0.500
     # Adjust the scale of the imgui to my liking
-    imgui.scale = 1.1
+    imgui.scale = 1.5
 
     # Enable if you'd like the picker gui to automatically appear when explorer has focus
     user.file_manager_auto_show_pickers = 0
 
     # Set the max number of command lines per page in help
-    user.help_max_command_lines_per_page = 50
+    user.help_max_command_lines_per_page = 75
 
     # Set the max number of contexts display per page in help
-    user.help_max_contexts_per_page = 43
+    user.help_max_contexts_per_page = 75
 
     # The default amount used when scrolling continuously
     user.mouse_continuous_scroll_amount = 80
@@ -40,7 +40,7 @@ settings():
     user.grids_put_one_bottom_left = 1
 
     # The number of lines of command history to display by default
-    user.command_history_display = 10
+    user.command_history_display = 3
 
     # The number of lines of command history to keep in total;
     # "command history more" to display all of them, "command history less" to restore

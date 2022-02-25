@@ -43,4 +43,4 @@ class UserActions:
         actions.key("ctrl-l")
         with clip.capture() as path:
             actions.edit.copy()
-        ui.launch(path="gnome-terminal", args=[f"--working-directory={path.get()}"])
+        ui.launch(path="alacritty", args=[f"--working-directory={path.get()}"])

@@ -28,7 +28,7 @@ ctx.lists["user.code_type"] = {
 class UserActions:
     def code_private_function(text: str):
         """Inserts private function declaration"""
-        result = "private function {}".format(
+        result = "function {}".format(
             actions.user.formatted_text(
                 text, settings.get("user.code_private_function_formatter")
             )

@@ -1,4 +1,6 @@
-from talon import Context, Module, actions, settings, ui
+import string
+from talon import Context, Module, actions, settings, ui, noise
+from talon.grammar import Phrase
 
 mod = Module()
 ctx = Context()
@@ -49,9 +51,15 @@ class Actions:
             actions.user.system_command(f"i3-msg resize {mode} {dir} 100 px or 10 ppt")
             actions.user.system_command(f"i3-msg move position center")
 
+    def focus_container(dir: str, phrase: Phrase = None):
+        """Focus on the next container"""
+        actions.user.system_command(f"i3-msg focus {dir}")
+        actions.sleep("200ms")
+        actions.user.rephrase(phrase)
+
 ctx.lists["user.applications"] = {
     "firefox": "firefox",
-    "thunar": "thunar",
+    "files": "thunar",
     "spotify": "spotify",
     "code": "code",
     "transmission": "transmission-gtk",

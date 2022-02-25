@@ -1,6 +1,7 @@
 tag: user.npm
 -
 
+node run [<user.text>]: "npm run {text or ''}"
 node update: "npm update\n"
 node global update: "npm -g update\n"
 node install: "npm install "

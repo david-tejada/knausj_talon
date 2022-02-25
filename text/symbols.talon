@@ -1,23 +1,21 @@
 question [mark]: "?"
 (downscore | underscore): "_"
+dash: "-"
 double dash: "--"
 triple quote: "'''"
 (triple grave | triple back tick | gravy):
     insert("```")
 (dot dot | dotdot): ".."
 ellipses: "..."
-(comma and | spamma): ", "
-slink:
-    key(right)
-    ", "
-coalgap: ": "
-punch:
-    edit.line_end()
-    ": "
+(comma and | spam): ", "
+punch: ": "
 puncher:
     edit.line_end()
     ":\n"
 kick:
+    key(right)
+    ", "
+kicker:
     edit.line_end()
     ",\n"
 plus: "+"

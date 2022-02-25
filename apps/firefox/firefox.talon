@@ -13,3 +13,5 @@ tab search <user.text>$:
 # Vimium
 blink: key(ctrl-alt-f)
 blink new: key(ctrl-alt-F)
+ceil: key(ctrl-alt-u)
+floor: key(ctrl-alt-j)

@@ -43,9 +43,18 @@ go way up:
     
 go bottom:
     edit.file_end()
+
+bottom more:
+    edit.file_end()
+    key(enter)
     
 go top:
     edit.file_start()
+
+top more:
+    edit.file_start()
+    key(enter:2)
+    key(up:2)
 
 go page down:
     edit.page_down()
