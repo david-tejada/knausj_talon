@@ -1,6 +1,9 @@
 tag: user.npm
 -
 
+node init: "npm init\n"
+node init yes: "npm init -y\n"
+node start: "npm start\n"
 node run [<user.text>]: "npm run {text or ''}"
 node update: "npm update\n"
 node global update: "npm -g update\n"

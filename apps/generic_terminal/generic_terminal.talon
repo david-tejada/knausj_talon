@@ -23,4 +23,4 @@ copy paste:
 # Open with vscode
 code this: 'code .\n'
 
-go to [<user.text>]: user.terminal_open_recent_directory(text or "")
+frecent [<user.text>]: user.terminal_open_recent_directory(text or "")

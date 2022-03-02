@@ -166,6 +166,22 @@ class UserActions:
     def split_flip():
         actions.user.vscode("workbench.action.toggleEditorGroupLayout")
 
+    def split_focus_right():
+        """Focus split right"""
+        actions.user.vscode("workbench.action.focusRightGroup")
+        
+    def split_focus_left():
+        """Focus split left"""
+        actions.user.vscode("workbench.action.focusLeftGroup")
+        
+    def split_focus_down():
+        """Focus split down"""
+        actions.user.vscode("workbench.action.focusBelowGroup")
+        
+    def split_focus_up():
+        """Focus split up"""
+        actions.user.vscode("workbench.action.focusAboveGroup")
+
     def split_last():
         actions.user.vscode("workbench.action.focusLeftGroup")
 

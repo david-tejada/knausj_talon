@@ -119,6 +119,7 @@ git commit highlighted:
 # Commands to manage my dotfiles
 # https://www.atlassian.com/git/tutorials/dotfiles
 config add: "config add "
+config add modified: "config add -u\n"
 config commit message <user.text>: "config commit -m '{text}'"
 config commit:
     "config commit -m ''"

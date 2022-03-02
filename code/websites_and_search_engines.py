@@ -1,7 +1,12 @@
 from .user_settings import get_list_from_csv
-from talon import Module, Context
+from talon import Module, Context, actions
 from urllib.parse import quote_plus
 import webbrowser
+import os
+
+cwd = os.path.dirname(os.path.realpath(__file__))
+user_path = os.path.dirname(cwd)
+websites_file = os.path.join(user_path, "settings", "websites.csv")
 
 mod = Module()
 mod.list("website", desc="A website.")
@@ -55,3 +60,12 @@ class Actions:
         """Search a search engine for given text"""
         url = search_template.replace("%s", quote_plus(search_text))
         webbrowser.open(url)
+
+    def save_address_to_csv(text: str):
+        """Save the current address to websites.csv"""
+        actions.browser.focus_address()
+        actions.sleep("50ms")
+        selected_text = actions.edit.selected_text()
+        with open(websites_file, "a") as file:
+            file.write(f"\n{selected_text}, {text}")
+        actions.key("escape")

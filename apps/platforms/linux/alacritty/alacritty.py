@@ -50,17 +50,6 @@ class UserActions:
         actions.insert("cd ..")
         actions.key("enter")
 
-    def file_manager_current_path():
-        path = ui.active_window().title
-        path = get_win_path(path)
-
-        if path in directories_to_remap:
-            path = directories_to_remap[title]
-
-        if path in directories_to_exclude:
-            path = ""
-        return path
-
     def file_manager_show_properties():
         """Shows the properties for the file"""
 

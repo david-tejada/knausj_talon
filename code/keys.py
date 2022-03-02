@@ -133,7 +133,7 @@ punctuation_words = {
     "`": "`",
     ",": ",",  # <== these things
     "back tick": "`",
-    "ski": "`",
+    "grave": "`",
     "comma": ",",
     "period": ".",
     "full stop": ".",
@@ -151,7 +151,7 @@ punctuation_words = {
     "and sign": "&",
     "ampersand": "&",
     "dash": "-",
-    "lash": "_",
+    "score": "_",
 
     # Currencies
     "dollar sign": "$",
@@ -224,6 +224,7 @@ alternate_keys = {
     #'junk': 'backspace',
     "page up": "pageup",
     "page down": "pagedown",
+    "cape": "escape",
 }
 # mac apparently doesn't have the menu key.
 if app.platform in ("windows", "linux"):

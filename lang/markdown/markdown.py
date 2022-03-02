@@ -5,6 +5,7 @@ ctx = Context()
 
 mod.list("markdown_code_block_language", desc="Languages for code blocks")
 ctx.lists["user.markdown_code_block_language"] = {
+    "javascript": "javascript",
     "typescript": "typescript",
     "python": "python",
     "code": "",

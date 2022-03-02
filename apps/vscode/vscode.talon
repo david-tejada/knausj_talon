@@ -15,6 +15,7 @@ settings():
 
 window reload: user.vscode("workbench.action.reloadWindow")
 window close: user.vscode("workbench.action.closeWindow")
+close all editors: user.vscode("workbench.action.closeAllGroups")
 #multiple_cursor.py support end
 
 please [<user.text>]:
@@ -251,3 +252,11 @@ list note [<user.text>]:
     user.vscode("dendron.lookupNote")
     sleep(400ms)
     insert(text or "")
+
+# GitLens
+lens zen:
+    user.vscode("gitlens.switchMode")
+    "zen\n"
+lens review:
+    user.vscode("gitlens.switchMode")
+    "review\n"

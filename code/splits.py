@@ -18,6 +18,19 @@ class Actions:
     def split_window_up():
         """Move active tab to upper split"""
 
+    def split_focus_right():
+        """Focus split right"""
+        
+    def split_focus_left():
+        """Focus split left"""
+        
+    def split_focus_down():
+        """Focus split down"""
+        
+    def split_focus_up():
+        """Focus split up"""
+        
+
     def split_window_vertically():
         """Splits window vertically"""
 

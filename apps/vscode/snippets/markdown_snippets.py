@@ -6,9 +6,7 @@ import os
 ctx = Context()
 ctx.matches = r"""
 app: vscode
-mode: user.markdown
-mode: user.auto_lang 
-and code.language: markdown
+tag: user.markdown
 """
 # short name -> ide clip name
 ctx.lists["user.snippets"] = {

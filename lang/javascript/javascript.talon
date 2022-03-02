@@ -88,3 +88,20 @@ blocker:
     edit.line_end()
     " "
     user.code_block()
+
+construct <user.text>:
+    "function "
+    user.insert_formatted(text,"PUBLIC_CAMEL_CASE")
+    "()"
+    key("left")
+
+fun <user.text>:
+    user.insert_formatted(text,"PRIVATE_CAMEL_CASE")
+    "()"
+    key("left")
+
+react <user.text>:
+    # user.insert_snippet("{user.insert_formatted(text,"PUBLIC_CAMEL_CASE")}")
+    user.insert_snippet("something$0something{text}")
+    
+
