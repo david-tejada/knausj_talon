@@ -12,6 +12,22 @@ tag: user.javascript
 #     "string": ".ToString",
 # }
 
+mod.list("code_chain_function", "Function to use in a chain")
+
+ctx.lists["user.code_chain_function"] = {
+    "concat": "concat",
+    "filter": "filter",
+    "find": "find",
+    "flat map": "flatMap",
+    "for each": "forEach",
+    "includes": "includes",
+    "map": "map",
+    "push": "push",
+    "some": "some",
+    "split": "split",
+    "substring": "substring",
+    "then": "then",
+}
 
 @ctx.action_class("user")
 class UserActions:

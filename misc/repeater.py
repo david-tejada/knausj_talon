@@ -1,6 +1,11 @@
-from talon import actions, noise
+# from talon import actions, noise
+# import tempfile
 
-def on_pop(active):
-    actions.core.repeat_command(1)
+# LOGFILE = str(tempfile.gettempdir()) + "/talon-history.log"
 
-noise.register("pop", on_pop)
+# def on_pop(active):
+#     actions.core.repeat_command(1)
+#     with open(LOGFILE, "a") as file_object:
+#             file_object.write("POP\n")
+
+# noise.register("pop", on_pop)

@@ -109,6 +109,10 @@ indent [more]:
 (indent less | out dent):
     edit.indent_less()
 
+scoot:
+    key(space)
+    key(left)
+
 # deleting
 clear line:
     edit.delete_line()

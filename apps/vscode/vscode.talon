@@ -56,6 +56,10 @@ theme switch: user.vscode("workbench.action.selectTheme")
 wrap switch: user.vscode("editor.action.toggleWordWrap")
 zen switch: user.vscode("workbench.action.toggleZenMode")
 
+# Splits (Maybe move to splits.py and splits.talon)
+split max: user.vscode("workbench.action.maximizeEditor")
+split reset: user.vscode("workbench.action.evenEditorWidths")
+
 # File Commands
 list dock [<user.text>] [{user.file_extension}] [halt]:
     user.vscode("workbench.action.quickOpen")

@@ -62,9 +62,12 @@ make reduce:
 
 make spread: "..."
 
-from import:
-    insert(' from  ""')
-    key("left")
+import <user.text> from <user.text>:
+    "import "
+    user.insert_formatted(text_1,"PUBLIC_CAMEL_CASE")
+    " from \""
+    user.insert_formatted(text_2,"DASH_SEPARATED")
+    "\""
 
 console log:
     "console.log()"
@@ -105,3 +108,13 @@ react <user.text>:
     user.insert_snippet("something$0something{text}")
     
 
+bind <user.text>:
+    "this."
+    user.insert_formatted(text,"PRIVATE_CAMEL_CASE")
+    " = this."
+    user.insert_formatted(text,"PRIVATE_CAMEL_CASE")
+    ".bind(this)"
+
+chain {user.code_chain_function}:
+    insert(".{code_chain_function}()")
+    key(left)

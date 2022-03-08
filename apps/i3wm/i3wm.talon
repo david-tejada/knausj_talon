@@ -3,11 +3,11 @@ os: linux
 tag: user.i3wm
 -
 bay <number_small>: user.system_command("i3-msg workspace number {number_small}")
-# (beone|bione): user.system_command("i3-msg workspace number 1")
-# basix: user.system_command("i3-msg workspace number 6")
-# besev: user.system_command("i3-msg workspace number 7")
-# beto: user.system_command("i3-msg workspace number 2")
-# be eleven: user.system_command("i3-msg workspace number 11")
+(beone|bione): user.system_command("i3-msg workspace number 1")
+basix: user.system_command("i3-msg workspace number 6")
+besev: user.system_command("i3-msg workspace number 7")
+beto: user.system_command("i3-msg workspace number 2")
+be eleven: user.system_command("i3-msg workspace number 11")
 (bay flip|flipper): user.system_command("i3-msg workspace back_and_forth")
 bay right: user.system_command("i3-msg workspace next")
 bay left: user.system_command("i3-msg workspace prev")

@@ -11,7 +11,7 @@ tag_names_list = {
     "html", "head", "body", "header", "footer", "main", "aside",
     "div", "span", "table", "template", "script", "nav",
     "button", "input", "textarea", "select", "option", "form",
-    "label", "Link", "hr", "p"
+    "label", "Link", "hr", "p", "fieldset"
 }
 
 tag_names = {
