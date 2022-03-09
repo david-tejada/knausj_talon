@@ -206,17 +206,17 @@ ctx.lists["self.arrow_key"] = {
     "up": "up",
 }
 
-simple_keys = [
-    "end",
-    "enter",
-    "escape",
-    "home",
-    "insert",
-    "pagedown",
-    "pageup",
-    "space",
-    "tab",
-]
+simple_keys = {
+    "ending": "end",
+    "enter": "enter",
+    "escape": "escape",
+    "home": "home",
+    "insert": "insert",
+    "pagedown": "pagedown",
+    "pageup": "pageup",
+    "space": "space",
+    "tab": "tab",
+}
 
 alternate_keys = {
     "shave": "backspace",
@@ -230,7 +230,8 @@ if app.platform in ("windows", "linux"):
     alternate_keys["menu key"] = "menu"
     alternate_keys["print screen"] = "printscr"
 
-special_keys = {k: k for k in simple_keys}
+# special_keys = {k: k for k in simple_keys}
+special_keys = simple_keys
 special_keys.update(alternate_keys)
 ctx.lists["self.special_key"] = special_keys
 ctx.lists["self.function_key"] = {
