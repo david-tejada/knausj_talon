@@ -1,5 +1,4 @@
 from talon import Context, actions, ui, Module, app, clip
-from datetime import datetime
 
 is_mac = app.platform == "mac"
 

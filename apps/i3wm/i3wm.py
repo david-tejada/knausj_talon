@@ -51,6 +51,8 @@ class Actions:
             actions.user.system_command(f"i3-msg resize {mode} {dir} 100 px or 10 ppt")
             actions.user.system_command(f"i3-msg move position center")
 
+    # This function is here so I can issue a command after glide or slide that 
+    # will apply in the next context
     def focus_container(dir: str, phrase: Phrase = None):
         """Focus on the next container"""
         actions.user.system_command(f"i3-msg focus {dir}")

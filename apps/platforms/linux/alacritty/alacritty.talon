@@ -5,6 +5,7 @@ tag(): terminal
 tag(): user.generic_unix_shell
 tag(): user.git
 tag(): user.npm
+tag(): user.yarn
 tag(): user.apt
 tag(): user.pip
 tag(): user.file_manager

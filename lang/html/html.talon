@@ -6,6 +6,8 @@ block tag {user.code_tag}:
     user.insert_snippet("<{code_tag}>\n\t$0\n</{code_tag}>")
 block tag <user.text>:
     user.insert_snippet("<{text}>\n\t$0\n</{text}>")
+blank tag:
+    user.insert_snippet("<>\n\t$0\n</>")
 
 tag {user.code_tag}:
     "<{code_tag}>"

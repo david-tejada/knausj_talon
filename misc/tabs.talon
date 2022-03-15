@@ -1,6 +1,6 @@
 tag: user.tabs
 -
-tab new: app.tab_open()
+spawn: app.tab_open()
 pull: app.tab_previous()
 push: app.tab_next()
 tab close: user.tab_close_wrapper()

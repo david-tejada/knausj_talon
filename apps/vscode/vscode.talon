@@ -72,7 +72,7 @@ pop dock <user.text> [{user.file_extension}] [halt]:
     sleep(400ms)
     insert(text or "")
     insert(file_extension or "")
-    sleep(300ms)
+    sleep(400ms)
     key(enter)
     sleep(150ms)
 pop work <user.text>:
@@ -101,6 +101,7 @@ file remove:
 file open folder: user.vscode("revealFileInOS")
 file reveal: user.vscode("workbench.files.action.showActiveFileInExplorer")
 save ugly: user.vscode("workbench.action.files.saveWithoutFormatting")
+keeper all: user.vscode("workbench.action.files.saveFiles")
 
 # Language Features
 suggest show: user.vscode("editor.action.triggerSuggest")
@@ -247,15 +248,6 @@ install local: user.vscode("workbench.extensions.action.installVSIX")
 
 # quokka
 toggle quokka: user.vscode("quokka.toggle")
-
-# dendron
-paste link: user.vscode("dendron.pasteLink")
-make note [<user.text>]: user.convert_to_dendron_note("{text or ''}")
-dendron preview: user.vscode("dendron.showPreview")
-list note [<user.text>]:
-    user.vscode("dendron.lookupNote")
-    sleep(400ms)
-    insert(text or "")
 
 # GitLens
 lens zen:

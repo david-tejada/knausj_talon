@@ -103,11 +103,6 @@ fun <user.text>:
     "()"
     key("left")
 
-react <user.text>:
-    # user.insert_snippet("{user.insert_formatted(text,"PUBLIC_CAMEL_CASE")}")
-    user.insert_snippet("something$0something{text}")
-    
-
 bind <user.text>:
     "this."
     user.insert_formatted(text,"PRIVATE_CAMEL_CASE")
@@ -118,3 +113,8 @@ bind <user.text>:
 chain {user.code_chain_function}:
     insert(".{code_chain_function}()")
     key(left)
+
+make block lambda:
+    "() => {}"
+    key(left)
+    key(enter)
