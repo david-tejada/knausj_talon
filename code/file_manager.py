@@ -177,16 +177,6 @@ class Actions:
             gui_files.hide()
             gui_folders.hide()
 
-    def file_manager_open_user_directory(path: str):
-        """expands and opens the user directory"""
-        # this functionality exists mostly for windows.
-        # since OneDrive does strange stuff...
-        if path in directories_to_remap:
-            path = directories_to_remap[path]
-
-        path = os.path.expanduser(os.path.join("~", path))
-        actions.user.file_manager_open_directory(path)
-
     def file_manager_get_directory_by_index(index: int) -> str:
         """Returns the requested directory for the imgui display by index"""
         index = (current_folder_page - 1) * setting_imgui_limit.get() + index
