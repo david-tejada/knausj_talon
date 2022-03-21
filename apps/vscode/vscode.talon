@@ -8,11 +8,6 @@ tag(): user.snippets
 tag(): user.splits
 tag(): user.tabs
 
-settings():
-    # This is here to fix a weird issue in dendron were names
-    # get cut off
-    key_wait = 2
-
 window reload: user.vscode("workbench.action.reloadWindow")
 window close: user.vscode("workbench.action.closeWindow")
 close all editors: user.vscode("workbench.action.closeAllGroups")
@@ -59,6 +54,10 @@ zen switch: user.vscode("workbench.action.toggleZenMode")
 # Splits (Maybe move to splits.py and splits.talon)
 split max: user.vscode("workbench.action.maximizeEditor")
 split reset: user.vscode("workbench.action.evenEditorWidths")
+cross: user.vscode("workbench.action.focusNextGroup")
+crossing: 
+    user.vscode("workbench.action.focusNextGroup")
+    user.vscode("workbench.action.maximizeEditor")
 
 # File Commands
 list dock [<user.text>] [{user.file_extension}] [halt]:
@@ -101,7 +100,7 @@ file remove:
 file open folder: user.vscode("revealFileInOS")
 file reveal: user.vscode("workbench.files.action.showActiveFileInExplorer")
 save ugly: user.vscode("workbench.action.files.saveWithoutFormatting")
-keeper all: user.vscode("workbench.action.files.saveFiles")
+disk all: user.vscode("workbench.action.files.saveFiles")
 
 # Language Features
 suggest show: user.vscode("editor.action.triggerSuggest")

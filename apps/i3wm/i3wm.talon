@@ -9,7 +9,7 @@ before: user.system_command("i3-msg workspace number 4")
 basix: user.system_command("i3-msg workspace number 6")
 besev: user.system_command("i3-msg workspace number 7")
 be eleven: user.system_command("i3-msg workspace number 11")
-(bay flip|flipper): user.system_command("i3-msg workspace back_and_forth")
+(bay flip|flip): user.system_command("i3-msg workspace back_and_forth")
 bay right: user.system_command("i3-msg workspace next")
 bay left: user.system_command("i3-msg workspace prev")
 bay rename <number_small> (<user.text> | <user.letters>): user.system_command("i3-msg 'rename workspace to \"{number_small}: {text or letters}\"'oo")
@@ -68,6 +68,30 @@ detach <number_small>:
 
 win horizontal: user.system_command("i3-msg split h")
 win vertical: user.system_command("i3-msg split v")
+
+above left:
+    user.system_command("i3-msg split v")
+    user.system_command("i3-msg focus left")
+    user.system_command("i3-msg move right")
+    user.system_command("i3-msg focus up")
+
+above right:
+    user.system_command("i3-msg split v")
+    user.system_command("i3-msg focus right")
+    user.system_command("i3-msg move left")
+    user.system_command("i3-msg focus up")
+
+below left:
+    user.system_command("i3-msg focus left")
+    user.system_command("i3-msg split v")
+    user.system_command("i3-msg focus right")
+    user.system_command("i3-msg move left")
+
+below right:
+    user.system_command("i3-msg focus right")
+    user.system_command("i3-msg split v")
+    user.system_command("i3-msg focus left")
+    user.system_command("i3-msg move right")
 
 make scratch: user.system_command("i3-msg move scratchpad")
 scratch <user.text>: user.system_command('i3-msg [title="(?i){text}"] scratchpad show')

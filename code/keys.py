@@ -3,7 +3,7 @@ from typing import Set
 from talon import Module, Context, actions, app
 import sys
 
-default_alphabet = "air bat cap drum each fine gust harp ice jane krunch look made near odd pit quench rip sun trap urge vest whale plex yank zip".split(
+default_alphabet = "air bat cap drum each fine gust harp ink jane krunch look made near ox pit quench rip sun trap urch vest whale plex yank zip".split(
     " "
 )
 letters_string = "abcdefghijklmnopqrstuvwxyz"
@@ -115,6 +115,7 @@ modifier_keys = {
     # If you find 'alt' is often misrecognized, try using 'alter'.
     "alt": "alt",
     "control": "ctrl",  #'troll':   'ctrl',
+    "troll": "ctrl",
     "shift": "shift",  #'sky':     'shift',
     "super": "super",
 }
@@ -160,7 +161,8 @@ punctuation_words = {
 symbol_key_words = {
     "dot": ".",
     "point": ".",
-    "twin": "'",
+    "single": "'",
+    "stack": ":",
     "apostrophe": "'",
     "round": "(",
     "rounder": ")",
@@ -178,7 +180,7 @@ symbol_key_words = {
     "plus": "+",
     "tilde": "~",
     "bang": "!",
-    "score": "_",
+    "brow": "_",
     "less than": "<",
     "greater than": ">",
     "star": "*",
@@ -187,7 +189,7 @@ symbol_key_words = {
     "tender": "^",
     "amper": "&",
     "pipe": "|",
-    "quad": '"',
+    "double": '"',
     # Currencies
     "dollar": "$",
     "pound sign": "£",
@@ -220,7 +222,7 @@ simple_keys = {
 
 alternate_keys = {
     "shave": "backspace",
-    "trimer": "delete",
+    "drill": "delete",
     #'junk': 'backspace',
     "page up": "pageup",
     "page down": "pagedown",

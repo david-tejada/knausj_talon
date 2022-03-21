@@ -21,7 +21,7 @@ paste that: edit.paste()
 nope: edit.undo()
 redo it: edit.redo()
 paste match: edit.paste_match_style()
-keeper: edit.save()
+disk: edit.save()
 wipe: key(backspace)    
 void: key(space)
 padding: 

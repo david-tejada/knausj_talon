@@ -11,7 +11,13 @@ tab search <user.text>$:
     key(down)
 
 # Vimium
-blink: key(ctrl-alt-f)
-blink new: key(ctrl-alt-F)
-ceil: key(ctrl-alt-u)
-floor: key(ctrl-alt-j)
+hint: key(ctrl-alt-f)
+hint new: key(ctrl-alt-F)
+upper: key(ctrl-alt-u)
+downer: key(ctrl-alt-j)
+parrot(mfff):
+    user.append_to_logfile("MFFF")
+    key(ctrl-alt-j)
+parrot(tchak):
+    user.append_to_logfile("TCHAK")
+    key(ctrl-alt-f)

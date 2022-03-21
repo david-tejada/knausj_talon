@@ -13,6 +13,6 @@ mode: all
     user.mouse_sleep()
     speech.disable()
     user.engine_sleep()
-^drowse [<phrase>]$: speech.disable()
+^(drowse|trowse|trawse) [<phrase>]$: speech.disable()
 ^jolt$: speech.enable()
 

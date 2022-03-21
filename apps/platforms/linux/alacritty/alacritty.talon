@@ -14,10 +14,10 @@ cleft: key('alt-backspace')
 crimp: key('ctrl-delete')
 
 # Fix weird scrolling behavior in alacritty
-ceil:
+upper:
     user.mouse_move_center_active_window()
     user.mouse_scroll_down(0.75)
-floor:
+downer:
     user.mouse_move_center_active_window()
     user.mouse_scroll_up(0.75)
 

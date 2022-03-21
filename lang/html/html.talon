@@ -1,6 +1,6 @@
 tag: user.html
 -
-tag(): user.comments
+tag(): user.code_comment_line
 
 block tag {user.code_tag}:
     user.insert_snippet("<{code_tag}>\n\t$0\n</{code_tag}>")
@@ -18,11 +18,15 @@ tag <user.text>:
 
 closed tag {user.code_tag}:       "<{code_tag}/>"
 close tag <user.text>:   "<{text}/>"
-component <user.text>:
+closed comp <user.text>:
     "<"
     user.insert_formatted(text, "PUBLIC_CAMEL_CASE")
     "  />"
     key(left:3)
+comp <user.text>:
+    "<"
+    user.insert_formatted(text, "PUBLIC_CAMEL_CASE")
+    ">"
 
 close tag: user.code_close_tag()
 

@@ -1,9 +1,9 @@
 tag: user.tabs
 -
-spawn: app.tab_open()
+tabby: app.tab_open()
 pull: app.tab_previous()
 push: app.tab_next()
-tab close: user.tab_close_wrapper()
+closer: user.tab_close_wrapper()
 tab (reopen|restore): app.tab_reopen()
 tab <number>: user.tab_jump(number)
 tab last: user.tab_final()

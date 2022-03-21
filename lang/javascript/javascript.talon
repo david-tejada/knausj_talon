@@ -118,3 +118,15 @@ make block lambda:
     "() => {}"
     key(left)
     key(enter)
+
+export default function <user.text>:
+    "export default function "
+    user.insert_formatted(text,"PUBLIC_CAMEL_CASE")
+    "() {}"
+    key(left enter)
+
+export function <user.text>:
+    "export function "
+    user.insert_formatted(text,"PUBLIC_CAMEL_CASE")
+    "() {}"
+    key(left enter)
