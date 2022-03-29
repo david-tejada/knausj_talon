@@ -9,8 +9,14 @@ tag(): user.code_generic
     insert(';')
     key(left)
 
-value {user.css_values}:
-    insert(user.css_values)
+{user.css_properties} is:
+    insert(user.css_properties)
+    insert(': ')
+    insert(';')
+    key(left)
+
+value <user.css_value>+:
+    user.insert_many_sep(user.css_value_list)
 
 pseudo {user.css_pseudo}:
     insert(user.css_pseudo)
