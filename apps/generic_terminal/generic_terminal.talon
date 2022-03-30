@@ -23,5 +23,5 @@ copy paste:
 # Open with vscode
 code this: 'code .\n'
 
-frecent [<user.text>]: user.terminal_open_recent_directory(text or "")
+recent [<user.text>]: user.terminal_open_recent_directory(text or "")
 go <user.system_path>: insert("cd \"{system_path}\"\n")

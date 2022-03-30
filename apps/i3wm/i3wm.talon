@@ -5,6 +5,7 @@ tag: user.i3wm
 bay <number_small>: user.system_command("i3-msg workspace number {number_small}")
 (beone|bione): user.system_command("i3-msg workspace number 1")
 beto: user.system_command("i3-msg workspace number 2")
+batry: user.system_command("i3-msg workspace number 3")
 before: user.system_command("i3-msg workspace number 4")
 basix: user.system_command("i3-msg workspace number 6")
 besev: user.system_command("i3-msg workspace number 7")
@@ -108,7 +109,7 @@ launch: user.i3wm_launch()
 launch {user.applications}: user.system_command_nb("{applications}")
 lock screen: user.i3wm_lock()
 ^computer reboot$: user.system_command("reboot")
-(launch shell|koopa): user.i3wm_shell()
+(launch shell|Shelley): user.i3wm_shell()
 
 (poppy|scratch (shell|window)):
     user.i3wm_shell()

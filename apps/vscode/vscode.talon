@@ -236,6 +236,7 @@ curse undo: user.vscode("cursorUndo")
 
 select word: user.vscode("editor.action.addSelectionToNextFindMatch")
 skip word: user.vscode("editor.action.moveSelectionToNextFindMatch")
+toggle wrap: user.vscode("editor.action.toggleWordWrap")
 
 # jupyter
 cell next: user.vscode("jupyter.gotoNextCellInFile")
