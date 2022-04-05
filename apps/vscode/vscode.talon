@@ -85,6 +85,10 @@ list work [<user.text>]:
     user.vscode("workbench.action.openRecent")
     sleep(400ms)
     insert(text or "")
+pop work:
+    user.vscode("workbench.action.openRecent")
+    sleep(400ms)
+    key(enter)
 pop dock: user.vscode("workbench.action.openPreviousRecentlyUsedEditorInGroup")
 file copy path: user.vscode("copyFilePath")
 file create sibling: user.vscode_and_wait("explorer.newFile")
