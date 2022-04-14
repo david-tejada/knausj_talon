@@ -121,12 +121,20 @@ make block lambda:
 
 export default function <user.text>:
     "export default function "
-    user.insert_formatted(text,"PUBLIC_CAMEL_CASE")
+    user.insert_formatted(text,"PRIVATE_CAMEL_CASE")
     "() {}"
     key(left enter)
 
 export function <user.text>:
     "export function "
-    user.insert_formatted(text,"PUBLIC_CAMEL_CASE")
+    user.insert_formatted(text,"PRIVATE_CAMEL_CASE")
     "() {}"
+    key(left enter)
+
+for <user.text> of <user.text>:
+    "for (const "
+    user.insert_formatted(text_1,"PRIVATE_CAMEL_CASE")
+    " of "
+    user.insert_formatted(text_2,"PRIVATE_CAMEL_CASE")
+    ") {}"
     key(left enter)
