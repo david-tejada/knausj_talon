@@ -8,7 +8,6 @@ tag(): user.code_comment_block_c_like
 tag(): user.code_data_bool
 tag(): user.code_data_null
 tag(): user.code_functions
-tag(): user.code_functions_gui
 tag(): user.code_libraries
 tag(): user.code_operators_array
 tag(): user.code_operators_assignment
@@ -49,16 +48,13 @@ make async: "async "
 make await: "await "
 
 make map:
-    insert(".map()")
-    key(left)
+    user.insert_between(".map(", ")")
 
 make filter:
-    insert(".filter()")
-    key(left)
+    user.insert_between(".filter(", ")")
 
 make reduce:
-    insert(".reduce()")
-    key(left)
+    user.insert_between(".reduce(", ")")
 
 make spread: "..."
 
@@ -138,3 +134,6 @@ for <user.text> of <user.text>:
     user.insert_formatted(text_2,"PRIVATE_CAMEL_CASE")
     ") {}"
     key(left enter)
+    
+from import:
+    user.insert_between(' from  "', '"')

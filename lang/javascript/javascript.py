@@ -5,12 +5,6 @@ ctx = Context()
 ctx.matches = """
 tag: user.javascript
 """
-# tbd
-# ctx.lists["user.code_functions"] = {
-#     "integer": "int.TryParse",
-#     "print": "Console.WriteLine",
-#     "string": ".ToString",
-# }
 
 mod.list("code_chain_function", "Function to use in a chain")
 
@@ -38,24 +32,21 @@ class UserActions:
         actions.auto_insert(" === null")
 
     def code_type_dictionary():
-        actions.insert("{}")
-        actions.key("left")
+        actions.user.insert_between("{", "}")
 
     def code_state_if():
-        actions.insert("if ()")
-        actions.key("left")
+        actions.user.insert_between("if (", ")")
 
     def code_state_else_if():
-        actions.insert(" else if ()")
-        actions.key("left")
+        actions.user.insert_between(" else if (", ")")
 
     def code_state_else():
-        actions.insert(" else {}")
-        actions.key("left enter")
+        actions.user.insert_between(" else {", "}")
+        actions.key("enter")
 
     def code_block():
-        actions.insert("{}")
-        actions.key("left enter")
+        actions.user.insert_between("{", "}")
+        actions.key("enter")
 
     def code_self():
         actions.auto_insert("this")
@@ -64,8 +55,7 @@ class UserActions:
         actions.auto_insert('.')
 
     def code_state_while():
-        actions.insert("while ()")
-        actions.key("left")
+        actions.user.insert_between("while (", ")")
 
     def code_state_do():
         actions.auto_insert("do ")
@@ -74,12 +64,10 @@ class UserActions:
         actions.insert("return ")
 
     def code_state_for():
-        actions.insert("for ()")
-        actions.key("left")
+        actions.user.insert_between("for (", ")")
 
     def code_state_switch():
-        actions.insert("switch ()")
-        actions.key("left")
+        actions.user.insert_between("switch (", ")")
 
     def code_state_case():
         actions.auto_insert("case :")
@@ -94,8 +82,7 @@ class UserActions:
         actions.auto_insert("class ")
 
     def code_state_for_each():
-        actions.insert(".forEach()")
-        actions.key("left")
+        actions.user.insert_between(".forEach(", ")")
 
     def code_break():
         actions.auto_insert("break;")
@@ -116,8 +103,7 @@ class UserActions:
         actions.auto_insert(" => ")
 
     def code_operator_subscript():
-        actions.insert("[]")
-        actions.key("left")
+        actions.user.insert_between("[", "]")
 
     def code_operator_assignment():
         actions.auto_insert(" = ")

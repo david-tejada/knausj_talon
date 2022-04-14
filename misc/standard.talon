@@ -28,4 +28,3 @@ padding:
 	insert("  ") 
 	key(left)
 slap: edit.line_insert_down()
-

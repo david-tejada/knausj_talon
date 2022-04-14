@@ -72,48 +72,6 @@ current_file_page = current_folder_page = 1
 ctx.lists["self.file_manager_directories"] = []
 ctx.lists["self.file_manager_files"] = []
 
-directories_to_remap = {}
-user_path = os.path.expanduser("~")
-if app.platform == "windows":
-    is_windows = True
-    import ctypes
-
-    GetUserNameEx = ctypes.windll.secur32.GetUserNameExW
-    NameDisplay = 3
-
-    size = ctypes.pointer(ctypes.c_ulong(0))
-    GetUserNameEx(NameDisplay, None, size)
-
-    nameBuffer = ctypes.create_unicode_buffer(size.contents.value)
-    GetUserNameEx(NameDisplay, nameBuffer, size)
-    one_drive_path = os.path.expanduser(os.path.join("~", "OneDrive"))
-
-    # this is probably not the correct way to check for onedrive, quick and dirty
-    if os.path.isdir(os.path.expanduser(os.path.join("~", r"OneDrive\Desktop"))):
-        default_folder = os.path.join("~", "Desktop")
-
-        directories_to_remap = {
-            "Desktop": os.path.join(one_drive_path, "Desktop"),
-            "Documents": os.path.join(one_drive_path, "Documents"),
-            "Downloads": os.path.join(user_path, "Downloads"),
-            "Music": os.path.join(user_path, "Music"),
-            "OneDrive": one_drive_path,
-            "Pictures": os.path.join(one_drive_path, "Pictures"),
-            "Videos": os.path.join(user_path, "Videos"),
-        }
-    else:
-        # todo use expanduser for cross platform support
-        directories_to_remap = {
-            "Desktop": os.path.join(user_path, "Desktop"),
-            "Documents": os.path.join(user_path, "Documents"),
-            "Downloads": os.path.join(user_path, "Downloads"),
-            "Music": os.path.join(user_path, "Music"),
-            "OneDrive": one_drive_path,
-            "Pictures": os.path.join(user_path, "Pictures"),
-            "Videos": os.path.join(user_path, "Videos"),
-        }
-
-
 @mod.action_class
 class Actions:
     def file_manager_current_path() -> str:

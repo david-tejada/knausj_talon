@@ -7,7 +7,7 @@ tag(): user.code_comment_block_c_like
 tag(): user.code_data_bool
 tag(): user.code_data_null
 tag(): user.code_functions
-tag(): user.code_functions_gui
+tag(): user.code_functions_common
 tag(): user.code_libraries
 tag(): user.code_libraries_gui
 tag(): user.code_operators_array
@@ -34,13 +34,11 @@ settings():
 # NOTE: migrated from generic, as they were only used here, though once cpp support is added, perhaps these should be migrated to a tag together with the commands below
 make include:
     insert('#include ')
-make include system:
-    insert('#include <>')
-    edit.left()
-make include local:
-    insert('#include ""')
-    edit.left()
-make type deaf:
+state include system:
+    user.insert_between("#include <", ">")
+state include local:
+    user.insert_between('#include "', '"')
+state type deaf:
     insert('typedef ')
 make type deaf struct:
     insert('typedef struct')
@@ -94,8 +92,7 @@ standard cast to <user.stdint_cast>: "{stdint_cast}"
 <user.c_signed>: "{c_signed}"
 standard <user.stdint_types>: "{stdint_types}"
 int main:
-    insert("int main()")
-    edit.left()
+    user.insert_between("int main(", ")")
 
 toggle includes: user.code_toggle_libraries()
 include <user.code_libraries>:

@@ -16,7 +16,7 @@ close all editors: user.vscode("workbench.action.closeAllGroups")
 please [<user.text>]:
     user.vscode("workbench.action.showCommands")
     insert(user.text or "")
-    
+
 # Sidebar
 bar explore: user.vscode("workbench.view.explorer")
 bar extensions: user.vscode("workbench.view.extensions")
@@ -30,7 +30,7 @@ symbol hunt [<user.text>]:
     user.vscode("workbench.action.gotoSymbol")
     sleep(50ms)
     insert(text or "")
-    
+
 # Panels
 panel control: user.vscode("workbench.panel.repl.view.focus")
 panel output: user.vscode("workbench.panel.output.focus")
@@ -139,7 +139,7 @@ go recent [<user.text>]:
     sleep(50ms)
     insert(text or "")
     sleep(250ms)
-    
+
 # Bookmarks. Requires Bookmarks plugin
 go marks: user.vscode("workbench.view.extension.bookmarks")
 toggle mark: user.vscode("bookmarks.toggle")
@@ -229,7 +229,7 @@ restore: user.vscode("workbench.action.evenEditorWidths")
 replace here:
     user.replace("")
     key(cmd-alt-l)
-    
+
 hover show: user.vscode("editor.action.showHover")
 
 join lines: user.vscode("editor.action.joinLines")
