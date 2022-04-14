@@ -21,3 +21,8 @@ parrot(mfff):
 parrot(tchak):
     user.append_to_logfile("TCHAK")
     key(ctrl-alt-f)
+
+# devtools
+tool inspect: key(ctrl-shift-c)
+tool console: key(ctrl-shift-k)
+tool debug: key(ctrl-shift-z)
