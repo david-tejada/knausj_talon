@@ -51,9 +51,6 @@ theme switch: user.vscode("workbench.action.selectTheme")
 wrap switch: user.vscode("editor.action.toggleWordWrap")
 zen switch: user.vscode("workbench.action.toggleZenMode")
 
-# Splits (Maybe move to splits.py and splits.talon)
-split max: user.vscode("workbench.action.maximizeEditor")
-split reset: user.vscode("workbench.action.evenEditorWidths")
 cross: user.vscode("workbench.action.focusNextGroup")
 crossing: 
     user.vscode("workbench.action.focusNextGroup")
