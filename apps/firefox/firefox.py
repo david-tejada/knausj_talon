@@ -17,6 +17,11 @@ os: mac
 and app.bundle: org.mozilla.firefox
 """
 
+apps.firefox = """
+os: linux
+and app.name: firefox-aurora
+"""
+
 ctx.matches = r"""
 app: firefox
 """
