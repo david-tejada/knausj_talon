@@ -61,6 +61,7 @@ class Actions:
 
 ctx.lists["user.applications"] = {
     "firefox": "firefox",
+    "chrome": "google-chrome",
     "files": "thunar",
     "spotify": "spotify",
     "code": "code",
@@ -69,5 +70,6 @@ ctx.lists["user.applications"] = {
     "pavucontrol": "pavucontrol",
     "libreoffice": "libreoffice",
     "peek": "peek",
-    "google chrome": "google-chrome"
+    "google chrome": "google-chrome",
+    "kazam": "kazam"
 }
