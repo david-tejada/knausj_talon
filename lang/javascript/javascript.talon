@@ -26,6 +26,8 @@ settings():
 is strict equal: " === "
 is strict not equal: " !== "
 
+make nullish: " ?? "
+
 make const: "const "
 const <user.text>:
     "const "
@@ -36,11 +38,6 @@ let <user.text>:
     "let "
     user.insert_formatted(text,"PRIVATE_CAMEL_CASE")
     
-make var: "var "
-var <user.text>:
-    "var "
-    user.insert_formatted(text,"PRIVATE_CAMEL_CASE")
-
 make export: "export "
 
 make async: "async "
@@ -98,13 +95,6 @@ fun <user.text>:
     user.insert_formatted(text,"PRIVATE_CAMEL_CASE")
     "()"
     key("left")
-
-bind <user.text>:
-    "this."
-    user.insert_formatted(text,"PRIVATE_CAMEL_CASE")
-    " = this."
-    user.insert_formatted(text,"PRIVATE_CAMEL_CASE")
-    ".bind(this)"
 
 chain {user.code_chain_function}:
     insert(".{code_chain_function}()")
