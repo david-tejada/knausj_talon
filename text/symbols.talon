@@ -12,10 +12,10 @@ punch: ": "
 puncher:
     edit.line_end()
     ":\n"
-kick:
+sprint:
     key(right)
     ", "
-kicker:
+sprinter:
     edit.line_end()
     ",\n"
 plus: "+"

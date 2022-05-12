@@ -4,7 +4,7 @@ find it:
 next one:
     edit.find_next()
 
-pets:
+recede:
     edit.word_left()
 
 step:
