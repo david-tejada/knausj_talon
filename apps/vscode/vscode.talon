@@ -257,3 +257,9 @@ lens zen:
 lens review:
     user.vscode("gitlens.switchMode")
     "review\n"
+
+then: skip()
+
+# Splits
+split clear: user.vscode("workbench.action.closeEditorsInGroup")
+split clear all: user.vscode("workbench.action.closeAllEditors")
