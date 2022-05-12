@@ -13,7 +13,7 @@ be eleven: user.system_command("i3-msg workspace number 11")
 (bay flip|flip): user.system_command("i3-msg workspace back_and_forth")
 bay right: user.system_command("i3-msg workspace next")
 bay left: user.system_command("i3-msg workspace prev")
-bay rename <number_small> (<user.text> | <user.letters>): user.system_command("i3-msg 'rename workspace to \"{number_small}: {text or letters}\"'oo")
+bay rename <number_small> (<user.text> | <user.letters>): user.system_command("i3-msg 'rename workspace to \"{number_small}: {text or letters}\"'")
 
 win <user.arrow_keys>: user.system_command("i3-msg focus {user.arrow_keys}")
 glide: user.system_command("i3-msg focus right")
@@ -110,14 +110,6 @@ launch {user.applications}: user.system_command_nb("{applications}")
 lock screen: user.i3wm_lock()
 ^computer reboot$: user.system_command("reboot")
 (launch shell|Shelley): user.i3wm_shell()
-
-(poppy|scratch (shell|window)):
-    user.i3wm_shell()
-    sleep(300ms)
-    user.system_command("i3-msg mark __scratchpad")
-    user.system_command("i3-msg move scratchpad")
-    user.system_command("i3-msg [con_mark='__scratchpad'] scratchpad show")
-    user.system_command("i3-msg unmark __scratchpad")
 
 system tray: key("super-shift-s")
 
