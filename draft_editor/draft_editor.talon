@@ -2,13 +2,13 @@ user.draft_editor_running: True
 not tag: user.draft_editor_app_focused
 -
 
-draft this:
+write pull:
 	user.draft_editor_open()
 
-draft all:
+write pull all:
 	edit.select_all()
 	user.draft_editor_open()
 
-draft line:
+write pull line:
 	edit.select_line()
 	user.draft_editor_open()
