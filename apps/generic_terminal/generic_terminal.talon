@@ -25,4 +25,3 @@ copy paste:
 code this: 'code .\n'
 
 recent [<user.text>]: user.terminal_open_recent_directory(text or "")
-go <user.system_path>: insert("cd \"{system_path}\"\n")
