@@ -4,5 +4,3 @@ cancel cancel$: skip()
 
 # allows you to say something (eg to a human) that you don't want talon to hear, eg "ignore hey Jerry"
 ignore [<phrase>]$: app.notify("Command ignored")
-
-then: skip()
