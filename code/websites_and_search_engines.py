@@ -1,12 +1,9 @@
-from .user_settings import get_list_from_csv
-from talon import Module, Context, actions
-from urllib.parse import quote_plus
 import webbrowser
-import os
+from urllib.parse import quote_plus
 
-cwd = os.path.dirname(os.path.realpath(__file__))
-user_path = os.path.dirname(cwd)
-websites_file = os.path.join(user_path, "settings", "websites.csv")
+from talon import Context, Module
+
+from .user_settings import get_list_from_csv
 
 mod = Module()
 mod.list("website", desc="A website.")
@@ -16,10 +13,10 @@ mod.list(
 )
 
 website_defaults = {
-    "talon home page":"http://talonvoice.com",
-    "talon slack":"http://talonvoice.slack.com/messages/help",
-    "talon wiki":"https://talon.wiki/",
-    "talon practice":"https://chaosparrot.github.io/talon_practice/",
+    "talon home page": "http://talonvoice.com",
+    "talon slack": "http://talonvoice.slack.com/messages/help",
+    "talon wiki": "https://talon.wiki/",
+    "talon practice": "https://chaosparrot.github.io/talon_practice/",
     "talon repository search": "https://search.talonvoice.com/search/",
     "amazon": "https://www.amazon.com/",
     "dropbox": "https://dropbox.com/",

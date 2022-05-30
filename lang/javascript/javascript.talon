@@ -8,6 +8,7 @@ tag(): user.code_comment_block_c_like
 tag(): user.code_data_bool
 tag(): user.code_data_null
 tag(): user.code_functions
+tag(): user.code_functions_common
 tag(): user.code_libraries
 tag(): user.code_operators_array
 tag(): user.code_operators_assignment
@@ -25,7 +26,6 @@ settings():
 
 is strict equal: " === "
 is strict not equal: " !== "
-
 make nullish: " ?? "
 
 make const: "const "
@@ -44,14 +44,14 @@ make async: "async "
 
 make await: "await "
 
-make map:
-    user.insert_between(".map(", ")")
+state await: "await "
 
-make filter:
-    user.insert_between(".filter(", ")")
+dot {user.code_common_member_function}:
+    user.insert_between(".{code_common_member_function}(", ")")
 
-make reduce:
-    user.insert_between(".reduce(", ")")
+state map: app.notify('ERROR: Command deprecated; please use "dot map"')
+state filter: app.notify('ERROR: Command deprecated; please use "dot filter"')
+state reduce: app.notify('ERROR: Command deprecated; please use "dot reduce"')
 
 make spread: "..."
 

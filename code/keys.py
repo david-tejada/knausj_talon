@@ -1,7 +1,4 @@
-from typing import Set
-
-from talon import Module, Context, actions, app
-import sys
+from talon import Context, Module, actions, app
 
 default_alphabet = "ads bus cap drum each fine gust hope ink jane krunch look made near ox pit quick rip sun trap urch vest wasp plex yank zip".split(
     " "
@@ -10,8 +7,8 @@ letters_string = "abcdefghijklmnopqrstuvwxyz"
 
 default_digits = "zero one two three four five six seven eight nine".split(" ")
 numbers = [str(i) for i in range(10)]
-default_f_digits = "one two three four five six seven eight nine ten eleven twelve".split(
-    " "
+default_f_digits = (
+    "one two three four five six seven eight nine ten eleven twelve".split(" ")
 )
 
 mod = Module()
@@ -119,7 +116,7 @@ modifier_keys = {
     "shift": "shift",  #'sky':     'shift',
     "super": "super",
 }
-if app.platform  == "mac":
+if app.platform == "mac":
     modifier_keys["command"] = "cmd"
     modifier_keys["option"] = "alt"
 ctx.lists["self.modifier_key"] = modifier_keys
@@ -246,7 +243,7 @@ class Actions:
     def move_cursor(s: str):
         """Given a sequence of directions, eg. 'left left up', moves the cursor accordingly using edit.{left,right,up,down}."""
         for d in s.split():
-            if d in ('left','right','up','down'):
+            if d in ("left", "right", "up", "down"):
                 getattr(actions.edit, d)()
             else:
-                raise RuntimeError(f'invalid arrow key: {d}')
+                raise RuntimeError(f"invalid arrow key: {d}")

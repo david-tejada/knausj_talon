@@ -1,4 +1,4 @@
-from talon import Module, Context, actions, settings
+from talon import Context, Module, actions, settings
 
 mod = Module()
 ctx = Context()
@@ -6,17 +6,38 @@ ctx.matches = """
 tag: user.javascript
 """
 
-mod.list("code_chain_function", "Function to use in a chain")
+ctx.lists["user.code_common_function"] = {
+    "abs": "Math.abs",
+    "entries": "Object.entries",
+    "fetch": "fetch",
+    "floor": "Math.floor",
+    "from entries": "Object.fromEntries",
+    "keys": "Object.keys",
+    "log": "console.log",
+    "max": "Math.max",
+    "min": "Math.min",
+    "print": "console.log",
+    "round": "Math.round",
+    "values": "Object.values",
+}
 
-ctx.lists["user.code_chain_function"] = {
+mod.list("code_common_member_function", "Function to use in a dotted chain, eg .foo()")
+
+ctx.lists["user.code_common_member_function"] = {
+    "catch": "catch",
     "concat": "concat",
     "filter": "filter",
+    "finally": "finally",
     "find": "find",
     "flat map": "flatMap",
     "for each": "forEach",
+    "join": "join",
     "includes": "includes",
     "map": "map",
+    "pop": "pop",
     "push": "push",
+    "reduce": "reduce",
+    "slice": "slice",
     "some": "some",
     "split": "split",
     "substring": "substring",
@@ -52,7 +73,7 @@ class UserActions:
         actions.auto_insert("this")
 
     def code_operator_object_accessor():
-        actions.auto_insert('.')
+        actions.auto_insert(".")
 
     def code_state_while():
         actions.user.insert_between("while (", ")")
@@ -70,7 +91,7 @@ class UserActions:
         actions.user.insert_between("switch (", ")")
 
     def code_state_case():
-        actions.auto_insert("case :")
+        actions.user.insert_between("case ", ":")
 
     def code_state_go_to():
         actions.auto_insert("")

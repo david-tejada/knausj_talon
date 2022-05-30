@@ -1,4 +1,4 @@
-from talon import ctrl, ui, Module, Context, actions, clip, app
+from talon import Context, Module, actions
 
 ctx = Context()
 mod = Module()
@@ -35,14 +35,16 @@ class user_actions:
 @ctx.action_class('browser')
 class BrowserActions:
     # TODO
-    #action(browser.address):
-    #action(browser.title):
+    # action(browser.address):
+    # action(browser.title):
     def go(url: str):
         actions.browser.focus_address()
         actions.sleep("50ms")
         actions.insert(url)
         actions.key("enter")
+
     def focus_search():
         actions.browser.focus_address()
+
     def submit_form():
-        actions.key('enter')
+        actions.key("enter")

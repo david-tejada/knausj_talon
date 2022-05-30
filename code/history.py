@@ -18,7 +18,7 @@ LOGFILE = str(tempfile.gettempdir()) + "/talon-history.log"
 def on_phrase(j):
     global history
 
-    words = j.get('text')
+    words = j.get("text")
 
     text = actions.user.history_transform_phrase_text(words)
 
@@ -92,4 +92,4 @@ class Actions:
         if not actions.speech.enabled():
             return None
 
-        return ' '.join(words) if words else None
+        return " ".join(words) if words else None
