@@ -115,3 +115,7 @@ system tray: key("super-shift-s")
 
 keyboard spanish: user.system_command("setxkbmap es")
 keyboard english: user.system_command("setxkbmap us")
+
+snooze break:
+    mouse_move(1912, 1111)
+    mouse_click(0)

@@ -3,7 +3,7 @@ from typing import Set
 from talon import Module, Context, actions, app
 import sys
 
-default_alphabet = "air bat cap drum each fine gust harp ink jane krunch look made near ox pit quench rip sun trap urch vest whale plex yank zip".split(
+default_alphabet = "ads bus cap drum each fine gust hope ink jane krunch look made near ox pit quick rip sun trap urch vest wasp plex yank zip".split(
     " "
 )
 letters_string = "abcdefghijklmnopqrstuvwxyz"
@@ -162,7 +162,7 @@ symbol_key_words = {
     "dot": ".",
     "point": ".",
     "single": "'",
-    "stack": ":",
+    "colon": ":",
     "apostrophe": "'",
     "round": "(",
     "rounder": ")",

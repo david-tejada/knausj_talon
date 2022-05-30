@@ -1,7 +1,7 @@
 app: firefox
 app: vscode
 -
-switcheroo:
+code swap:
   edit.select_all()
   edit.copy()
   sleep(200ms)

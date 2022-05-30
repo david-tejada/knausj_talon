@@ -70,3 +70,9 @@ show cache: browser.show_clear_cache()
 # restore: key(X)
 # search tabs: key(T)
 # move to window: key(W)
+
+# Open website in the current browser
+pop page {user.website}:
+    app.tab_open()
+    user.paste(website)
+    key(enter)

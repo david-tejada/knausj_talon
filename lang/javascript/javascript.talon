@@ -66,6 +66,13 @@ console log:
     "console.log()"
     key("left")
 
+console error:
+    "console.error()"
+    key("left")
+
+console trace:
+    "console.trace()"
+
 new <user.text>:
     "new "
     user.insert_formatted(text,"PUBLIC_CAMEL_CASE")
