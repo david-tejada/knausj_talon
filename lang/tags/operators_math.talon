@@ -21,5 +21,9 @@ is less [than] or equal: user.code_operator_less_than_or_equal_to()
 (make | logical) and: user.code_operator_and()
 (make | logical) or: user.code_operator_or()
 
+# set operators
+(op | is) in: user.code_operator_in()
+(op | is) not in: user.code_operator_not_in()
+
 # TODO: This operator should either be abstracted into a function or removed.
 (make | pad) colon: " : "
