@@ -25,6 +25,7 @@ mod.setting(
 
 mod.list("applications", desc="List of applications to launch")
 
+
 @mod.action_class
 class Actions:
     def i3wm_launch():
@@ -36,7 +37,7 @@ class Actions:
         """Trigger the lock screen"""
         key = settings.get("user.i3_mod_key")
         actions.key(f"{key}-shift-x")
-        
+
     def i3wm_shell():
         """Launch a shell"""
         key = settings.get("user.i3_mod_key")
@@ -51,7 +52,7 @@ class Actions:
             actions.user.system_command(f"i3-msg resize {mode} {dir} 100 px or 10 ppt")
             actions.user.system_command(f"i3-msg move position center")
 
-    # This function is here so I can issue a command after glide or slide that 
+    # This function is here so I can issue a command after glide or slide that
     # will apply in the next context
     def focus_container(dir: str, phrase: Phrase = None):
         """Focus on the next container"""
@@ -59,17 +60,18 @@ class Actions:
         actions.sleep("200ms")
         actions.user.rephrase(phrase)
 
+
 ctx.lists["user.applications"] = {
-    "firefox": "firefox",
-    "chrome": "google-chrome",
-    "files": "thunar",
-    "spotify": "spotify",
-    "code": "code",
-    "transmission": "transmission-gtk",
     "alacritty": "alacritty",
-    "pavucontrol": "pavucontrol",
+    "chrome": "google-chrome",
+    "code": "code",
+    "edge": "microsoft-edge",
+    "files": "thunar",
+    "firefox": "firefox",
+    "kazam": "kazam",
     "libreoffice": "libreoffice",
+    "pavucontrol": "pavucontrol",
     "peek": "peek",
-    "google chrome": "google-chrome",
-    "kazam": "kazam"
+    "spotify": "spotify",
+    "transmission": "transmission-gtk",
 }

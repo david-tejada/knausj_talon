@@ -27,6 +27,7 @@ settings():
 is strict equal: " === "
 is strict not equal: " !== "
 make nullish: " ?? "
+is instance of: " instanceof "
 
 make const: "const "
 const <user.text>:
@@ -44,14 +45,8 @@ make async: "async "
 
 make await: "await "
 
-state await: "await "
-
 dot {user.code_common_member_function}:
     user.insert_between(".{code_common_member_function}(", ")")
-
-state map: app.notify('ERROR: Command deprecated; please use "dot map"')
-state filter: app.notify('ERROR: Command deprecated; please use "dot filter"')
-state reduce: app.notify('ERROR: Command deprecated; please use "dot reduce"')
 
 make spread: "..."
 
@@ -102,10 +97,6 @@ fun <user.text>:
     user.insert_formatted(text,"PRIVATE_CAMEL_CASE")
     "()"
     key("left")
-
-chain {user.code_chain_function}:
-    insert(".{code_chain_function}()")
-    key(left)
 
 make block lambda:
     "() => {}"

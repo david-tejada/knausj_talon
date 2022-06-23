@@ -150,7 +150,6 @@ punctuation_words = {
     "ampersand": "&",
     "dash": "-",
     "score": "_",
-
     # Currencies
     "dollar sign": "$",
     "pound sign": "£",
@@ -158,7 +157,7 @@ punctuation_words = {
 symbol_key_words = {
     "dot": ".",
     "point": ".",
-    "single": "'",
+    "quote": "'",
     "colon": ":",
     "apostrophe": "'",
     "round": "(",
@@ -190,7 +189,7 @@ symbol_key_words = {
     # Currencies
     "dollar": "$",
     "pound sign": "£",
-    "euro sign": "€"
+    "euro sign": "€",
 }
 
 # make punctuation words also included in {user.symbol_keys}
@@ -214,7 +213,7 @@ simple_keys = {
     "pagedown": "pagedown",
     "pageup": "pageup",
     "space": "space",
-    "tab": "tab",
+    "taber": "tab",
 }
 
 alternate_keys = {

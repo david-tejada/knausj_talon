@@ -1,7 +1,5 @@
 tag: browser
-title: /- YouTube/
-# Homepage
-# title: YouTube/
+browser.host: /youtube/
 -
 speed up: key("shift-.")
 (speed | slow) down: key("shift-,")

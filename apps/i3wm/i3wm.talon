@@ -2,18 +2,11 @@
 os: linux
 tag: user.i3wm
 -
-bay <number_small>: user.system_command("i3-msg workspace number {number_small}")
-(beone|bione): user.system_command("i3-msg workspace number 1")
-beto: user.system_command("i3-msg workspace number 2")
-batry: user.system_command("i3-msg workspace number 3")
-before: user.system_command("i3-msg workspace number 4")
-basix: user.system_command("i3-msg workspace number 6")
-besev: user.system_command("i3-msg workspace number 7")
-be eleven: user.system_command("i3-msg workspace number 11")
-(bay flip|flip): user.system_command("i3-msg workspace back_and_forth")
-bay right: user.system_command("i3-msg workspace next")
-bay left: user.system_command("i3-msg workspace prev")
-bay rename <number_small> (<user.text> | <user.letters>): user.system_command("i3-msg 'rename workspace to \"{number_small}: {text or letters}\"'")
+lane <number_small>: user.system_command("i3-msg workspace number {number_small}")
+(lane flip|flip): user.system_command("i3-msg workspace back_and_forth")
+lane right: user.system_command("i3-msg workspace next")
+lane left: user.system_command("i3-msg workspace prev")
+lane rename <number_small> (<user.text> | <user.letters>): user.system_command("i3-msg 'rename workspace to \"{number_small}: {text or letters}\"'")
 
 win <user.arrow_keys>: user.system_command("i3-msg focus {user.arrow_keys}")
 glide: user.system_command("i3-msg focus right")
