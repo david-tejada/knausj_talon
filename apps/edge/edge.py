@@ -12,6 +12,8 @@ os: windows
 and app.exe: msedge.exe
 os: mac
 and app.bundle: com.microsoft.edgemac
+os: linux
+and app.name: Microsoft-edge
 """
 
 ctx.matches = r"""
