@@ -220,6 +220,7 @@ alternate_keys = {
     "shave": "backspace",
     "drill": "delete",
     #'junk': 'backspace',
+    "forward delete": "delete",
     "page up": "pageup",
     "page down": "pagedown",
 }

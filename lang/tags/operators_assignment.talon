@@ -15,6 +15,6 @@ make mod equals: user.code_operator_modulo_assignment()
 [make] increment: user.code_operator_increment()
 
 #bitwise operators
-(make | logical | bitwise) (ex | exclusive) or equals: user.code_operator_bitwise_exclusive_or_equals()
-[(make | logical | bitwise)] (left shift | shift left) equals: user.code_operator_bitwise_left_shift_equals()
-[(make | logical | bitwise)] (left right | shift right) equals: user.code_operator_bitwise_right_shift_equals()
+(make | logical | bitwise) (ex | exclusive) or equals: user.code_operator_bitwise_exclusive_or_assignment()
+[(make | logical | bitwise)] (left shift | shift left) equals: user.code_operator_bitwise_left_shift_assignment()
+[(make | logical | bitwise)] (right shift | shift right) equals: user.code_operator_bitwise_right_shift_assignment()
