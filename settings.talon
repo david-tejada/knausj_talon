@@ -54,5 +54,6 @@ settings():
     # user.context_sensitive_dictation = 1
 
 tag(): user.i3wm
+tag(): user.cursorless_experimental_snippets
 # Uncomment this to enable the curse yes/curse no commands (show hide mouse cursor). See issue #688.
 # tag(): user.mouse_cursor_commands_enable

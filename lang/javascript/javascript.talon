@@ -62,6 +62,10 @@ console log:
     "console.log()"
     key("left")
 
+console debug:
+    "console.debug()"
+    key("left")
+
 console error:
     "console.error()"
     key("left")
@@ -74,6 +78,8 @@ new <user.text>:
     user.insert_formatted(text,"PUBLIC_CAMEL_CASE")
     "()"
     key("left")
+
+throw new error: user.insert_between("throw new Error(\"", "\")")
 
 require <user.text>:
     "const "
@@ -126,3 +132,10 @@ for <user.text> of <user.text>:
     
 from import:
     user.insert_between(' from  "', '"')
+
+type of <user.text> is <user.text>:
+    "typeof "
+    user.insert_formatted(text_1,"PRIVATE_CAMEL_CASE")
+    " === \""
+    insert(text_2)
+    "\""

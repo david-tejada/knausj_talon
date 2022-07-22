@@ -77,3 +77,7 @@ eslint,e s lint
 stringify
 init
 key
+null
+abort
+hintable
+hintables

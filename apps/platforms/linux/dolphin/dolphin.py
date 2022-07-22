@@ -2,15 +2,15 @@ from talon import ui, clip, Context, Module, actions
 
 # App definition
 mod = Module()
-mod.apps.thunar = """
+mod.apps.dolphin = """
 os: linux
-and app.exe: Thunar
+and app.name: dolphin
 """
 
 # Context matching
 ctx = Context()
 ctx.matches = r"""
-app: thunar
+app: dolphin
 """
 
 

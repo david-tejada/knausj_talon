@@ -57,10 +57,7 @@ theme switch: user.vscode("workbench.action.selectTheme")
 wrap switch: user.vscode("editor.action.toggleWordWrap")
 zen switch: user.vscode("workbench.action.toggleZenMode")
 
-cross: user.vscode("workbench.action.focusNextGroup")
-crossing: 
-    user.vscode("workbench.action.focusNextGroup")
-    user.vscode("workbench.action.maximizeEditor")
+wade: user.vscode("workbench.action.focusNextGroup")
 
 # File Commands
 list dock [<user.text>] [{user.file_extension}] [halt]:

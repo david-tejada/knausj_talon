@@ -99,7 +99,12 @@ window <user.text>: user.system_command('i3-msg [title="(?i){text}"] focus')
 # these rely on the user settings for the mod key. see i3wm.py Actions class
 
 launch: user.i3wm_launch()
-launch {user.applications}: user.system_command_nb("{applications}")
+launch {user.applications}:
+    user.i3wm_launch()
+    sleep(100ms)
+    insert(applications)
+    sleep(100ms)
+    key(enter)
 lock screen: user.i3wm_lock()
 ^computer reboot$: user.system_command("reboot")
 (launch shell|Shelley): user.i3wm_shell()

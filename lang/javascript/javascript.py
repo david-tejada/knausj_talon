@@ -24,6 +24,7 @@ ctx.lists["user.code_common_function"] = {
 mod.list("code_common_member_function", "Function to use in a dotted chain, eg .foo()")
 
 ctx.lists["user.code_common_member_function"] = {
+    "add event listener": "addEventListener",
     "catch": "catch",
     "concat": "concat",
     "filter": "filter",
@@ -31,11 +32,14 @@ ctx.lists["user.code_common_member_function"] = {
     "find": "find",
     "flat map": "flatMap",
     "for each": "forEach",
+    "get computed style": "getComputedStyle",
     "join": "join",
     "includes": "includes",
     "map": "map",
     "pop": "pop",
     "push": "push",
+    "query selector": "querySelector",
+    "query selector all": "querySelectorAll",
     "reduce": "reduce",
     "slice": "slice",
     "some": "some",

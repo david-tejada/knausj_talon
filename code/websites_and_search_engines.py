@@ -1,9 +1,15 @@
 import webbrowser
 from urllib.parse import quote_plus
 
-from talon import Context, Module
+from talon import Context, Module, actions
 
 from .user_settings import get_list_from_csv
+
+import os
+
+cwd = os.path.dirname(os.path.realpath(__file__))
+user_path = os.path.dirname(cwd)
+websites_file = os.path.join(user_path, "settings", "websites.csv")
 
 mod = Module()
 mod.list("website", desc="A website.")

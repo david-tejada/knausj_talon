@@ -110,7 +110,7 @@ def letters(m) -> str:
 ctx = Context()
 modifier_keys = {
     # If you find 'alt' is often misrecognized, try using 'alter'.
-    "alt": "alt",
+    "alter": "alt",
     "control": "ctrl",  #'troll':   'ctrl',
     "troll": "ctrl",
     "shift": "shift",  #'sky':     'shift',
@@ -206,7 +206,7 @@ ctx.lists["self.arrow_key"] = {
 
 simple_keys = {
     "ending": "end",
-    "shock": "enter",
+    "enter": "enter",
     "escape": "escape",
     "home": "home",
     "insert": "insert",
