@@ -1,4 +1,4 @@
-app: apple_terminal
+app: hyper
 -
 # makes the commands in generic_terminal available
 tag(): terminal

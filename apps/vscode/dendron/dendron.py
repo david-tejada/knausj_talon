@@ -6,7 +6,7 @@ mod = Module()
 
 ctx.matches = r"""
 app: vscode
-win.title: /dendron \(Workspace\)/
+win.title: /Dendron/
 """
 
 # def generate_frontmatter(title: str) -> str:
@@ -18,7 +18,9 @@ class Actions:
         """Function for creating dendron notes with the text from the existing note"""
         dash_separated = "-".join(text.split())
         now = datetime.now()
-        note_name = "daily.journal.{}.{:02d}.{:02d}.{}".format(now.year, now.month, now.day, dash_separated)
+        note_name = "daily.journal.{}.{:02d}.{:02d}.{}".format(
+            now.year, now.month, now.day, dash_separated
+        )
         actions.edit.select_all()
         actions.edit.copy()
         actions.edit.delete()

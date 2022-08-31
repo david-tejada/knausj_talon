@@ -71,5 +71,5 @@ show cache: browser.show_clear_cache()
 # Open website in the current browser
 pop page {user.website}:
     app.tab_open()
-    user.paste(website)
+    insert(website)
     key(enter)

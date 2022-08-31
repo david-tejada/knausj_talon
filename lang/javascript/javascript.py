@@ -29,7 +29,7 @@ ctx.lists["user.code_common_member_function"] = {
     "concat": "concat",
     "filter": "filter",
     "finally": "finally",
-    "find": "find",
+    # "find": "find",
     "flat map": "flatMap",
     "for each": "forEach",
     "get computed style": "getComputedStyle",

@@ -1,5 +1,5 @@
 app: vscode
-win.title: /dendron \(Workspace\)/
+win.title: /Dendron/
 -
 preview: user.vscode("dendron.showPreview")
 paste link: user.vscode("dendron.pasteLink")

@@ -23,7 +23,7 @@ stalonetray
 cursorless
 dendron
 nodejs,node js
-vscode,veecode
+vscode,vescode
 npm,NPM
 python3,python three
 markdown
@@ -81,3 +81,8 @@ null
 abort
 hintable
 hintables
+node
+nodes
+debounce
+parrot
+puppeteer

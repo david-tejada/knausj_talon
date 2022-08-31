@@ -49,6 +49,15 @@ mac_ctx.matches = r"""
 os: mac
 app: vscode
 """
+mod.list("vscode_workspaces", desc="list of my most used vscode workspaces")
+
+ctx.lists["user.vscode_workspaces"] = {
+    "rango": "rango",
+    "rango talon": "rango-talon",
+    "nous": "knausj_talon",
+    "cursorless settings": "cursorless-settings",
+    "dendron": "dendron",
+}
 
 
 @ctx.action_class("app")
@@ -170,18 +179,19 @@ class UserActions:
     def split_focus_right():
         """Focus split right"""
         actions.user.vscode("workbench.action.focusRightGroup")
-        
+
     def split_focus_left():
         """Focus split left"""
         actions.user.vscode("workbench.action.focusLeftGroup")
-        
+
     def split_focus_down():
         """Focus split down"""
         actions.user.vscode("workbench.action.focusBelowGroup")
-        
+
     def split_focus_up():
         """Focus split up"""
         actions.user.vscode("workbench.action.focusAboveGroup")
+
     def split_maximize():
         actions.user.vscode("workbench.action.maximizeEditor")
 
@@ -382,13 +392,16 @@ class UserActions:
         actions.sleep("100ms")
         actions.key("esc")
 
+
 @mod.action_class
 class Actions:
     def convert_to_dendron_note(text: str):
         """Function for creating dendron notes with the text from the existing note"""
         dash_separated = "-".join(text.split())
         now = datetime.now()
-        note_name = "daily.journal.{}.{:02d}.{:02d}.{}".format(now.year, now.month, now.day, dash_separated)
+        note_name = "daily.journal.{}.{:02d}.{:02d}.{}".format(
+            now.year, now.month, now.day, dash_separated
+        )
         actions.edit.select_all()
         actions.edit.copy()
         actions.edit.delete()
@@ -404,4 +417,3 @@ class Actions:
         actions.user.vscode("dendron.renameNote")
         actions.sleep("300ms")
         actions.user.paste(note_name)
-

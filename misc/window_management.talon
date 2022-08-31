@@ -17,3 +17,9 @@ snap <user.running_applications> <user.window_snap_position>:
     user.snap_app(running_applications, window_snap_position)
 snap <user.running_applications> [screen] <number>:
     user.move_app_to_screen(running_applications, number)
+
+flip: key(cmd-tab)
+^coder: user.switcher_launch("/Applications/Visual Studio Code.app")
+^foxy: user.switcher_launch("/Applications/Firefox.app")
+^hyper: user.switcher_launch("/Applications/Hyper.app")
+

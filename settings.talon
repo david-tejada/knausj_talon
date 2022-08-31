@@ -4,7 +4,7 @@ settings():
     
     speech.timeout = 0.500
     # Adjust the scale of the imgui to my liking
-    imgui.scale = 1.5
+    imgui.scale = 1.1
 
     # Enable if you'd like the picker gui to automatically appear when explorer has focus
     user.file_manager_auto_show_pickers = 0
@@ -13,7 +13,7 @@ settings():
     user.help_max_command_lines_per_page = 75
 
     # Set the max number of contexts display per page in help
-    user.help_max_contexts_per_page = 75
+    user.help_max_contexts_per_page = 55
 
     # The default amount used when scrolling continuously
     user.mouse_continuous_scroll_amount = 80
@@ -53,7 +53,7 @@ settings():
     # per-application basis.
     # user.context_sensitive_dictation = 1
 
-tag(): user.i3wm
+# tag(): user.i3wm
 tag(): user.cursorless_experimental_snippets
 # Uncomment this to enable the curse yes/curse no commands (show hide mouse cursor). See issue #688.
 # tag(): user.mouse_cursor_commands_enable
