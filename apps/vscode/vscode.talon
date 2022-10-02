@@ -277,9 +277,10 @@ skip word: user.vscode("editor.action.moveSelectionToNextFindMatch")
 toggle wrap: user.vscode("editor.action.toggleWordWrap")
 
 # jupyter
-cell next: user.vscode("jupyter.gotoNextCellInFile")
-cell last: user.vscode("jupyter.gotoPrevCellInFile")
-cell run above: user.vscode("jupyter.runallcellsabove.palette")
+cell next: user.vscode("notebook.focusNextEditor")
+cell last: user.vscode("notebook.focusPreviousEditor")
+cell run above: user.vscode("notebook.cell.executeCellsAbove")
+cell run: user.vscode("notebook.cell.execute")
 
 cell run: user.vscode("jupyter.runcurrentcell")
 install local: user.vscode("workbench.extensions.action.installVSIX")
