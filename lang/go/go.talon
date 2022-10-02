@@ -50,8 +50,8 @@ make (chan | channel): " chan "
 make go: "go "
 make if: "if "
 if <user.text> [over]:
-  insert("if ")
-  insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+    insert("if ")
+    insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
 spawn <user.text> [over]:
   insert("go ")
   insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
@@ -133,8 +133,7 @@ make slice: " []"
 slice of: "[]"
 [state] (no | nil): "nil"
 state (int | integer | ant) sixty four: " int64 "
-state tag:
-  user.insert_between(" `", "`")
+state tag: user.insert_between(" `", "`")
 field tag <user.text> [over]:
     user.insert_between(" `", "`")
     sleep(100ms)
@@ -175,8 +174,8 @@ loop over [<user.text>] [over]:
     insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
 
 item <user.text> [over]:
-  insert(", ")
-  insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+    insert(", ")
+    insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
 
 value <user.text> [over]:
     insert(": ")

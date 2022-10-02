@@ -21,7 +21,7 @@ win tabbed: user.system_command("i3-msg layout tabbed")
 reload i three config: user.system_command("i3-msg reload")
 restart i three: user.system_command("i3-msg restart")
 
-(full screen|scuba): user.system_command("i3-msg fullscreen")
+(full screen | scuba): user.system_command("i3-msg fullscreen")
 toggle floating: user.system_command("i3-msg floating toggle")
 focus floating: user.system_command("i3-msg focus mode_toggle")
 center window: user.system_command("i3-msg move position center")
@@ -36,11 +36,11 @@ win short: user.system_command("i3-msg resize shrink height 100 px or 10 ppt")
 win fat: user.system_command("i3-msg resize grow width 100 px or 10 ppt")
 win slim: user.system_command("i3-msg resize shrink width 100 px or 10 ppt")
 
-horizontal (shell|terminal):
+horizontal (shell | terminal):
     user.system_command("i3-msg split h")
     user.system_command("i3-msg exec i3-sensible-terminal")
 
-vertical (shell|terminal):
+vertical (shell | terminal):
     user.system_command("i3-msg split v")
     user.system_command("i3-msg exec i3-sensible-terminal")
 

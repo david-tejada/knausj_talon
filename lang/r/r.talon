@@ -30,7 +30,7 @@ library <user.code_libraries>:
     key(end enter)
 
 # R specific commands
-(chain|pipe that):
+(chain | pipe that):
     key(end)
     " %>%"
     key(enter)
@@ -40,4 +40,5 @@ make na:
 # TODO: migrate to function tag
 ^function define <user.text>$: user.code_private_function(text)
 
-named arg {user.code_parameter_name}: user.code_insert_named_argument(code_parameter_name)
+named arg {user.code_parameter_name}:
+    user.code_insert_named_argument(code_parameter_name)
