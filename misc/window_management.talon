@@ -1,6 +1,6 @@
 window (new|open): app.window_open()
-window next: app.window_next()
-window last: app.window_previous()
+glide: app.window_next()
+slide: app.window_previous()
 window close: app.window_close()
 focus <user.running_applications>: user.switcher_focus(running_applications)
 # following only works on windows. Can't figure out how to make it work for mac. No idea what the equivalent for linux would be.
@@ -18,8 +18,8 @@ snap <user.running_applications> <user.window_snap_position>:
 snap <user.running_applications> [screen] <number>:
     user.move_app_to_screen(running_applications, number)
 
-flip: key(cmd-tab)
+flip it: key(cmd-tab)
 ^coder: user.switcher_launch("/Applications/Visual Studio Code.app")
 ^foxy: user.switcher_launch("/Applications/Firefox.app")
-^hyper: user.switcher_launch("/Applications/Hyper.app")
+^warpy: user.switcher_launch("/Applications/Warp.app")
 

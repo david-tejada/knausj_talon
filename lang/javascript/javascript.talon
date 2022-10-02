@@ -73,6 +73,12 @@ console error:
 console trace:
     "console.trace()"
 
+console time:
+    "console.time()"
+
+console time end:
+    "console.timeEnd()"
+
 new <user.text>:
     "new "
     user.insert_formatted(text,"PUBLIC_CAMEL_CASE")
@@ -139,3 +145,9 @@ type of <user.text> is <user.text>:
     " === \""
     insert(text_2)
     "\""
+
+class <user.text>:
+    "class "
+    user.insert_formatted(text,"PUBLIC_CAMEL_CASE")
+    " {}"
+    key("left enter")

@@ -29,3 +29,8 @@ funky {user.css_functions}:
 variable <user.text>:
     insert("--")
     user.insert_formatted(text, "DASH_SEPARATED")
+
+blocker:
+    edit.line_end()
+    " "
+    user.code_block()

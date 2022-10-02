@@ -1,6 +1,6 @@
 from talon import Context, Module, actions, app
 
-default_alphabet = "ads bus cap drum each fine gust hope ink jane krunch look made near ox pit quick rip sun trap urch vest wasp plex yank zip".split(
+default_alphabet = "air bill cap drum each fine gust hope ink jane krunch look made near ox pit quick rip sun trap urch vest wasp plex yoke zip".split(
     " "
 )
 letters_string = "abcdefghijklmnopqrstuvwxyz"
@@ -117,7 +117,7 @@ modifier_keys = {
     "super": "super",
 }
 if app.platform == "mac":
-    modifier_keys["command"] = "cmd"
+    modifier_keys["many"] = "cmd"
     modifier_keys["option"] = "alt"
 ctx.lists["self.modifier_key"] = modifier_keys
 alphabet = dict(zip(default_alphabet, letters_string))
@@ -234,7 +234,7 @@ special_keys = simple_keys
 special_keys.update(alternate_keys)
 ctx.lists["self.special_key"] = special_keys
 ctx.lists["self.function_key"] = {
-    f"F {default_f_digits[i]}": f"f{i + 1}" for i in range(12)
+    f"flip {default_f_digits[i]}": f"f{i + 1}" for i in range(12)
 }
 
 

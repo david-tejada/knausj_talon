@@ -33,6 +33,7 @@ ctx.lists["user.code_common_member_function"] = {
     "flat map": "flatMap",
     "for each": "forEach",
     "get computed style": "getComputedStyle",
+    "get bounding client rect": "getBoundingClientRect",
     "join": "join",
     "includes": "includes",
     "map": "map",

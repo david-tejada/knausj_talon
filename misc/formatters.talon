@@ -1,9 +1,10 @@
 #provide both anchored and unachored commands via 'then'
-phrase <user.text>$: user.insert_with_history(text)
+phrase <user.text>: user.insert_with_history(text)
 phrase <user.text> then: user.insert_with_history(text)
-{user.prose_formatter} <user.prose>$: user.insert_formatted(prose, prose_formatter)
+lit <user.prose>$: user.insert_formatted(prose, "NOOP")
+{user.prose_formatter} <user.prose>: user.insert_formatted(prose, prose_formatter)
 {user.prose_formatter} <user.prose> then: user.insert_formatted(prose, prose_formatter)
-<user.format_text>+$: user.insert_many(format_text_list)
+<user.format_text>+: user.insert_many(format_text_list)
 <user.format_text>+ then: user.insert_many(format_text_list)
 <user.formatters> that: user.formatters_reformat_selection(user.formatters)
 padder <user.word>: insert(" {user.word} ")
