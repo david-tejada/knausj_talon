@@ -32,7 +32,11 @@ class user_actions:
             raise RuntimeError(f"number should be in range 1-9")
         actions.key(f"{ckey()}-{number}")
 
-
+    def tab_final():
+        if app.platform == "mac":
+            actions.key("cmd-9")
+        else:
+            actions.key("ctrl-9")
 
 
 @ctx.action_class("app")
@@ -42,4 +46,3 @@ class user_actions:
 
     def tab_previous():
         actions.key(f"{ckey()}-shift-" "{")
-

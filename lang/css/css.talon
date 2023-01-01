@@ -18,6 +18,9 @@ tag(): user.code_generic
 value <user.css_value>+:
     user.insert_many_sep(user.css_value_list)
 
+number <user.css_number_unit>:
+    insert(css_number_unit)
+
 pseudo {user.css_pseudo}:
     insert(user.css_pseudo)
 

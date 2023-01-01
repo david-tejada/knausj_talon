@@ -41,3 +41,24 @@ copy command:
 
 copy output:
     key(cmd-alt-shift-c)
+
+split make right:
+    key(cmd-d)
+
+split make down:
+    key(cmd-shift-d)
+
+split right:
+    key(cmd-alt-right)
+
+split left:
+    key(cmd-alt-left)
+
+split up:
+    key(cmd-alt-up)
+
+split down:
+    key(cmd-alt-down)
+
+split max:
+    key(cmd-shift-enter)

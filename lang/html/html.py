@@ -4,7 +4,9 @@ mod = Module()
 
 ctx = Context()
 ctx.matches = r"""
-tag: user.html
+not app: firefox
+and tag: user.html
+app: firefox
 """
 
 tag_names_list = {

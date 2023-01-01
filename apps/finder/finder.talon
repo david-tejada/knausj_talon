@@ -26,3 +26,15 @@ trash it: key(cmd-backspace)
 
 hide [finder]: key(cmd-h)
 hide others: app.window_hide_others()
+
+copy name:
+  key(enter)
+  edit.copy()
+  key(escape)
+
+paste sub:
+  key(enter)
+  edit.paste()
+  insert(".es")
+  key(enter)
+  

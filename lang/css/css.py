@@ -5,7 +5,10 @@ mod = Module()
 ctx = Context()
 
 ctx.matches = r"""
-tag: user.css
+os: mac
+and tag: user.css
+os: mac
+and app: firefox
 """
 
 
@@ -19,9 +22,19 @@ class Actions:
         actions.key("backspace")
 
 
-@mod.capture(rule="<number> [point <number>] [{user.css_units}]")
+@mod.capture(rule="[minus] <number> [point <number>] [{user.css_units}]")
 def css_number_unit(m) -> str:
-    return ".".join(str(x) for x in m.number_list) + m.css_units
+    if "minus" in m:
+        result = "-"
+    else:
+        result = ""
+    result = result + ".".join(str(x) for x in m.number_list)
+    try:
+        result = result + m.css_units
+    except AttributeError:
+        pass
+    
+    return result
 
 
 @mod.capture(rule="<user.number_string> | <self.css_number_unit> | {user.css_values}")
@@ -208,6 +221,7 @@ ctx.lists["user.css_properties"] = {
     "image resolution": "image-resolution",
     "ime mode": "ime-mode",
     "inline size": "inline-size",
+    "inset": "inset",
     "isolation": "isolation",
     "justify content": "justify-content",
     "left": "left",
@@ -688,67 +702,67 @@ ctx.lists["user.css_pseudo"] = {
     "volleyed": ":valid",
 }
 
-ctx.lists["user.css_functions"] = {
-    "annotation": "annotation",
-    "attr": "attr",
-    "blur": "blur",
-    "brightness": "brightness",
-    "calc": "calc",
-    "character variant": "character-variant",
-    "circle": "circle",
-    "contrast": "contrast",
-    "cubic bezier": "cubic-bezier",
-    "drop shadow": "drop-shadow",
-    "element": "element",
-    "ellipse": "ellipse",
-    "grayscale": "grayscale",
-    "hsl": "hsl",
-    "hsla": "hsla",
-    "hue rotate": "hue-rotate",
-    "image": "image",
-    "inset": "inset",
-    "invert": "invert",
-    "lang": "lang",
-    "linear gradient": "linear-gradient",
-    "matrix": "matrix",
-    "matrix3d": "matrix3d",
-    "minmax": "minmax",
-    "opacity": "opacity",
-    "ornaments": "ornaments",
-    "perspective": "perspective",
-    "polygon": "polygon",
-    "radial-gradient": "radial-gradient",
-    "rect": "rect",
-    "repeat": "repeat",
-    "repeating linear gradient": "repeating-linear-gradient",
-    "repeating radial gradient": "repeating-radial-gradient",
-    "rgb": "rgb",
-    "rgba": "rgba",
-    "rotate": "rotate",
-    "rotatex": "rotatex",
-    "rotatey": "rotatey",
-    "rotatez": "rotatez",
-    "rotate3d": "rotate3d",
-    "saturate": "saturate",
-    "scale": "scale",
-    "scalex": "scalex",
-    "scaley": "scaley",
-    "scalez": "scalez",
-    "scale3d": "scale3d",
-    "sepia": "sepia",
-    "skew": "skew",
-    "skewx": "skewx",
-    "skewy": "skewy",
-    "steps": "steps",
-    "styleset": "styleset",
-    "stylistic": "stylistic",
-    "swash": "swash",
-    "symbols": "symbols",
-    "translate": "translate",
-    "translatex": "translatex",
-    "translatey": "translatey",
-    "translatez": "translatez",
-    "translate3d": "translate3d",
-    "url": "url",
-    "var": "var",
-}
+# ctx.lists["user.css_functions"] = {
+#     "annotation": "annotation",
+#     "attr": "attr",
+#     "blur": "blur",
+#     "brightness": "brightness",
+#     "calc": "calc",
+#     "character variant": "character-variant",
+#     "circle": "circle",
+#     "contrast": "contrast",
+#     "cubic bezier": "cubic-bezier",
+#     "drop shadow": "drop-shadow",
+#     "element": "element",
+#     "ellipse": "ellipse",
+#     "grayscale": "grayscale",
+#     "hsl": "hsl",
+#     "hsla": "hsla",
+#     "hue rotate": "hue-rotate",
+#     "image": "image",
+#     "inset": "inset",
+#     "invert": "invert",
+#     "lang": "lang",
+#     "linear gradient": "linear-gradient",
+#     "matrix": "matrix",
+#     "matrix3d": "matrix3d",
+#     "minmax": "minmax",
+#     "opacity": "opacity",
+#     "ornaments": "ornaments",
+#     "perspective": "perspective",
+#     "polygon": "polygon",
+#     "radial-gradient": "radial-gradient",
+#     "rect": "rect",
+#     "repeat": "repeat",
+#     "repeating linear gradient": "repeating-linear-gradient",
+#     "repeating radial gradient": "repeating-radial-gradient",
+#     "rgb": "rgb",
+#     "rgba": "rgba",
+#     "rotate": "rotate",
+#     "rotatex": "rotatex",
+#     "rotatey": "rotatey",
+#     "rotatez": "rotatez",
+#     "rotate3d": "rotate3d",
+#     "saturate": "saturate",
+#     "scale": "scale",
+#     "scalex": "scalex",
+#     "scaley": "scaley",
+#     "scalez": "scalez",
+#     "scale3d": "scale3d",
+#     "sepia": "sepia",
+#     "skew": "skew",
+#     "skewx": "skewx",
+#     "skewy": "skewy",
+#     "steps": "steps",
+#     "styleset": "styleset",
+#     "stylistic": "stylistic",
+#     "swash": "swash",
+#     "symbols": "symbols",
+#     "translate": "translate",
+#     "translatex": "translatex",
+#     "translatey": "translatey",
+#     "translatez": "translatez",
+#     "translate3d": "translate3d",
+#     "url": "url",
+#     "var": "var",
+# }

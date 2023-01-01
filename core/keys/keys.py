@@ -1,6 +1,6 @@
 from talon import Context, Module, actions, app
 
-default_alphabet = "air bill cap drum each fine gust hope ink jane krunch look made near ox pit quick rip sun trap urch vest wasp plex yoke zip".split(
+default_alphabet = "any bill cap drum each fine gust harp ink jane krunch look made near ox pit quick rip sun trap urch vest wasp plex yoke zip".split(
     " "
 )
 letters_string = "abcdefghijklmnopqrstuvwxyz"
@@ -189,7 +189,7 @@ symbol_key_words = {
     "pipe": "|",
     "double": '"',
     # Currencies
-    "dollar": "$",
+    "dolly": "$",
     "pound sign": "£",
     "euro sign": "€",
 }
@@ -236,7 +236,7 @@ special_keys = simple_keys
 special_keys.update(alternate_keys)
 ctx.lists["self.special_key"] = special_keys
 ctx.lists["self.function_key"] = {
-    f"flip {default_f_digits[i]}": f"f{i + 1}" for i in range(12)
+    f"F {default_f_digits[i]}": f"f{i + 1}" for i in range(12)
 }
 
 

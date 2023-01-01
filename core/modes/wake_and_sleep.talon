@@ -15,5 +15,3 @@ mode: all
     user.engine_sleep()
 (drawse | trawse) [<phrase>]$: speech.disable()
 ^jolt: speech.enable()
-# parrot(cluck): speech.enable()
-

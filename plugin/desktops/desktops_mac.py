@@ -14,13 +14,13 @@ def _drag_window_mac(win=None):
     if win is None:
         win = ui.active_window()
     fs = win.children.find(AXSubrole="AXFullScreenButton")[0]
-    rect = fs.AXFrame["$rect2d"]
-    x = rect["x"] + rect["width"] + 5
-    y = rect["y"] + rect["height"] / 2
+    rect = fs.AXFrame
+    x = rect.x + rect.width + 10
+    y = rect.y + rect.height / 2
     ctrl.mouse_move(x, y)
     ctrl.mouse_click(button=0, down=True)
     yield
-    time.sleep(0.1)
+    time.sleep(0.5)
     ctrl.mouse_click(button=0, up=True)
 
 

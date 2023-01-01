@@ -39,7 +39,11 @@ make let: "let "
 let <user.text>:
     "let "
     user.insert_formatted(text,"PRIVATE_CAMEL_CASE")
-    
+
+dolly var:
+    "${}"
+    key(left)
+
 make export: "export "
 
 make async: "async "

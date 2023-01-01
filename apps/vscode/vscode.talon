@@ -110,6 +110,7 @@ file clone:
 file remove:
     user.vscode("fileutils.removeFile")
     sleep(150ms)
+file revert: user.vscode("workbench.action.files.revert")
 file open folder: user.vscode("revealFileInOS")
 file reveal: user.vscode("workbench.files.action.showActiveFileInExplorer")
 save ugly: user.vscode("workbench.action.files.saveWithoutFormatting")
@@ -201,7 +202,8 @@ git push: user.vscode("git.push")
 git push focus: user.vscode("git.pushForce")
 git rebase abort: user.vscode("git.rebaseAbort")
 git reveal: user.vscode("git.revealInExplorer")
-git revert: user.vscode("git.revertChange")
+git clean: user.vscode("git.clean")
+git revert selected: user.vscode("git.revertSelectedRanges")
 git stash: user.vscode("git.stash")
 git stash pop: user.vscode("git.stashPop")
 git status: user.vscode("workbench.scm.focus")
@@ -296,8 +298,8 @@ lens review:
     user.vscode("gitlens.switchMode")
     "review\n"
 
-then: skip()
-
 # Splits
 split clear: user.vscode("workbench.action.closeEditorsInGroup")
 split clear all: user.vscode("workbench.action.closeAllEditors")
+
+go live: user.vscode("extension.liveServer.goOnline")
