@@ -43,8 +43,14 @@ make type deaf struct:
 
 # XXX - create a preprocessor tag for these, as they will match cpp, etc
 make define: "#define "
-make undefine: "#undef "
-make if define: "#ifdef "
+make (undefine | undeaf): "#undef "
+make if (define | deaf): "#ifdef "
+[make] define <user.text>$:
+    "#define {user.formatted_text(text, 'ALL_CAPS,SNAKE_CASE')}"
+[make] (undefine | undeaf) <user.text>$:
+    "#undef {user.formatted_text(text, 'ALL_CAPS,SNAKE_CASE')}"
+[make] if (define | deaf) <user.text>$:
+    "#ifdef {user.formatted_text(text, 'ALL_CAPS,SNAKE_CASE')}"
 
 # XXX - preprocessor instead of pre?
 make pre if: "#if "

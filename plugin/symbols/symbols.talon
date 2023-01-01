@@ -23,45 +23,18 @@ dub arrow: "=>"
 new liner: "\\n"
 carriage return: "\\r"
 line feed: "\\r\\n"
-empty dubstring:
-    '""'
-    key(left)
-empty escaped (dubstring|dub quotes):
-    '\\"\\"'
-    key(left)
-    key(left)
-empty string:
-    "''"
-    key(left)
-empty escaped string:
-    "\\'\\'"
-    key(left)
-    key(left)
-inside paren:
-	insert("()")
-	key(left)
-inside brack:
-	insert("[]")
-	key(left)
-inside brace:
-	insert("{}")
-	key(left)
-inside angle:
-    insert("<>")
-    key(left)
-inside percent:
-	insert("%%")
-	key(left)
-inside (quotes | string):
-	insert("''")
-	key(left)
-inside (double quotes | dubquotes):
-    insert('""')
-	key(left)
-inside (graves | back ticks):
-	insert("``")
-	key(left)
-angle it:
+empty dub string: user.insert_between('"', '"')
+empty escaped (dub string | dub quotes): user.insert_between('\\"', '\\"')
+empty string: user.insert_between("'", "'")
+empty escaped string: user.insert_between("\\'", "\\'")
+(inside parens | args): user.insert_between("(", ")")
+inside (squares | square brackets | list): user.insert_between("[", "]")
+inside (bracket | braces): user.insert_between("{", "}")
+inside percent: user.insert_between("%", "%")
+inside (quotes | string): user.insert_between("'", "'")
+inside (double quotes | dub quotes): user.insert_between('"', '"')
+inside (graves | back ticks): user.insert_between("`", "`")
+angle that:
     text = edit.selected_text()
     user.paste("<{text}>")
 brack it:
@@ -79,7 +52,7 @@ percent it:
 quote it:
     text = edit.selected_text()
     user.paste("'{text}'")
-double it:
+(double quote | dub quote) that:
     text = edit.selected_text()
     user.paste('"{text}"')
 (grave | back tick) it:
