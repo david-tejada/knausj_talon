@@ -1,4 +1,4 @@
-# NOTE: If you want to use i3wm you must enable the tag settings.talon. ex: `tag(): user.i3wm`
+# NOTE: If you want to use i3wm you must enable the tag settings.talon. i.e.: `tag(): user.i3wm`
 os: linux
 tag: user.i3wm
 -
@@ -117,3 +117,13 @@ keyboard english: user.system_command("setxkbmap us")
 snooze break:
     mouse_move(1912, 1111)
     mouse_click(0)
+    
+new scratch (shell | window):
+    user.i3wm_shell()
+    sleep(200ms)
+    user.system_command("i3-msg move scratchpad")
+    user.system_command("i3-msg scratchpad show")
+
+murder:
+    user.deprecate_command("2023-02-04", "murder", "win kill")
+    user.system_command("i3-msg kill")
