@@ -15,7 +15,7 @@ def _drag_window_mac(win=None):
         win = ui.active_window()
     fs = win.children.find(AXSubrole="AXFullScreenButton")[0]
     rect = fs.AXFrame
-    x = rect.x + rect.width + 5
+    x = rect.x + rect.width + 10
     y = rect.y + rect.height / 2
     previous_position = ctrl.mouse_pos()
     ctrl.mouse_move(x, y)

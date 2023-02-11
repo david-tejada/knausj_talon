@@ -26,6 +26,8 @@ ctx.matches = r"""
 app: firefox
 """
 
+ctx.tags = ["user.devtools"]
+
 @mod.action_class
 class Actions:
     def run_devtools_command(command: str) -> None:
@@ -36,11 +38,13 @@ class user_actions:
     def tab_close_wrapper():
         actions.sleep("300ms")
         actions.app.tab_close()
-    def run_devtools_command(command: str) -> None:
+    def devtools_focus_console():
         actions.key("cmd-alt-k")
-        actions.edit.delete_line()
-        actions.user.paste(command)
-        actions.key("enter")
+    def devtools_focus_debugger():
+        actions.key("cmd-alt-z")
+    def devtools_focus_inspector():
+        actions.key("cmd-alt-c")
+        
     
 
 @ctx.action_class('browser')

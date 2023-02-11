@@ -70,10 +70,14 @@ class AppActions:
         actions.user.vscode("workbench.action.closeActiveEditor")
 
     def tab_next():
-        actions.user.vscode("workbench.action.nextEditorInGroup")
+        # I use this to avoid the timeout error when using the remote button
+        actions.key("cmd-k cmd-alt-right")
+        # actions.user.vscode("workbench.action.nextEditorInGroup")
 
     def tab_previous():
-        actions.user.vscode("workbench.action.previousEditorInGroup")
+        # I use this to avoid the timeout error when using the remote button
+        actions.key("cmd-k cmd-alt-left")
+        # actions.user.vscode("workbench.action.previousEditorInGroup")
 
     def tab_reopen():
         actions.user.vscode("workbench.action.reopenClosedEditor")

@@ -38,3 +38,5 @@ paste sub:
   insert(".es")
   key(enter)
   
+hidden switch:
+  key(cmd-shift-.)

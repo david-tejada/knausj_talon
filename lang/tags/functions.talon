@@ -19,7 +19,9 @@ tag: user.code_functions
     user.code_modified_function(code_function_modifier_list or 0, text)
 
 # for annotating function parameters
-is type <user.code_type>: user.code_insert_type_annotation(code_type)
+# is type <user.code_type>: user.code_insert_type_annotation(code_type)
+is type <user.code_type> (or <user.code_type>)*: user.code_insert_type_annotation_multiple(code_type_list)
+something <user.letter> <user.letter>*: user.insert_many_sep(user.letter_list)
 returns [type] <user.code_type>: user.code_insert_return_type(code_type)
 
 # for generic reference of types

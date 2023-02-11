@@ -6,7 +6,7 @@ ctx.matches = r"""
 os: mac
 app: chrome
 """
-ctx.tags = ["browser", "user.tabs"]
+ctx.tags = ["browser", "user.tabs", "user.devtools"]
 
 
 def chrome_app():
@@ -91,3 +91,14 @@ class BrowserActions:
 
     def toggle_dev_tools():
         actions.key("cmd-alt-i")
+
+@ctx.action_class("user")
+class user_actions:
+    def devtools_focus_console():
+        actions.key("ctrl-`")
+
+    def devtools_focus_debugger():
+        actions.key("cmd-alt-z")
+    
+    def devtools_focus_inspector():
+        actions.key("cmd-alt-c")

@@ -292,6 +292,7 @@ ctx.lists["user.css_properties"] = {
     "page break inside": "page-break-inside",
     "perspective origin": "perspective-origin",
     "perspective": "perspective",
+    "place content": "place-content",
     "pointer events": "pointer-events",
     "position": "position",
     "pouting": "padding",
@@ -377,6 +378,10 @@ ctx.lists["user.css_units"] = {
     "character": "ch",
     "degree": "deg",
     "fraction": "fr",
+    "view height": "vh",
+    "V H": "vh",
+    "view width": "vw",
+    "V W": "vw",
 }
 
 ctx.lists["user.css_values"] = {
@@ -502,6 +507,7 @@ ctx.lists["user.css_values"] = {
     "lower latin": "lower-latin",
     "lower roman": "lower-roman",
     "lowercase": "lowercase",
+    "left": "left",
     "left to right": "ltr",
     "luminosity": "luminosity",
     "manual": "manual",

@@ -14,4 +14,5 @@ mode: all
     speech.disable()
     user.engine_sleep()
 (drawse | trawse) [<phrase>]$: speech.disable()
+key(f20): speech.disable()
 ^jolt: speech.enable()

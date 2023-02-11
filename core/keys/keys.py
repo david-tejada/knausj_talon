@@ -134,7 +134,7 @@ modifier_keys = {
     "super": "super",
 }
 if app.platform == "mac":
-    modifier_keys["many"] = "cmd"
+    modifier_keys["money"] = "cmd"
     modifier_keys["option"] = "alt"
 ctx.lists["self.modifier_key"] = modifier_keys
 ctx.lists["self.letter"] = alphabet_list

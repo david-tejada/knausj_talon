@@ -9,6 +9,13 @@ tag(): user.code_generic
     insert(';')
     key(left)
 
+{user.css_properties} is <user.css_value> [(and <user.css_value>)*]:
+    insert(user.css_properties)
+    insert(': ')
+    user.insert_many_sep(user.css_value_list)
+    insert(';')
+    key(left)
+
 {user.css_properties} is:
     insert(user.css_properties)
     insert(': ')
@@ -29,8 +36,13 @@ funky {user.css_functions}:
     insert("()")
     key(left)
 
-variable <user.text>:
+make var <user.text>:
     insert("--")
+    user.insert_formatted(text, "DASH_SEPARATED")
+    insert(": ")
+
+var <user.text>:
+    user.insert_between("var(--", ")")
     user.insert_formatted(text, "DASH_SEPARATED")
 
 blocker:

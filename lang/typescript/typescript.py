@@ -1,9 +1,16 @@
-from talon import Context, actions, settings
+from talon import Context, Module, actions, settings
+from typing import List
 
+mod = Module()
 ctx = Context()
 ctx.matches = r"""
 tag: user.typescript
 """
+
+@mod.action_class
+class Actions:
+    def code_insert_type_annotation_multiple(types: List[str]):
+        """Insert multiple types"""
 
 ctx.lists["user.code_type"] = {
     "boolean": "boolean",
@@ -13,6 +20,7 @@ ctx.lists["user.code_type"] = {
     "undefined": "undefined",
     "number": "number",
     "any": "any",
+    "unknown": "unknown",
     "Anchor": "HTMLAnchorElement",
     "Base": "HTMLBaseElement",
     "Body": "HTMLBodyElement",
@@ -23,6 +31,7 @@ ctx.lists["user.code_type"] = {
     "Dialog": "HTMLDialogElement",
     "Directory": "HTMLDirectoryElement",
     "Div": "HTMLDivElement",
+    "dom rect": "DOMRect",
     "Embed": "HTMLEmbedElement",
     "Element": "Element",
     "FieldSet": "HTMLFieldSetElement",
@@ -113,6 +122,10 @@ class UserActions:
 
     def code_insert_type_annotation(type: str):
         actions.insert(f": {type}")
+
+    def code_insert_type_annotation_multiple(types: List[str]):
+        actions.insert(": ")
+        actions.insert(" | ".join(types))
 
     def code_insert_return_type(type: str):
         actions.insert(f": {type}")

@@ -2,8 +2,10 @@ tag: user.tabs
 -
 tabby: app.tab_open()
 tab left: app.tab_previous()
+key(f18): app.tab_previous()
 tab up: app.tab_previous()
 tab right: app.tab_next()
+key(f16): app.tab_next()
 tab down: app.tab_next()
 tab close: user.tab_close_wrapper()
 tab (reopen|restore): app.tab_reopen()

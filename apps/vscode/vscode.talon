@@ -7,6 +7,7 @@ tag(): user.multiple_cursors
 tag(): user.snippets
 tag(): user.splits
 tag(): user.tabs
+tag(): user.emoji
 
 window reload: user.vscode("workbench.action.reloadWindow")
 window close: user.vscode("workbench.action.closeWindow")
@@ -323,3 +324,7 @@ split clear: user.vscode("workbench.action.closeEditorsInGroup")
 split clear all: user.vscode("workbench.action.closeAllEditors")
 
 go live: user.vscode("extension.liveServer.goOnline")
+
+# Markdown Preview
+side preview: user.vscode("markdown.showPreviewToSide")
+preview refresh: user.vscode("markdown.preview.refresh")

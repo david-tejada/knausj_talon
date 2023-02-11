@@ -73,3 +73,10 @@ pop page {user.website}:
     app.tab_open()
     insert(website)
     key(enter)
+
+video play:
+    key(f k)
+    speech.disable()
+
+video stop:
+    key(k f)
