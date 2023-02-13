@@ -34,14 +34,18 @@ def on_phrase(j):
 def gui(gui: imgui.GUI):
     global history
     # gui.text("Command History")
-    # gui.line()
+    gui.line()
     text = (
         history[:] if hist_more else history[-setting_command_history_display.get() :]
     )
-    for line in text:
-        gui.text(line)
+    
+    if hist_more:
+        for line in text:
+            gui.text(line)
+    else:
+        gui.text("  ·  ".join(text))
 
-    gui.spacer()
+    # gui.spacer()
     # if gui.button("Command history close"):
     #     actions.user.history_disable()
 
