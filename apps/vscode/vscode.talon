@@ -68,13 +68,13 @@ zen switch: user.vscode("workbench.action.toggleZenMode")
 wade: user.vscode("workbench.action.focusNextGroup")
 
 # File Commands
-list dock [<user.text>] [{user.file_extension}] [halt]:
+lisa [<user.text>] [{user.file_extension}] [halt]:
     user.vscode("workbench.action.quickOpen")
     sleep(400ms)
     insert(text or "")
     insert(file_extension or "")
     sleep(300ms)
-pop dock <user.text> [{user.file_extension}] [halt]:
+poppy <user.text> [{user.file_extension}] [halt]:
     user.vscode("workbench.action.quickOpen")
     sleep(400ms)
     insert(text or "")
@@ -97,7 +97,7 @@ pop work:
     user.vscode("workbench.action.openRecent")
     sleep(400ms)
     key(enter)
-pop dock: user.vscode("workbench.action.openPreviousRecentlyUsedEditorInGroup")
+poppy: user.vscode("workbench.action.openPreviousRecentlyUsedEditorInGroup")
 file copy path: user.vscode("copyFilePath")
 file copy local [path]: user.vscode("copyRelativeFilePath")
 file create sibling: user.vscode_and_wait("explorer.newFile")
@@ -220,6 +220,7 @@ git stage selected: user.vscode("git.stageSelectedRanges")
 git sync: user.vscode("git.sync")
 git unstage: user.vscode("git.unstage")
 git unstage all: user.vscode("git.unstageAll")
+git unstage selected: user.vscode("git.unstageSelectedRanges")
 pull request: user.vscode("pr.create")
 # Use keyboard shortcuts because VSCode relies on when clause contexts to choose the appropriate
 # action: https://code.visualstudio.com/api/references/when-clause-contexts

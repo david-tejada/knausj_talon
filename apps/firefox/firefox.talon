@@ -12,3 +12,12 @@ tab search <user.text>$:
 
 profiler run: key(ctrl-shift-1)
 profiler stop: key(ctrl-shift-2)
+
+focus page:
+    browser.focus_address()
+    edit.find()
+    sleep(180ms)
+    key(escape)
+
+Some test:
+    key(a b)

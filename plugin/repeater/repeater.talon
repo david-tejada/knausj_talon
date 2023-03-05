@@ -5,3 +5,7 @@
 parrot(cluck): core.repeat_command(1)
 key(f14): core.repeat_command(1)
 repeat that <number_small> [times]: core.repeat_command(number_small)
+
+# Repeat the whole phrase
+again: core.repeat_phrase(1)
+repeat all <number_small> [times]: core.repeat_phrase(number_small)

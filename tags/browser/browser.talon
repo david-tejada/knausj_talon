@@ -69,7 +69,7 @@ show cache: browser.show_clear_cache()
 # move to window: key(W)
 
 # Open website in the current browser
-pop page {user.website}:
+poppy {user.website}:
     app.tab_open()
     insert(website)
     key(enter)

@@ -30,11 +30,10 @@ def on_phrase(j):
 
 
 # todo: dynamic rect?
-@imgui.open(y=0)
+@imgui.open(y=1665)
 def gui(gui: imgui.GUI):
     global history
     # gui.text("Command History")
-    gui.line()
     text = (
         history[:] if hist_more else history[-setting_command_history_display.get() :]
     )
@@ -45,6 +44,7 @@ def gui(gui: imgui.GUI):
     else:
         gui.text("  ·  ".join(text))
 
+    gui.spacer()
     # gui.spacer()
     # if gui.button("Command history close"):
     #     actions.user.history_disable()

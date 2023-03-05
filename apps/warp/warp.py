@@ -38,6 +38,13 @@ class user_actions:
         else:
             actions.key("ctrl-9")
 
+    def terminal_change_directory(path: str):
+        dash_separated = "-".join(path.split(" "))
+        actions.insert(f"cd {dash_separated}")
+        actions.sleep("150ms")
+        if path:
+            actions.key("tab enter:2")
+
 
 @ctx.action_class("app")
 class user_actions:

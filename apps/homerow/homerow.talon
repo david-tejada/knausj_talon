@@ -1,4 +1,4 @@
-yellow: key(cmd-shift-space)
+market | mark it: key(cmd-shift-space)
 knock <user.letters>: 
   user.insert_formatted(letters, "ALL_CAPS")
   key(enter)

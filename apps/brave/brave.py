@@ -12,7 +12,7 @@ and app.bundle: com.brave.Browser
 ctx.matches = r"""
 app: brave
 """
-ctx.tags = ["browser", "user.tabs"]
+ctx.tags = ["browser", "user.tabs", "user.devtools"]
 
 
 @ctx.action_class("user")
@@ -41,6 +41,15 @@ class user_actions:
         actions.browser.focus_address()
         actions.sleep("180ms")
         actions.key("alt-enter")
+
+    def devtools_focus_console():
+        actions.key("ctrl-`")
+
+    def devtools_focus_debugger():
+        actions.key("cmd-alt-z")
+
+    def devtools_focus_inspector():
+        actions.key("cmd-alt-c")
 
 
 @ctx.action_class("browser")

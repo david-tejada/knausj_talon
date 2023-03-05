@@ -5,6 +5,7 @@ from typing import Union
 from talon import Context, Module, actions
 from talon.grammar import Phrase
 
+mod = Module()
 ctx = Context()
 key = actions.key
 edit = actions.edit
@@ -96,6 +97,8 @@ def every_word(word_func):
 
 formatters_dict = {
     "NOOP": (SEP, lambda i, word, _: word),
+    "TRAILING_PADDING": (SEP, every_word(lambda text: f"{text} ")),
+    "LEADING_PADDING": (SEP, first_vs_rest(lambda text: f" {text}")),
     "DOUBLE_UNDERSCORE": (NOSEP, first_vs_rest(lambda w: f"__{w}__")),
     "PRIVATE_CAMEL_CASE": (
         NOSEP,
@@ -151,6 +154,14 @@ formatters_words = {
     "snake": formatters_dict["SNAKE_CASE"],
     "string": formatters_dict["SINGLE_QUOTED_STRING"],
     "title": formatters_dict["CAPITALIZE_ALL_WORDS"],
+}
+
+mod.list("formatter_word", desc="List of word formatters")
+ctx.lists["self.formatter_word"] = {
+    "word": "ALL_LOWERCASE",
+    "trot": "TRAILING_PADDING,ALL_LOWERCASE",
+    "proud": "CAPITALIZE_FIRST_WORD",
+    "leap": "TRAILING_PADDING,CAPITALIZE_FIRST_WORD",
 }
 
 all_formatters = {}
@@ -295,6 +306,7 @@ def unformat_text(text: str) -> str:
 ctx.lists["self.formatters"] = formatters_words.keys()
 ctx.lists["self.prose_formatter"] = {
     "say": "NOOP",
+    "then": "LEADING_PADDING",
     "speak": "NOOP",
     "sentence": "CAPITALIZE_FIRST_WORD",
 }
