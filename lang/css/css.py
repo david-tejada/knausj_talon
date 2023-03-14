@@ -33,7 +33,7 @@ def css_number_unit(m) -> str:
         result = result + m.css_units
     except AttributeError:
         pass
-    
+
     return result
 
 

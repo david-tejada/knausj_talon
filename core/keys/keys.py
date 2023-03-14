@@ -147,7 +147,6 @@ punctuation_words = {
     "`": "`",
     ",": ",",  # <== these things
     "back tick": "`",
-    "grave": "`",
     "comma": ",",
     # Workaround for issue with conformer b-series; see #946
     "coma": ",",
@@ -197,6 +196,7 @@ symbol_key_words = {
     "dash": "-",
     "equals": "=",
     "plus": "+",
+    "grave": "`",
     "tilde": "~",
     "bang": "!",
     "brow": "_",
