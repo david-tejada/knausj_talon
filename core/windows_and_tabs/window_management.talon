@@ -21,7 +21,7 @@ snap <user.running_applications> [screen] <number>:
 flip it: key(cmd-tab)
 ^coder: user.switcher_launch("/Applications/Visual Studio Code.app")
 ^foxy: user.switcher_launch("/Applications/Firefox.app")
-^crome: user.switcher_launch("/Applications/Google Chrome.app")
+^cromy: user.switcher_launch("/Applications/Google Chrome.app")
 ^browser: user.switcher_launch("/Applications/Brave Browser.app")
 ^bitwarden: user.switcher_launch("/Applications/Bitwarden.app")
 ^warpy: user.switcher_launch("/Applications/Warp.app")
