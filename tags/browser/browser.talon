@@ -6,6 +6,7 @@ address copy | url copy | copy address | copy url:
     browser.focus_address()
     sleep(50ms)
     edit.copy()
+    browser.focus_page()
 go home: browser.go_home()
 go forward: browser.go_forward()
 go (back | backward): browser.go_back()
@@ -30,3 +31,7 @@ show downloads: browser.show_downloads()
 show extensions: browser.show_extensions()
 show history: browser.show_history()
 show cache: browser.show_clear_cache()
+
+poppy {user.website}:
+    app.tab_open()
+    browser.go(website)

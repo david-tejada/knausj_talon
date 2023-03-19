@@ -7,8 +7,8 @@ triple quote: "'''"
 (dot dot | dotdot): ".."
 ellipses: "..."
 (comma and | spam): ", "
-punch: ": "
-puncher:
+punt: ": "
+punter:
     edit.line_end()
     ":\n"
 sprint:

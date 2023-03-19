@@ -6,7 +6,7 @@ mod = Module()
 
 ctx.matches = r"""
 app: vscode
-win.title: /Dendron/
+win.title: /dendron \(workspace\)/i
 """
 
 # def generate_frontmatter(title: str) -> str:

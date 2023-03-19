@@ -18,16 +18,6 @@ tag <user.text>:
 
 closed tag {user.code_tag}:       "<{code_tag}/>"
 close tag <user.text>:   "<{text}/>"
-closed comp <user.text>:
-    "<"
-    user.insert_formatted(text, "PUBLIC_CAMEL_CASE")
-    "  />"
-    key(left:3)
-comp <user.text>:
-    "<"
-    user.insert_formatted(text, "PUBLIC_CAMEL_CASE")
-    ">"
-
 close tag: user.code_close_tag()
 
 attr <user.text>:
