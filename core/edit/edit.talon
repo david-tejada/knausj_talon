@@ -2,7 +2,7 @@ find it: edit.find()
 
 next one: edit.find_next()
 
-recede:
+leap:
     edit.word_left()
 
 step:
