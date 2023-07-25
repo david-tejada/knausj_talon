@@ -2,7 +2,9 @@
 settings():
     user.context_sensitive_dictation = 1
     
-    speech.timeout = 0.500
+    user.accessibility_dictation = 1
+    
+    speech.timeout = 0.400
     # Adjust the scale of the imgui to my liking
     imgui.scale = 1.1
 
@@ -40,7 +42,7 @@ settings():
     user.grids_put_one_bottom_left = 1
 
     # The number of lines of command history to display by default
-    user.command_history_display = 3
+    user.command_history_display = 5
 
     # The number of lines of command history to keep in total;
     # "command history more" to display all of them, "command history less" to restore
