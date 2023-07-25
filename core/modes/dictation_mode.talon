@@ -1,5 +1,5 @@
-experiment: anchor-file
 mode: dictation
+and not mode: user.spanish
 -
 ^press <user.modifiers>$: key(modifiers)
 ^press <user.keys>$: key(keys)
