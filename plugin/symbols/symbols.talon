@@ -1,4 +1,4 @@
-question [mark]: "?"
+question: "?"
 (downscore | underscore): "_"
 dash: "-"
 double dash: "--"
@@ -7,14 +7,14 @@ triple quote: "'''"
 (dot dot | dotdot): ".."
 ellipses: "..."
 (comma and | spam): ", "
-punt: ": "
-punter:
+punch: ": "
+punch roll:
     edit.line_end()
     ":\n"
 sprint:
     key(right)
     ", "
-sprinter:
+sprint roll:
     edit.line_end()
     ",\n"
 plus: "+"
