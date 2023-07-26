@@ -52,3 +52,6 @@ talon dump context:
 
 talon (bug report | report bug):
     user.open_url("https://github.com/knausj85/knausj_talon/issues")
+
+^talon debug window$: menu.open_debug_window()
+^talon relaunch: user.talon_relaunch()
