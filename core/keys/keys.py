@@ -134,7 +134,7 @@ modifier_keys = {
     "super": "super",
 }
 if app.platform == "mac":
-    modifier_keys["money"] = "cmd"
+    modifier_keys["mac"] = "cmd"
     modifier_keys["option"] = "alt"
 ctx.lists["self.modifier_key"] = modifier_keys
 ctx.lists["self.letter"] = alphabet_list
@@ -177,9 +177,10 @@ punctuation_words = {
     "right paren": ")",
 }
 symbol_key_words = {
-    "dot": ".",
+    # "dot": ".",
     "point": ".",
     "quote": "'",
+    "single": "'",
     "colon": ":",
     "apostrophe": "'",
     "round": "(",
@@ -205,7 +206,7 @@ symbol_key_words = {
     "star": "*",
     "hash": "#",
     "percent": "%",
-    "tender": "^",
+    "hattie": "^",
     "amper": "&",
     "pipe": "|",
     "double": '"',
@@ -229,14 +230,14 @@ ctx.lists["self.arrow_key"] = {
 
 simple_keys = {
     "ending": "end",
-    "enter": "enter",
-    "escape": "escape",
+    "intro": "enter",
+    "vanish": "escape",
     "home": "home",
     "insert": "insert",
     "pagedown": "pagedown",
     "pageup": "pageup",
     "space": "space",
-    "taber": "tab",
+    "push": "tab",
 }
 
 alternate_keys = {
