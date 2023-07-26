@@ -80,6 +80,12 @@ def text(m) -> str:
     return format_phrase(m)
 
 
+@mod.capture(rule="({user.vocabulary} | <phrase> | <user.number_string>)+")
+def text_with_digits(m) -> str:
+    """A sequence of words, including user-defined vocabulary."""
+    return format_phrase(m)
+
+
 @mod.capture(
     rule="({user.vocabulary} | {user.punctuation} | {user.prose_snippets} | <phrase> | <user.prose_number> | <user.prose_modifier>)+"
 )

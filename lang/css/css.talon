@@ -36,14 +36,14 @@ funky {user.css_functions}:
     insert("()")
     key(left)
 
-make var <user.text_with_digits>:
+make var <user.text>:
     insert("--")
-    user.insert_formatted(text_with_digits, "DASH_SEPARATED")
+    user.insert_formatted(text, "DASH_SEPARATED")
     insert(": ")
 
-variable <user.text_with_digits>:
+var <user.text>:
     user.insert_between("var(--", ")")
-    user.insert_formatted(text_with_digits, "DASH_SEPARATED")
+    user.insert_formatted(text, "DASH_SEPARATED")
 
 blocker:
     edit.line_end()
