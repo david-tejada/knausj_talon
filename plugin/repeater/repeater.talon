@@ -3,6 +3,7 @@
 <number_small> times: core.repeat_command(number_small - 1)
 (repeat that | twice): core.repeat_command(1)
 third: core.repeat_command(2)
+parrot(alveolar_click): core.repeat_command(1)
 key(f14): core.repeat_command(1)
 repeat that <number_small> [times]: core.repeat_command(number_small)
 
