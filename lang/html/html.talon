@@ -9,10 +9,10 @@ block tag <user.text>:
 blank tag:
     user.insert_snippet("<>\n\t$0\n</>")
 
-tag {user.code_tag}:
+make tag {user.code_tag}:
     "<{code_tag}>"
     user.code_push_tag_name(code_tag)
-tag <user.text>:
+make tag <user.text>:
     "<{text}>"
     user.code_push_tag_name(text)
 
