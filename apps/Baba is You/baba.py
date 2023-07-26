@@ -1,6 +1,5 @@
-from talon import Context, Module, actions, app
+from talon import Module
 
-ctx = Context()
 mod = Module()
 
 mod.apps.baba = "app.bundle: Baba Is You"
