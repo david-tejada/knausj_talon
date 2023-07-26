@@ -164,10 +164,10 @@ toggle mark: user.vscode("bookmarks.toggle")
 go next mark: user.vscode("bookmarks.jumpToNext")
 go last mark: user.vscode("bookmarks.jumpToPrevious")
 
-close other tabs: user.vscode("workbench.action.closeOtherEditors")
-close all tabs: user.vscode("workbench.action.closeAllEditors")
-close tabs way right: user.vscode("workbench.action.closeEditorsToTheRight")
-close tabs way left: user.vscode("workbench.action.closeEditorsToTheLeft")
+tab close other: user.vscode("workbench.action.closeOtherEditors")
+tab close all: user.vscode("workbench.action.closeAllEditors")
+tab close [way] right: user.vscode("workbench.action.closeEditorsToTheRight")
+tab close [way] left: user.vscode("workbench.action.closeEditorsToTheLeft")
 
 # Folding
 fold that: user.vscode("editor.fold")
