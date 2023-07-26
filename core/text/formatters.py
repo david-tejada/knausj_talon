@@ -142,9 +142,9 @@ formatters_words = {
     "all cap": formatters_dict["ALL_CAPS"],
     "all down": formatters_dict["ALL_LOWERCASE"],
     "camel": formatters_dict["PRIVATE_CAMEL_CASE"],
-    "pointy": formatters_dict["DOT_SEPARATED"],
+    "dotted": formatters_dict["DOT_SEPARATED"],
     "dub string": formatters_dict["DOUBLE_QUOTED_STRING"],
-    "dunder": formatters_dict["DOUBLE_UNDERSCORE"],
+    "dub under": formatters_dict["DOUBLE_UNDERSCORE"],
     "hammer": formatters_dict["PUBLIC_CAMEL_CASE"],
     "kebab": formatters_dict["DASH_SEPARATED"],
     "packed": formatters_dict["DOUBLE_COLON_SEPARATED"],
@@ -161,7 +161,7 @@ ctx.lists["self.formatter_word"] = {
     "word": "ALL_LOWERCASE",
     "trot": "TRAILING_PADDING,ALL_LOWERCASE",
     "proud": "CAPITALIZE_FIRST_WORD",
-    "leap": "TRAILING_PADDING,CAPITALIZE_FIRST_WORD",
+    "moat": "TRAILING_PADDING,CAPITALIZE_FIRST_WORD",
 }
 
 all_formatters = {}
@@ -306,7 +306,6 @@ def unformat_text(text: str) -> str:
 ctx.lists["self.formatters"] = formatters_words.keys()
 ctx.lists["self.prose_formatter"] = {
     "say": "NOOP",
-    "then": "LEADING_PADDING",
     "speak": "NOOP",
     "sentence": "CAPITALIZE_FIRST_WORD",
 }
