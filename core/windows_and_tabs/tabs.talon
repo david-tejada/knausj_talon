@@ -1,7 +1,7 @@
 tag: user.tabs
 -
 tabby: app.tab_open()
-tab left: app.tab_previous()
+(tab | dub) (left | lift): app.tab_previous()
 key(f18): app.tab_previous()
 tab up: app.tab_previous()
 tab right: app.tab_next()
