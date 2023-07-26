@@ -10,3 +10,14 @@ normal speed:
     # Go to min, then max
     key("shift-,:7")
     key(">:3")
+
+cinema:
+    key(f k)
+    speech.disable()
+
+cinema stop:
+    key(f k)
+    speech.enable()
+
+full video: key(f)
+start video: key(k)
