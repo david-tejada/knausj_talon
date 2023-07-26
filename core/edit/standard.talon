@@ -11,8 +11,8 @@ redo it: edit.redo()
 paste match: edit.paste_match_style()
 disk: edit.save()
 disk all: edit.save_all()
-(pad | padding): user.insert_between(" ", " ")
-(pad | padding) <user.symbol_key>+:
+padding: user.insert_between(" ", " ")
+padding <user.symbol_key>+:
     insert(" ")
     user.insert_many(symbol_key_list)
     insert(" ")
