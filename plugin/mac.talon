@@ -3,5 +3,5 @@ spotlight <user.text>:
   sleep(150ms)
   insert(text)
 
-keyboard switch:
+input switch:
   key(ctrl-alt-space)
