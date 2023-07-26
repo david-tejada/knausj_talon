@@ -65,7 +65,6 @@ theme switch: user.vscode("workbench.action.selectTheme")
 wrap switch: user.vscode("editor.action.toggleWordWrap")
 zen switch: user.vscode("workbench.action.toggleZenMode")
 
-wade: user.vscode("workbench.action.focusNextGroup")
 
 # File Commands
 lisa [<user.text>] [{user.file_extension}] [halt]:
@@ -221,6 +220,7 @@ git sync: user.vscode("git.sync")
 git unstage: user.vscode("git.unstage")
 git unstage all: user.vscode("git.unstageAll")
 git unstage selected: user.vscode("git.unstageSelectedRanges")
+git open: user.vscode("git.openFile")
 pull request: user.vscode("pr.create")
 # Use keyboard shortcuts because VSCode relies on when clause contexts to choose the appropriate
 # action: https://code.visualstudio.com/api/references/when-clause-contexts
@@ -245,12 +245,12 @@ test cancel: user.vscode("testing.cancelRun")
 # Debugging
 break point: user.vscode("editor.debug.action.toggleBreakpoint")
 step over: user.vscode("workbench.action.debug.stepOver")
-debug step into: user.vscode("workbench.action.debug.stepInto")
-debug step out [of]: user.vscode("workbench.action.debug.stepOut")
+step into: user.vscode("workbench.action.debug.stepInto")
+step out [of]: user.vscode("workbench.action.debug.stepOut")
 debug start: user.vscode("workbench.action.debug.start")
 debug pause: user.vscode("workbench.action.debug.pause")
 debug stopper: user.vscode("workbench.action.debug.stop")
-debug continue: user.vscode("workbench.action.debug.continue")
+resume: user.vscode("workbench.action.debug.continue")
 debug restart: user.vscode("workbench.action.debug.restart")
 debug console: user.vscode("workbench.debug.action.toggleRepl")
 debug clean: user.vscode("workbench.debug.panel.action.clearReplAction")
@@ -284,10 +284,6 @@ restore: user.vscode("workbench.action.evenEditorWidths")
 select breadcrumb: user.vscode("breadcrumbs.focusAndSelect")
 # Use `alt-left` and `alt-right` to navigate the bread crumb
 
-replace here:
-    user.replace("")
-    key(cmd-alt-l)
-
 hover show: user.vscode("editor.action.showHover")
 
 join lines: user.vscode("editor.action.joinLines")
@@ -298,7 +294,6 @@ curse undo: user.vscode("cursorUndo")
 
 select word: user.vscode("editor.action.addSelectionToNextFindMatch")
 skip word: user.vscode("editor.action.moveSelectionToNextFindMatch")
-toggle wrap: user.vscode("editor.action.toggleWordWrap")
 
 # jupyter
 cell next: user.vscode("notebook.focusNextEditor")
@@ -306,7 +301,6 @@ cell last: user.vscode("notebook.focusPreviousEditor")
 cell run above: user.vscode("notebook.cell.executeCellsAbove")
 cell run: user.vscode("notebook.cell.execute")
 
-cell run: user.vscode("jupyter.runcurrentcell")
 install local: user.vscode("workbench.extensions.action.installVSIX")
 
 # quokka
@@ -324,8 +318,24 @@ lens review:
 split clear: user.vscode("workbench.action.closeEditorsInGroup")
 split clear all: user.vscode("workbench.action.closeAllEditors")
 
+# Live server
 go live: user.vscode("extension.liveServer.goOnline")
 
 # Markdown Preview
 side preview: user.vscode("markdown.showPreviewToSide")
 preview refresh: user.vscode("markdown.preview.refresh")
+
+# Generate Numbers. Needs the extension andreas-talon
+generate range [from <number_small>]:
+    user.run_rpc_command("andreas.generateRange", number_small or 1)
+
+# cursorless
+next: user.vscode_and_wait("jumpToNextSnippetPlaceholder")
+
+source next: key(cmd-0 down space)
+source last: key(cmd-0 up space)
+
+# search
+switch case: key(cmd-alt-c)
+switch word: key(cmd-alt-w)
+switch regex: key(cmd-alt-r)
