@@ -97,7 +97,7 @@ clear down:
 
 clear word: edit.delete_word()
 
-cleft:
+cleft | cliff:
     edit.extend_word_left()
     edit.delete()
 
@@ -105,7 +105,7 @@ crimp:
     edit.extend_word_right()
     edit.delete()
 
-cleft all:
+(cleft | cliff) all:
     edit.extend_line_start()
     edit.delete()
 
