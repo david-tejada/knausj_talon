@@ -40,3 +40,7 @@ paste sub:
   
 hidden switch:
   key(cmd-shift-.)
+
+enter <user.text>:
+  insert(text)
+  key(cmd-o)
