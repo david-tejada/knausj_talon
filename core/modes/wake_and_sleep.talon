@@ -13,6 +13,5 @@ mode: all
     user.mouse_sleep()
     speech.disable()
     user.engine_sleep()
-(drawse | trawse) [<phrase>]$: speech.disable()
-key(f20): speech.disable()
+(drowse | trawse) [<phrase>]$: speech.disable()
 ^jolt: speech.enable()
