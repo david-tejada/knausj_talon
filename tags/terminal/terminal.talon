@@ -25,3 +25,6 @@ copy paste:
 code this: 'code .\n'
 
 recent [<user.text>]: user.terminal_open_recent_directory(text or "")
+
+talon repl: "/Users/david/.talon/.venv/bin/repl\n"
+talon log: "tail -F ~/.talon/talon.log\n"
