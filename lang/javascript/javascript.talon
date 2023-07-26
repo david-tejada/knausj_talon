@@ -27,13 +27,14 @@ settings():
 
 is strict equal: " === "
 is strict not equal: " !== "
-make nullish: " ?? "
+make dub quest: " ?? "
 is instance of: " instanceof "
 
 make const: "const "
 const <user.text>:
     "const "
     user.insert_formatted(text,"PRIVATE_CAMEL_CASE")
+    " = "
 
 make let: "let "
 let <user.text>:
@@ -43,6 +44,10 @@ let <user.text>:
 dolly var:
     "${}"
     key(left)
+
+make classic for:
+    "for(let i = 1; i<=nums.length; i++) {\n\t\n}"
+    key(up)
 
 make export: "export "
 
@@ -110,35 +115,10 @@ construct <user.text>:
     "()"
     key("left")
 
-fun <user.text>:
-    user.insert_formatted(text,"PRIVATE_CAMEL_CASE")
-    "()"
-    key("left")
-
 make block lambda:
     "() => {}"
     key(left)
     key(enter)
-
-export default function <user.text>:
-    "export default function "
-    user.insert_formatted(text,"PRIVATE_CAMEL_CASE")
-    "() {}"
-    key(left enter)
-
-export function <user.text>:
-    "export function "
-    user.insert_formatted(text,"PRIVATE_CAMEL_CASE")
-    "() {}"
-    key(left enter)
-
-for <user.text> of <user.text>:
-    "for (const "
-    user.insert_formatted(text_1,"PRIVATE_CAMEL_CASE")
-    " of "
-    user.insert_formatted(text_2,"PRIVATE_CAMEL_CASE")
-    ") {}"
-    key(left enter)
     
 from import:
     user.insert_between(' from  "', '"')
@@ -155,3 +135,40 @@ class <user.text>:
     user.insert_formatted(text,"PUBLIC_CAMEL_CASE")
     " {}"
     key("left enter")
+
+j s dock:
+    "/**"
+    sleep(100ms)
+    key(tab)
+
+
+# Cursorless snippets
+
+await <user.text>:
+    camel = user.formatted_text(text, "PRIVATE_CAMEL_CASE")
+    user.cursorless_insert_snippet("await {camel}($arguments)")
+
+export funk <user.camel>:
+    user.cursorless_insert_snippet("export function {camel}($params) {{\n\t$body\n}}")
+
+export async funk <user.camel>:
+    user.cursorless_insert_snippet("export async function {camel}($params) {{\n\t$body\n}}")
+
+something <user.formatted_text>:
+    user.paste("something {formatted_text}")
+
+export component <user.pascal>:
+    user.cursorless_insert_snippet("export function {pascal}($params) {{\n\t$body\n}}")
+
+for <user.camel> of <user.camel>:
+    user.cursorless_insert_snippet("for (const {camel_1} of {camel_2}) {{\n\t$body\n}}")
+
+use state <user.text>:
+    camel = user.formatted_text(text, "PRIVATE_CAMEL_CASE")
+    pascal = user.formatted_text(text, "PUBLIC_CAMEL_CASE")
+    snippet = "const [{camel}, set{pascal}] = useState($initialState)"
+    user.cursorless_insert_snippet(snippet)
+
+heading comment <user.text>:
+    upper = user.formatted_text(text, "ALL_CAPS")
+    user.cursorless_insert_snippet("// =============================================================================\n// {upper}\n// =============================================================================")
