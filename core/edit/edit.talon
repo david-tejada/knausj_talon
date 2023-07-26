@@ -1,5 +1,10 @@
 find it: edit.find()
 
+find it <user.text>:
+    edit.find()
+    sleep(250ms)
+    user.paste(text)
+
 next one: edit.find_next()
 
 leap:
