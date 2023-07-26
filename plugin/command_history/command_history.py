@@ -1,5 +1,5 @@
 from typing import Optional
-from talon import imgui, Module, speech_system, actions, app
+from talon import imgui, Module, speech_system, actions, app, ui
 import tempfile
 
 # We keep command_history_size lines of history, but by default display only
