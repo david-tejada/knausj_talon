@@ -2,9 +2,8 @@ from talon import Context, Module, actions
 
 ctx = Context()
 mod = Module()
-apps = mod.apps
-apps.firefox = "app.name: Arc"
-apps.firefox = """
+mod.apps.arc = "app.name: Arc"
+mod.apps.arc = """
 os: mac
 and app.bundle: company.thebrowser.Browser
 """
@@ -13,11 +12,13 @@ ctx.matches = r"""
 app: arc
 """
 
+
 @ctx.action_class("user")
 class user_actions:
     def tab_close_wrapper():
         actions.sleep("300ms")
         actions.app.tab_close()
+
 
 @ctx.action_class("app")
 class AppActions:
@@ -25,7 +26,8 @@ class AppActions:
         actions.key("cmd-t")
         actions.sleep("200ms")
 
-@ctx.action_class('browser')
+
+@ctx.action_class("browser")
 class BrowserActions:
     # TODO
     # action(browser.address):
