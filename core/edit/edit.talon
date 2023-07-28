@@ -196,7 +196,6 @@ nope: edit.undo()
 redo it: edit.redo()
 
 # Save
-: edit.save()
-
-all: edit.save_all()
+disk: edit.save()
+disk all: edit.save_all()
 
