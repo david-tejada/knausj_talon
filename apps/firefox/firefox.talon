@@ -17,3 +17,9 @@ profiler stop: key(ctrl-shift-2)
 
 (sidebar | panel) bookmarks: user.firefox_bookmarks_sidebar()
 (sidebar | panel) history: user.firefox_history_sidebar()
+
+background page:
+    app.tab_open()
+    browser.go("about:debugging#/runtime/this-firefox")
+    sleep(500ms)
+    key(tab:7 enter)
