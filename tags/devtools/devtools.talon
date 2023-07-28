@@ -1,11 +1,6 @@
-tag: devtools
 tag: browser
 -
-tool (inspect | elements): user.devtools_focus_inspector()
-tool console: user.devtools_focus_console()
-tool (debug | sources): user.devtools_focus_debugger()
-pane left: user.devtools_focus_previous_pane()
-pane right: user.devtools_focus_next_pane()
+tag(): user.devtools
 
 use this [<user.word>]:
     user.devtools_execute_javascript("{word or 'target'} = $0")
@@ -26,20 +21,6 @@ copy tag name: user.devtools_execute_javascript("copy($0.tagName)")
 copy ref: user.devtools_execute_javascript("copy($0.href)")
 
 freeze in five: user.devtools_execute_javascript("setTimeout(()=>{{debugger}},5000)\n")
-
-
-pop dock <user.text>:
-    key(cmd-p)
-    sleep(200ms)
-    user.paste(text)
-    sleep(200ms)
-    key(enter)
-
-list dock <user.text>:
-    key(cmd-p)
-    sleep(200ms)
-    user.paste(text)
-    sleep(200ms)
 
 get id <user.text>:
     id = user.formatted_text(text, "DASH_SEPARATED")
@@ -101,11 +82,6 @@ get proto:
 walk <number>:
     user.devtools_execute_javascript("walker=document.createTreeWalker($0, NodeFilter.SHOW_ELEMENT);current=walker.nextNode();for(i=1;i<{number};i++){{current=walker.nextNode()}};inspect(current)")
 
-step over: key(f10)
-step into: key(f11)
-step out: key(shift-f11)
-resume: key(f8)
-
 # devtools rango
 get <user.letters>: 
     user.devtools_execute_javascript("""
@@ -129,3 +105,47 @@ log hints cache:
     user.devtools_execute_javascript("logHintsCache()")
 log hints stack:
     user.devtools_execute_javascript("logHintsStack()")
+
+
+tool (inspect | elements): user.devtools_inspector_pane()
+tool console: user.devtools_console_pane()
+go console: user.devtools_focus_console()
+tool (debug | sources): user.devtools_debugger_pane()
+pane left: user.devtools_focus_previous_pane()
+pane right: user.devtools_focus_next_pane()
+
+step over: user.devtools_debugger_step_over()
+step into: user.devtools_debugger_step_into()
+step out: user.devtools_debugger_step_out()
+resume: user.devtools_debugger_resume()
+
+poppy <user.text>:
+    user.devtools_search_file(text)
+    sleep(100ms)
+    key(enter)
+
+
+lisa <user.text>: user.devtools_search_file(text)
+ 
+go line <number>:
+    user.devtools_go_to_line(number)
+
+breakpoint:
+    key(cmd-b)
+
+breakpoint <number>:
+    user.devtools_go_to_line(number)
+    key(cmd-b)
+
+con breakpoint <number>:
+    user.devtools_go_to_line(number)
+    user.devtools_conditional_breakpoint()
+
+log point <number>:
+    user.devtools_go_to_line(number)
+    # This doesn't work at the moment because of this bug:
+    # https://bugzilla.mozilla.org/show_bug.cgi?id=1840390
+    key(cmd-shift-b)
+
+watch expression [<user.text>]:
+    user.devtools_add_watch_expression(text or "")

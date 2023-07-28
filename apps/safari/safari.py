@@ -37,6 +37,31 @@ class UserActions:
     def browser_open_address_in_new_tab():
         actions.key("cmd-enter")
 
+    def devtools_console_pane():
+        actions.key("escape")
+
+    def devtools_debugger_pane():
+        raise NotImplementedError(
+            "There is no way in Safari to switch to a specific panel once the devtools are open"
+        )
+
+    def devtools_inspector_pane():
+        raise NotImplementedError(
+            "There is no way in Safari to switch to a specific panel once the devtools are open"
+        )
+
+    def devtools_debugger_step_over():
+        actions.key("f6")
+
+    def devtools_debugger_step_into():
+        actions.key("f7")
+
+    def devtools_debugger_step_out():
+        actions.key("f8")
+
+    def devtools_debugger_resume():
+        actions.key("cmd-\\")
+
 
 @ctx.action_class("browser")
 class BrowserActions:
