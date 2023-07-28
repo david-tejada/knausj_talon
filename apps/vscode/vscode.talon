@@ -7,6 +7,10 @@ tag(): user.splits
 tag(): user.tabs
 tag(): user.emoji
 
+settings():
+    user.accessibility_dictation = 1 
+    key_hold = 5.0
+
 window reload: user.vscode("workbench.action.reloadWindow")
 window close: user.vscode("workbench.action.closeWindow")
 close all editors: user.vscode("workbench.action.closeAllGroups")
