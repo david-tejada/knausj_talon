@@ -18,6 +18,19 @@ def safari_app():
     return ui.apps(bundle="com.apple.Safari")[0]
 
 
+@mod.action_class
+class Actions:
+    def safari_open_background_page():
+        """Open the extension background page in Safari"""
+        success = actions.user.menu_select(
+            "Develop|Web Extension Background Pages|Rango — Background Page"
+        )
+        if not success:
+            actions.user.menu_select(
+                "Develop|Web Extension Background Pages|Rango (not loaded)"
+            )
+
+
 @ctx.action_class("user")
 class UserActions:
     def browser_open_address_in_new_tab():
