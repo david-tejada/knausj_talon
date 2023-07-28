@@ -35,3 +35,6 @@ show cache: browser.show_clear_cache()
 visit {user.website}:
     app.tab_open()
     browser.go(website)
+
+# Bitwarden
+autofill: key(cmd-shift-l)
