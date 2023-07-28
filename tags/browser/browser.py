@@ -110,7 +110,7 @@ class BrowserActions:
         actions.browser.focus_address()
         actions.sleep("50ms")
         actions.insert(url)
-        actions.key("enter")
+        actions.key("delete enter")
 
     def go_home():
         actions.key("alt-home")
