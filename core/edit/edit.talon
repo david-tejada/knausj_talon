@@ -1,96 +1,81 @@
-find it: edit.find()
+# Zoom
+zoom in: edit.zoom_in()
+zoom out: edit.zoom_out()
+zoom reset: edit.zoom_reset()
 
+# Searching
+find it: edit.find()
 find it <user.text>:
     edit.find()
     sleep(250ms)
     user.paste(text)
-
 next one: edit.find_next()
 
-leap:
-    edit.word_left()
+# Navigation
 
-step:
-    edit.word_right()
+# The reason for these spoken forms is that "page up" and "page down" are globally defined as keys.
+scroll up: edit.page_up()
+scroll down: edit.page_down()
 
-west:
-    edit.left()
+leap: edit.word_left()
+step: edit.word_right()
 
-east:
-    edit.right()
+west: edit.left()
+east: edit.right()
+north: edit.up()
+south: edit.down()
 
-north:
-    edit.up()
-
-south:
-    edit.down()
-
-bend:
-    edit.line_start()
-
-lend:
-    edit.line_end()
-
-lend all:
+bend: edit.line_start()
+bend all:
     edit.line_start()
     edit.line_start()
-
-go way right: edit.line_end()
-
-go way down: edit.file_end()
+lend: edit.line_end()
 
 go way up: edit.file_start()
-
-go bottom: edit.file_end()
+go way down: edit.file_end()
 
 go top: edit.file_start()
 
-go page down: edit.page_down()
+go bottom: edit.file_end()
 
 go page up: edit.page_up()
+go page down: edit.page_down()
 
-# selecting
-select line: edit.select_line()
-
+# Selecting
 select all: edit.select_all()
+select line: edit.select_line()
+select line start: user.select_line_start()
+select line end: user.select_line_end()
 
 select left: edit.extend_left()
-
 select right: edit.extend_right()
-
 select up: edit.extend_line_up()
-
 select down: edit.extend_line_down()
 
 select word: edit.select_word()
-
 select word left: edit.extend_word_left()
-
 select word right: edit.extend_word_right()
 
 select way left: edit.extend_line_start()
-
 select way right: edit.extend_line_end()
-
 select way up: edit.extend_file_start()
-
 select way down: edit.extend_file_end()
 
-# editing
+# Indentation
 indent [more]: edit.indent_more()
-
 (indent less | out dent): edit.indent_less()
 
 scoot:
     key(space)
     key(left)
 
-# deleting
+# Delete
+clear all: user.delete_all()
 clear line: edit.delete_line()
-
-clear left: key(backspace)
-
-clear right: key(delete)
+clear line start: user.delete_line_start()
+clear line end: user.delete_line_end()
+clear left: edit.delete()
+clear right: user.delete_right()
 
 clear up:
     edit.extend_line_up()
@@ -131,14 +116,16 @@ clear way down:
     edit.extend_file_end()
     edit.delete()
 
-clear all:
-    edit.select_all()
-    edit.delete()
+# Copy
+copy that: edit.copy()
+copy all: user.copy_all()
+copy line: user.copy_line()
+copy line start: user.copy_line_start()
+copy line end: user.copy_line_end()
+copy word: user.copy_word()
+copy word left: user.copy_word_left()
+copy word right: user.copy_word_right()
 
-#copy commands
-copy all:
-    edit.select_all()
-    edit.copy()
 #to do: do we want these variants, seem to conflict
 # copy left:
 #      edit.extend_left()
@@ -153,22 +140,16 @@ copy all:
 #     edit.extend_down()
 #     edit.copy()
 
-copy word:
-    edit.select_word()
-    edit.copy()
+# Cut
+cut that: edit.cut()
+cut all: user.cut_all()
+cut line: user.cut_line()
+cut line start: user.cut_line_start()
+cut line end: user.cut_line_end()
+cut word: user.cut_word()
+cut word left: user.cut_word_left()
+cut word right: user.cut_word_right()
 
-copy word left: user.copy_word_left()
-
-copy word right: user.copy_word_right()
-
-copy line:
-    edit.select_line()
-    edit.copy()
-
-#cut commands
-cut all:
-    edit.select_all()
-    edit.cut()
 #to do: do we want these variants
 # cut left:
 #      edit.select_all()
@@ -183,20 +164,39 @@ cut all:
 #     edit.select_all()
 #     edit.cut()
 
-cut word:
-    edit.select_word()
-    edit.cut()
-
-cut word left: user.cut_word_left()
-
-cut word right: user.cut_word_right()
-
-cut line: user.cut_line()
-
-(pace | paste) all:
-    edit.select_all()
+# Paste
+(pace | paste) that: edit.paste()
+(pace | paste) enter:
     edit.paste()
+    key(enter)
+paste match: edit.paste_match_style()
+(pace | paste) all: user.paste_all()
+(pace | paste) line: user.paste_line()
+(pace | paste) line start: user.paste_line_start()
+(pace | paste) line end: user.paste_line_end()
+(pace | paste) word: user.paste_word()
 
-# duplication
+# Duplication
 clone that: edit.selection_clone()
 clone line: edit.line_clone()
+
+# Insert new line
+new line above: edit.line_insert_up()
+new line below | slap: edit.line_insert_down()
+
+# Insert padding with optional symbols
+padding: user.insert_between(" ", " ")
+padding <user.symbol_key>+:
+    insert(" ")
+    user.insert_many(symbol_key_list)
+    insert(" ")
+
+# Undo/redo
+nope: edit.undo()
+redo it: edit.redo()
+
+# Save
+: edit.save()
+
+all: edit.save_all()
+

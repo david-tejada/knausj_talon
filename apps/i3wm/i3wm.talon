@@ -2,128 +2,98 @@
 os: linux
 tag: user.i3wm
 -
-lane <number_small>: user.system_command("i3-msg workspace number {number_small}")
-(lane flip|flip): user.system_command("i3-msg workspace back_and_forth")
-lane right: user.system_command("i3-msg workspace next")
-lane left: user.system_command("i3-msg workspace prev")
-lane rename <number_small> (<user.text> | <user.letters>): user.system_command("i3-msg 'rename workspace to \"{number_small}: {text or letters}\"'")
+port <number_small>: user.i3wm_switch_to_workspace(number_small)
+(port flip | flipper): user.i3wm_switch_to_workspace("back_and_forth")
+port right: user.i3wm_switch_to_workspace("next")
+port left: user.i3wm_switch_to_workspace("prev")
 
-win <user.arrow_keys>: user.system_command("i3-msg focus {user.arrow_keys}")
-glide: user.system_command("i3-msg focus right")
-^glide <phrase>$: user.focus_container("right", phrase)
-slide: user.system_command("i3-msg focus left")
-^slide <phrase>$: user.focus_container("left", phrase)
-win close: user.system_command("i3-msg kill")
-win stacking: user.system_command("i3-msg layout stacking")
-win default: user.system_command("i3-msg layout toggle split")
-win tabbed: user.system_command("i3-msg layout tabbed")
+(win | window) left: user.i3wm_focus("left")
+(win | window) right: user.i3wm_focus("right")
+(win | window) up: user.i3wm_focus("up")
+(win | window) down: user.i3wm_focus("down")
+(win | window) kill: app.window_close()
+(win | window) stacking: user.i3wm_layout("stacking")
+(win | window) default: user.i3wm_layout()
+(win | window) tabbed: user.i3wm_layout("tabbed")
 
-reload i three config: user.system_command("i3-msg reload")
-restart i three: user.system_command("i3-msg restart")
+reload i three config: user.i3wm_reload()
+restart i three: user.i3wm_restart()
 
-(full screen | scuba): user.system_command("i3-msg fullscreen")
-toggle floating: user.system_command("i3-msg floating toggle")
-focus floating: user.system_command("i3-msg focus mode_toggle")
-center window: user.system_command("i3-msg move position center")
-resize mode: user.system_command('i3-msg mode "resize"')
-focus parent: user.system_command("i3-msg focus parent")
-focus child: user.system_command("i3-msg focus child")
+(full screen | scuba): user.i3wm_fullscreen()
+toggle floating: user.i3wm_float()
+focus floating: user.i3wm_focus("mode_toggle")
+center window: user.i3wm_move_position("center")
+resize mode: user.i3wm_mode("resize")
+focus parent: user.i3wm_focus("parent")
+focus child: user.i3wm_focus("child")
 
-win grow [<user.arrow_keys>]: user.i3wm_resize_window("grow", arrow_keys or "both")
-win shrink [<user.arrow_keys>]: user.i3wm_resize_window("shrink", arrow_keys or "both")
-win tall: user.system_command("i3-msg resize grow height 100 px or 10 ppt")
-win short: user.system_command("i3-msg resize shrink height 100 px or 10 ppt")
-win fat: user.system_command("i3-msg resize grow width 100 px or 10 ppt")
-win slim: user.system_command("i3-msg resize shrink width 100 px or 10 ppt")
+# resize helpers
+grow window:
+    user.i3wm_mode("resize")
+    key(right:10)
+    key(down:10)
+    # escape resize mode
+    key(escape)
+    # center window
+    sleep(200ms)
+    user.i3wm_move_position("center")
+
+# resize helpers
+shrink window:
+    user.i3wm_mode("resize")
+    key(left:10)
+    key(up:10)
+    # escape resize mode
+    key(escape)
+    # center window
+    sleep(200ms)
+    user.i3wm_move_position("center")
 
 horizontal (shell | terminal):
-    user.system_command("i3-msg split h")
-    user.system_command("i3-msg exec i3-sensible-terminal")
+    user.i3wm_split("h")
+    user.i3wm_shell()
 
 vertical (shell | terminal):
-    user.system_command("i3-msg split v")
-    user.system_command("i3-msg exec i3-sensible-terminal")
+    user.i3wm_split("v")
+    user.i3wm_shell()
 
 # XXX - just replace with shuffle eventually?
 # XXX - like also need to match the generic talon commands
-shuffle <number_small>:  user.system_command("i3-msg move container to workspace number {number_small}")
-shuffle: user.system_command("i3-msg move container to workspace back_and_forth")
-shuffle <user.arrow_keys>: user.system_command("i3-msg move {user.arrow_keys}")
-report <number_small>:
-    user.system_command("i3-msg move container to workspace number {number_small}")
-    user.system_command("i3-msg workspace number {number_small}")
-detach:
-    key(ctrl-alt-n)
-detach <number_small>:
-    key(ctrl-alt-n)
-    sleep(300ms)
-    user.system_command("i3-msg move container to workspace number {number_small}")
-    user.system_command("i3-msg workspace number {number_small}")
+(shuffle | move (win | window) [to] port) <number_small>:
+    user.i3wm_move_to_workspace(number_small)
+(shuffle | move (win | window) [to] last port):
+    user.i3wm_move_to_workspace("back_and_forth")
+(shuffle | move) flipper: user.i3wm_move_to_workspace("back_and_forth")
+(shuffle | move (win | window) left): user.i3wm_move("left")
+(shuffle | move (win | window) right): user.i3wm_move("right")
+(shuffle | move (win | window) up): user.i3wm_move("up")
+(shuffle | move (win | window) down): user.i3wm_move("down")
 
-win horizontal: user.system_command("i3-msg split h")
-win vertical: user.system_command("i3-msg split v")
+(win | window) horizontal: user.i3wm_split("h")
+(win | window) vertical: user.i3wm_split("v")
 
-above left:
-    user.system_command("i3-msg split v")
-    user.system_command("i3-msg focus left")
-    user.system_command("i3-msg move right")
-    user.system_command("i3-msg focus up")
-
-above right:
-    user.system_command("i3-msg split v")
-    user.system_command("i3-msg focus right")
-    user.system_command("i3-msg move left")
-    user.system_command("i3-msg focus up")
-
-below left:
-    user.system_command("i3-msg focus left")
-    user.system_command("i3-msg split v")
-    user.system_command("i3-msg focus right")
-    user.system_command("i3-msg move left")
-
-below right:
-    user.system_command("i3-msg focus right")
-    user.system_command("i3-msg split v")
-    user.system_command("i3-msg focus left")
-    user.system_command("i3-msg move right")
-
-make scratch: user.system_command("i3-msg move scratchpad")
-scratch <user.text>: user.system_command('i3-msg [title="(?i){text}"] scratchpad show')
-[(show|hide)] scratch: user.system_command("i3-msg scratchpad show")
+make scratch: user.i3wm_move("scratchpad")
+[(show | hide)] scratch: user.i3wm_show_scratchpad()
 next scratch:
-    user.system_command("i3-msg scratchpad show")
-    user.system_command("i3-msg scratchpad show")
-
-window <user.text>: user.system_command('i3-msg [title="(?i){text}"] focus')
+    user.i3wm_show_scratchpad()
+    user.i3wm_show_scratchpad()
 
 # these rely on the user settings for the mod key. see i3wm.py Actions class
-
 launch: user.i3wm_launch()
-launch {user.applications}:
+launch <user.text>:
     user.i3wm_launch()
     sleep(100ms)
-    insert(applications)
-    sleep(100ms)
-    key(enter)
+    insert("{text}")
 lock screen: user.i3wm_lock()
-^computer reboot$: user.system_command("reboot")
-(launch shell|Shelley): user.i3wm_shell()
 
-system tray: key("super-shift-s")
+(launch shell | koopa): user.i3wm_shell()
 
-keyboard spanish: user.system_command("setxkbmap es")
-keyboard english: user.system_command("setxkbmap us")
-
-snooze break:
-    mouse_move(1912, 1111)
-    mouse_click(0)
-    
 new scratch (shell | window):
     user.i3wm_shell()
     sleep(200ms)
-    user.system_command("i3-msg move scratchpad")
-    user.system_command("i3-msg scratchpad show")
+    user.i3wm_move("scratchpad")
+    user.i3wm_show_scratchpad()
 
 murder:
     user.deprecate_command("2023-02-04", "murder", "win kill")
-    user.system_command("i3-msg kill")
+    app.window_close()

@@ -67,7 +67,7 @@ class UserActions:
 class BrowserActions:
     def address() -> str:
         try:
-            window = safari_app().windows()[0]
+            window = ui.active_app().windows()[0]
         except IndexError:
             return ""
         try:
@@ -79,8 +79,8 @@ class BrowserActions:
             address = address_field.AXValue
         except (ui.UIErr, AttributeError):
             address = applescript.run(
-                """
-                tell application id "com.apple.Safari"
+                f"""
+                tell application id "{actions.app.bundle()}"
                     with timeout of 0.1 seconds
                         if not (exists (window 1)) then return ""
                         return window 1's current tab's URL
