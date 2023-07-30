@@ -1,6 +1,6 @@
 #defines the commands that sleep/wake Talon
-mode: all
--
+# mode: all
+# -
 ^(welcome back)+$:
     user.mouse_wake()
     user.history_enable()
