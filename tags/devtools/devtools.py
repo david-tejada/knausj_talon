@@ -109,7 +109,7 @@ class Actions:
 @ctx.action_class("user")
 class user_actions:
     def devtools_execute_javascript(command: str) -> None:
-        actions.user.devtools_console_pane()
+        actions.user.devtools_focus_console()
         actions.edit.select_all()
         actions.edit.delete()
         actions.user.paste(command)
