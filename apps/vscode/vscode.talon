@@ -9,7 +9,7 @@ tag(): user.emoji
 
 settings():
     user.accessibility_dictation = 1 
-    key_hold = 5.0
+    key_wait = 2.0
 
 window reload: user.vscode("workbench.action.reloadWindow")
 window close: user.vscode("workbench.action.closeWindow")
