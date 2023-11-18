@@ -175,7 +175,6 @@ punctuation_words = {
 symbol_key_words = {
     # "dot": ".",
     "point": ".",
-    "quote": "'",
     "single": "'",
     "colon": ":",
     "apostrophe": "'",
