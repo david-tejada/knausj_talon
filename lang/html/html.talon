@@ -27,3 +27,8 @@ make doctype: "<!DOCTYPE html>\n"
 make blank: "&nbsp;"
 
 aria {user.aria_attributes}: insert(aria_attributes)
+
+Lauren <number>:
+    "lorem{number}"
+    sleep(150ms)
+    key(enter)
