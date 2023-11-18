@@ -1,74 +1,81 @@
 Word(s),Spoken Form (If Different)
-under-documented,under documented
 admin
+alacritty,alacrity
+array
+async
+babel, babble
+bug
+changelog
+chatGPT,chat GPT
 Cisco
 Citrix
-VPN
-DNS
-Minecraft
-vimium
-i3,I three
-scratchpad
-polybar
-thunar
-pavucontrol
-picom
-htop
-tray
-alacritty,alacrity
-cursorless
-dendron
-nodejs,node js
-npm,NPM
-python3,python three
-knausj,naus
-json,Jason
-pulseaudio
-pokey
-fahrenheit
-webpack
-dom
-symlink
-rango
-css,cess
-javascript
-async
-desktop
-parse
-iframe
-iframes
-z-index,z index
-babel, babble
-changelog
-array
-href,age ref
-eslint,e s lint
-stringify
-init
-null
-node
-nodes
-debounce
-parrot
-puppeteer
-repl,ripple
+coccyx, coxes
 container
-queue
-PR,P R
-Mac m1,mac M one 
-svelte
-chatGPT,chat GPT
-GPT-4,GPT four
-Netlify
-vscode, v s code
-main
-git
+css,cess
+cursorless
+cyan
+debounce
+dendron
+desktop
+devtools,deaf tools
+DNS
+dom
+eslint,e s lint
+fahrenheit
 get
-bug
-page
+git
+GPT-4,GPT four
+grid
 hintable
 hintables
+href,age ref
+htop
+i3,I three
+iframe
+iframes
+init
+javascript
 jsdoc, j s dock
+json,Jason
+knausj,naus
+key
+keys
+linkedIn, linked in
+Mac m1,mac M one 
+main
+Minecraft
+Netlify
+node
+nodejs,node js
+nodes
+npm,NPM
+null
+page
+parrot
+parse
+parsed
+pavucontrol
+picom
+pokey
+polybar
+PR,P R
+pulseaudio
+puppeteer
+python3,python three
+queue
+rango
 raycast
-devtools,deaf tools
-coccyx, coxes
+repl,ripple
+scratchpad
+stringify
+svelte
+symlink
+thunar
+tray
+under-documented,under documented
+vimium
+vite,veet
+VPN
+vscode, v s code
+webpack
+z-index,z index

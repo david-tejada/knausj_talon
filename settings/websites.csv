@@ -10,23 +10,23 @@ chrome://extensions/, chrome extensions
 https://addons.mozilla.org/en-US/developers/addons, firefox addons
 https://app.slack.com/client/T7FPSMV8F,talon slack
 https://bugs.chromium.org/p/chromium/issues/list, chromium bugs
-https://bugs.chromium.org/p/chromium/issues/list, chromium bugs
 https://bugzilla.mozilla.org/home, bugzilla
 https://calendar.google.com,google calendar
 https://caniuse.com/, can I use
 https://chat.openai.com/?model=gpt-4-browsing, chat GPT browse
-https://chat.openai.com/?model=gpt-4, chat GPT
+https://chat.openai.com/, GPT
 https://codepen.io/, codepen
-https://colorhunt.co/, color hand
 https://colorhunt.co/, color hunt
 https://developer.chrome.com/docs/extensions/reference/, chrome extension API
 https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions, mozilla extension API
-https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select, Mozilla select
 https://discord.com/channels/@me, discord
+https://docs.google.com/, google docs
 https://docs.google.com/spreadsheets/d/10stJliUxiJ0xKZtQy1jtOXGQnSCQ46K9uGn67WEXVjc/edit#gid=1962446325, exercise log
 https://dropbox.com/,dropbox
 https://en.wikipedia.org/,wikipedia
 https://fedmentor.dev/, fed mentor
+https://www.figma.com/, figma
+https://fonts.google.com/, google fonts
 https://github.com/,github
 https://github.com/chaosparrot/parrot.py, parrot
 https://github.com/cursorless-dev/cursorless, cursorless GitHub
@@ -39,9 +39,10 @@ https://github.com/talonhub/community, community github
 https://jimmyjoy.com/, jimmy joy
 https://leetcode.com/, leet code
 https://leveluptutorials.com/home, level up
+https://linkedin.com/, linkedIn
 https://mail.google.com/,gmail
+https://mail.google.com/mail/u/1/#inbox, dev gmail
 https://maps.google.com/,google maps
-https://realpython.com/, real python
 https://regex101.com/, regex
 https://scholar.google.com/,google scholar
 https://talon.wiki/,talon wiki
@@ -52,6 +53,7 @@ https://www.calimove.com/courses/enrolled/592250, cali move
 https://www.executeprogram.com/, execute program
 https://www.frontendmentor.io/, front end mentor
 https://www.google.com/,google
+https://www.netlify.com/, netlify
 https://www.notion.so, notion
 https://www.onelook.com/,word search
 https://www.smashingmagazine.com/, smashing magazine
@@ -61,3 +63,5 @@ https://www.w3.org/TR/html-aria/#docconformance, area roles
 https://www.youtube.com/,youtube
 https://www.youtube.com/channel/UCML02pamUSxtbwAcrUdVmXg/videos, pokey YouTube
 https://www.zooplus.es/, zoo plus
+https://react.dev, react dev
+https://nerdcave.com/tailwind-cheat-sheet, tailwind cheatsheet

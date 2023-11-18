@@ -12,3 +12,4 @@ https://forvo.com/search/%s/,forvo
 https://www.youtube.com/results?search_query=%s,YouTube
 https://search.talonvoice.com/search/?q=%s&fold_case=auto&regex=false&context=false, talon
 https://duckduckgo.com/?q=%s&ia=web,duckduckgo
+https://duckduckgo.com/?q=%5Csite%3Adeveloper.mozilla.org+%s, moz
