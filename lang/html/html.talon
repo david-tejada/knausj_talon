@@ -25,3 +25,5 @@ attr <user.text>:
 
 make doctype: "<!DOCTYPE html>\n"
 make blank: "&nbsp;"
+
+aria {user.aria_attributes}: insert(aria_attributes)

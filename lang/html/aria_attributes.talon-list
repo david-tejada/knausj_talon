@@ -1,0 +1,39 @@
+list: user.aria_attributes
+tag: user.html
+-
+active descendant: aria-activedescendant
+atomic: aria-atomic
+auto complete: aria-autocomplete
+busy: aria-busy
+checked: aria-checked
+controls: aria-controls
+described by: aria-describedby
+disabled: aria-disabled
+drop effect: aria-dropeffect
+expanded: aria-expanded
+flow to: aria-flowto
+grabbed: aria-grabbed
+has popup: aria-haspopup
+hidden: aria-hidden
+invalid: aria-invalid
+label: aria-label
+labelled by: aria-labelledby
+level: aria-level
+live: aria-live
+multiline: aria-multiline
+multiselectable: aria-multiselectable
+orientation: aria-orientation
+owns: aria-owns
+placeholder: aria-placeholder
+pos inset: aria-posinset
+pressed: aria-pressed
+read only: aria-readonly
+relevant: aria-relevant
+required: aria-required
+selected: aria-selected
+set size: aria-setsize
+sort: aria-sort
+value max: aria-valuemax
+value min: aria-valuemin
+value now: aria-valuenow
+value text: aria-valuetext

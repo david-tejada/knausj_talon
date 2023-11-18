@@ -38,6 +38,7 @@ tag_names = {
 }
 tag_names.update(dict(zip(tag_names_list, tag_names_list)))
 
+mod.list("aria_attributes", desc="ARIA attributes")
 mod.list("code_tag", desc="Predefined tag names")
 ctx.lists["self.code_tag"] = tag_names
 
