@@ -8,6 +8,7 @@ settings():
 
 parrot(alveolar_click): speech.enable()
 key(f19): speech.enable()
+jolt: speech.enable()
 
 #this exists solely to prevent talon from walking up super easily in sleep mode at the moment with wav2letter
 <phrase>: skip()
