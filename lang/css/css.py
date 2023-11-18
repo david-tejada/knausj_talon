@@ -34,7 +34,9 @@ def css_number_unit(m) -> str:
     return result
 
 
-@mod.capture(rule="<user.number_string> | <self.css_number_unit> | {user.css_values}")
+@mod.capture(
+    rule="<user.number_string> | <self.css_number_unit> | {user.css_values} | {user.css_color_keywords}"
+)
 def css_value(m) -> str:
     try:
         return m.number_string
@@ -42,7 +44,10 @@ def css_value(m) -> str:
         try:
             return m.css_number_unit
         except AttributeError:
-            return m.css_values
+            try:
+                return m.css_values
+            except AttributeError:
+                return m.css_color_keywords
 
 
 @ctx.action_class("user")

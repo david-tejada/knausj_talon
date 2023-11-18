@@ -22,6 +22,10 @@ tag(): user.code_generic
     insert(';')
     key(left)
 
+media {user.css_properties} is <user.css_value>:
+    insert("@media ({user.css_properties}: {css_value}) {{}}")
+    key(left enter)
+
 value <user.css_value>+:
     user.insert_many_sep(user.css_value_list)
 
@@ -36,14 +40,16 @@ funky {user.css_functions}:
     insert("()")
     key(left)
 
-make var <user.text>:
+make var <user.text_with_digits>:
     insert("--")
-    user.insert_formatted(text, "DASH_SEPARATED")
+    user.insert_formatted(text_with_digits, "DASH_SEPARATED")
     insert(": ")
 
-var <user.text>:
+use var: user.insert_between("var(--", ")")
+
+use var <user.text_with_digits>:
     user.insert_between("var(--", ")")
-    user.insert_formatted(text, "DASH_SEPARATED")
+    user.insert_formatted(text_with_digits, "DASH_SEPARATED")
 
 blocker:
     edit.line_end()
