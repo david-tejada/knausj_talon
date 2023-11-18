@@ -330,9 +330,11 @@ go live: user.vscode("extension.liveServer.goOnline")
 side preview: user.vscode("markdown.showPreviewToSide")
 preview refresh: user.vscode("markdown.preview.refresh")
 
-# Generate Numbers. Needs the extension andreas-talon
+# Andreas-talon
 generate range [from <number_small>]:
     user.run_rpc_command("andreas.generateRange", number_small or 1)
+tab {self.letter} [{self.letter}]:
+    user.run_rpc_command("andreas.focusTab", "{letter_1}{letter_2 or ''}")
 
 # cursorless
 next: user.vscode_and_wait("jumpToNextSnippetPlaceholder")
