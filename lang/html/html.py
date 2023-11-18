@@ -5,7 +5,7 @@ mod = Module()
 ctx = Context()
 ctx.matches = r"""
 not app: firefox
-and tag: user.html
+and code.language: html
 app: firefox
 """
 

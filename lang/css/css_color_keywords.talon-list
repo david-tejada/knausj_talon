@@ -1,5 +1,5 @@
 list: user.css_color_keywords
-tag: user.css
+code.language: css
 -
 alice blue: aliceblue
 antique white: antiquewhite

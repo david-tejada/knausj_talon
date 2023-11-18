@@ -5,7 +5,7 @@ mod = Module()
 ctx = Context()
 
 ctx.matches = r"""
-tag: user.css
+code.language: css
 tag: user.devtools
 """
 
