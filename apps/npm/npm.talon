@@ -3,9 +3,11 @@ tag: user.npm
 
 node init: "npm init\n"
 node init yes: "npm init -y\n"
+node create vite: "npm create vite@latest\n"
 node start: "npm start\n"
 node watch: "npm run watch\n"
 node build: "npm run build\n"
+node dev: "npm run dev\n"
 node linter: "npm run lint\n"
 node test: "npm run test\n"
 node run [<user.text>]: "npm run {text or ''}"
