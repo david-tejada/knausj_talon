@@ -149,3 +149,6 @@ log point <number>:
 
 watch expression [<user.text>]:
     user.devtools_add_watch_expression(text or "")
+
+responsive larger: key(up:200)
+responsive smaller: key(down:200)
