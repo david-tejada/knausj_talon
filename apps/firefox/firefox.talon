@@ -23,3 +23,5 @@ background page:
     browser.go("about:debugging#/runtime/this-firefox")
     sleep(500ms)
     key(tab:7 enter)
+
+responsive mode: key(cmd-alt-m)
