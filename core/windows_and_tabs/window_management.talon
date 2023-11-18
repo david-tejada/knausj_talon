@@ -20,10 +20,10 @@ snap <user.running_applications> [screen] <number>:
     user.move_app_to_screen(running_applications, number)
 
 flip it: key(cmd-tab)
-^coder: user.switcher_launch("/Applications/Visual Studio Code.app")
+^cody: user.switcher_launch("/Applications/Visual Studio Code.app")
 ^foxy: user.switcher_launch("/Applications/Firefox.app")
 ^cromy: user.switcher_launch("/Applications/Google Chrome.app")
-^focus web: user.switcher_launch("/Applications/Brave Browser.app")
+^webby: user.switcher_launch("/Applications/Brave Browser.app")
 ^bitwarden: user.switcher_launch("/Applications/Bitwarden.app")
 ^terminal: user.switcher_launch("/Applications/Warp.app")
 
