@@ -1,6 +1,6 @@
 tag: user.code_imperative
 -
-block: user.code_block()
+make block: user.code_block()
 make if: user.code_state_if()
 make else if: user.code_state_else_if()
 make else: user.code_state_else()
