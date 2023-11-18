@@ -1,4 +1,5 @@
-tag: user.css
+code.language: css
+code.language: scss
 -
 tag(): user.code_generic
 

@@ -266,23 +266,6 @@ class UserActions:
     def multi_cursor_skip_occurrence():
         actions.user.vscode("editor.action.moveSelectionToNextFindMatch")
 
-    # snippet.py support begin
-    def snippet_search(text: str):
-        actions.user.vscode("editor.action.insertSnippet")
-        actions.insert(text)
-
-    def snippet_insert(text: str):
-        """Inserts a snippet"""
-        actions.user.vscode("editor.action.insertSnippet")
-        actions.insert(text)
-        actions.key("enter")
-
-    def snippet_create():
-        """Triggers snippet creation"""
-        actions.user.vscode("workbench.action.openSnippets")
-
-    # snippet.py support end
-
     def tab_jump(number: int):
         if number < 10:
             if is_mac:
@@ -406,28 +389,5 @@ class UserActions:
         actions.sleep("100ms")
         actions.key("esc")
 
-
-@mod.action_class
-class Actions:
-    def convert_to_dendron_note(text: str):
-        """Function for creating dendron notes with the text from the existing note"""
-        dash_separated = "-".join(text.split())
-        now = datetime.now()
-        note_name = "daily.journal.{}.{:02d}.{:02d}.{}".format(
-            now.year, now.month, now.day, dash_separated
-        )
-        actions.edit.select_all()
-        actions.edit.copy()
-        actions.edit.delete()
-        actions.user.vscode("workbench.action.closeActiveEditor")
-        actions.user.vscode("dendron.lookupNote")
-        actions.sleep("300ms")
-        actions.user.paste("placeholder")
-        actions.sleep("300ms")
-        actions.key("enter")
-        actions.sleep("300ms")
-        actions.edit.file_end()
-        actions.edit.paste()
-        actions.user.vscode("dendron.renameNote")
-        actions.sleep("300ms")
-        actions.user.paste(note_name)
+    def insert_snippet(body: str):
+        actions.user.run_rpc_command("editor.action.insertSnippet", {"snippet": body})

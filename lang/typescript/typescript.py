@@ -4,7 +4,10 @@ from typing import List
 mod = Module()
 ctx = Context()
 ctx.matches = r"""
-tag: user.typescript
+code.language: typescript
+code.language: typescriptreact
+# Make typescript win over javascript
+mode: command
 """
 
 @mod.action_class
