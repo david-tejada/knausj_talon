@@ -46,7 +46,7 @@ dolly var:
     key(left)
 
 make classic for:
-    "for(let i = 1; i<=nums.length; i++) {\n\t\n}"
+    "for(let i = 0; i=array.length; i++) {\n\t\n}"
     key(up)
 
 make export: "export "
@@ -150,6 +150,9 @@ await <user.text>:
 
 export funk <user.camel>:
     user.cursorless_insert_snippet("export function {camel}($params) {{\n\t$body\n}}")
+
+export default component <user.pascal>:
+    user.cursorless_insert_snippet("export default function {pascal}($params) {{\n\t$body\n}}")
 
 export async funk <user.camel>:
     user.cursorless_insert_snippet("export async function {camel}($params) {{\n\t$body\n}}")
