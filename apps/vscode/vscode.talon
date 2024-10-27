@@ -345,3 +345,11 @@ source last: key(cmd-0 up space)
 switch case: key(cmd-alt-c)
 switch word: key(cmd-alt-w)
 switch regex: key(cmd-alt-r)
+
+# Codeium
+suggest: key(alt-\)
+next comp: key(alt-])
+next comp: key(alt-[)
+codeium command: key(cmd-shift-i)
+codeium accept: key(alt-a)
+codeium switch: user.vscode("codeium.toggleAutocompleteForCurrentLanguage")
