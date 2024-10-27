@@ -20,12 +20,15 @@ desktop
 devtools,deaf tools
 DNS
 dom
+draggable
+endpoint
 eslint,e s lint
 fahrenheit
 get
 git
 GPT-4,GPT four
 grid
+headless
 hintable
 hintables
 href,age ref
@@ -37,17 +40,20 @@ init
 javascript
 jsdoc, j s dock
 json,Jason
-knausj,naus
 key
 keys
+knausj,naus
 linkedIn, linked in
 Mac m1,mac M one 
 main
 Minecraft
 Netlify
+nextjs, next js
 node
 nodejs,node js
 nodes
+note
+notes
 npm,NPM
 null
 page
@@ -71,11 +77,14 @@ stringify
 svelte
 symlink
 thunar
+transpilation
 tray
 under-documented,under documented
+vercel
 vimium
 vite,veet
 VPN
 vscode, v s code
 webpack
 z-index,z index
+zod
