@@ -43,13 +43,14 @@ make let: "let "
 let <user.text>:
     "let "
     user.insert_formatted(text,"PRIVATE_CAMEL_CASE")
+    " = "
 
 dolly var:
     "${}"
     key(left)
 
 make classic for:
-    "for(let i = 0; i=array.length; i++) {\n\t\n}"
+    "for(let i = 0; i=array.length; i++) {\n\t\n"
     key(up)
 
 make export: "export "
@@ -91,7 +92,7 @@ console time:
 console time end:
     "console.timeEnd()"
 
-new <user.text>:
+make new <user.text>:
     "new "
     user.insert_formatted(text,"PUBLIC_CAMEL_CASE")
     "()"
@@ -133,7 +134,7 @@ type of <user.text> is <user.text>:
     insert(text_2)
     "\""
 
-class <user.text>:
+make class <user.text>:
     "class "
     user.insert_formatted(text,"PUBLIC_CAMEL_CASE")
     " {}"
@@ -174,6 +175,10 @@ use state <user.text>:
     pascal = user.formatted_text(text, "PUBLIC_CAMEL_CASE")
     snippet = "const [{camel}, set{pascal}] = useState($initialState)"
     user.cursorless_insert_snippet(snippet)
+
+use effect:
+    user.cursorless_insert_snippet("useEffect(() => {{\n\t$1\n}}, [$3]);")
+
 
 heading comment <user.text>:
     upper = user.formatted_text(text, "ALL_CAPS")
