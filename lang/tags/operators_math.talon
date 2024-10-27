@@ -20,6 +20,7 @@ is less [than] or equal: user.code_operator_less_than_or_equal_to()
 # logical operators
 (make | logical) and: user.code_operator_and()
 (make | logical) or: user.code_operator_or()
+(make | logical) not: user.code_operator_not()
 
 # set operators
 (op | is) in: user.code_operator_in()

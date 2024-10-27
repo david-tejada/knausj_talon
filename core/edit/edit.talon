@@ -1,3 +1,7 @@
+# Compound of action(select, clear, copy, cut, paste, etc.) and modifier(word, line, etc.) commands for editing text.
+# eg: "select line", "clear all"
+<user.edit_action> <user.edit_modifier>: user.edit_command(edit_action, edit_modifier)
+
 # Zoom
 zoom in: edit.zoom_in()
 zoom out: edit.zoom_out()
@@ -16,6 +20,10 @@ next one: edit.find_next()
 # The reason for these spoken forms is that "page up" and "page down" are globally defined as keys.
 scroll up: edit.page_up()
 scroll down: edit.page_down()
+
+# go left, go left left down, go 5 left 2 down
+# go word left, go 2 words right
+go <user.navigation_step>+: user.perform_navigation_steps(navigation_step_list)
 
 leap: edit.word_left()
 step: edit.word_right()
@@ -42,17 +50,12 @@ go page up: edit.page_up()
 go page down: edit.page_down()
 
 # Selecting
-select all: edit.select_all()
-select line: edit.select_line()
-select line start: user.select_line_start()
-select line end: user.select_line_end()
 
 select left: edit.extend_left()
 select right: edit.extend_right()
 select up: edit.extend_line_up()
 select down: edit.extend_line_down()
 
-select word: edit.select_word()
 select word left: edit.extend_word_left()
 select word right: edit.extend_word_right()
 
@@ -70,10 +73,6 @@ scoot:
     key(left)
 
 # Delete
-clear all: user.delete_all()
-clear line: edit.delete_line()
-clear line start: user.delete_line_start()
-clear line end: user.delete_line_end()
 clear left: edit.delete()
 clear right: user.delete_right()
 
@@ -118,11 +117,6 @@ clear way down:
 
 # Copy
 copy that: edit.copy()
-copy all: user.copy_all()
-copy line: user.copy_line()
-copy line start: user.copy_line_start()
-copy line end: user.copy_line_end()
-copy word: user.copy_word()
 copy word left: user.copy_word_left()
 copy word right: user.copy_word_right()
 
@@ -142,11 +136,6 @@ copy word right: user.copy_word_right()
 
 # Cut
 cut that: edit.cut()
-cut all: user.cut_all()
-cut line: user.cut_line()
-cut line start: user.cut_line_start()
-cut line end: user.cut_line_end()
-cut word: user.cut_word()
 cut word left: user.cut_word_left()
 cut word right: user.cut_word_right()
 
@@ -170,11 +159,6 @@ cut word right: user.cut_word_right()
     edit.paste()
     key(enter)
 paste match: edit.paste_match_style()
-(pace | paste) all: user.paste_all()
-(pace | paste) line: user.paste_line()
-(pace | paste) line start: user.paste_line_start()
-(pace | paste) line end: user.paste_line_end()
-(pace | paste) word: user.paste_word()
 
 # Duplication
 clone that: edit.selection_clone()
@@ -199,3 +183,4 @@ redo it: edit.redo()
 disk: edit.save()
 disk all: edit.save_all()
 
+[go] line mid: user.line_middle()

@@ -1,5 +1,6 @@
-from talon import Module, Context, actions
-from typing import List, Any
+from typing import Any, List
+
+from talon import Context, Module, actions
 
 mod = Module()
 ctx = Context()

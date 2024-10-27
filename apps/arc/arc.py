@@ -1,45 +1,34 @@
-from talon import Context, Module, actions
+from talon import Context, Module, actions, app
 
 ctx = Context()
 mod = Module()
+
 mod.apps.arc = "app.name: Arc"
 mod.apps.arc = """
 os: mac
-and app.bundle: company.thebrowser.Browser
-"""
+app.bundle: company.thebrowser.Browser
 
+"""
 ctx.matches = r"""
 app: arc
 """
 
 
 @ctx.action_class("user")
-class user_actions:
+class UserActions:
     def tab_close_wrapper():
-        actions.sleep("300ms")
+        actions.sleep("180ms")
         actions.app.tab_close()
 
-
-@ctx.action_class("app")
-class AppActions:
-    def tab_open():
-        actions.key("cmd-t")
-        actions.sleep("200ms")
+    def command_search(command: str = ""):
+        actions.key("cmd-l")
+        if command != "":
+            actions.sleep("200ms")
+            actions.insert(command)
 
 
 @ctx.action_class("browser")
 class BrowserActions:
-    # TODO
-    # action(browser.address):
-    # action(browser.title):
-    def go(url: str):
-        actions.browser.focus_address()
-        actions.sleep("50ms")
-        actions.insert(url)
-        actions.key("enter")
-
-    def focus_search():
-        actions.browser.focus_address()
-
-    def submit_form():
-        actions.key("enter")
+    def show_extensions():
+        actions.app.tab_open()
+        actions.browser.go("arc://extensions")

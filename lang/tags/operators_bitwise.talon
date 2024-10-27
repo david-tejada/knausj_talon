@@ -4,6 +4,7 @@ tag: user.code_operators_bitwise
 #bitwise operators
 [make] bit and: user.code_operator_bitwise_and()
 [make] bit or: user.code_operator_bitwise_or()
+[make] bitwise not: user.code_operator_bitwise_not()
 
 # TODO: split these out into separate logical and bitwise operator commands
 
