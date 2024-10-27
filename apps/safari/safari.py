@@ -22,13 +22,13 @@ def safari_app():
 @mod.action_class
 class Actions:
     def safari_open_background_page():
-        """Open the extension background page in Safari"""
+        """Open the Rango background page in Safari"""
         success = actions.user.menu_select(
-            "Develop|Web Extension Background Pages|Rango — Background Page"
+            "Develop|Web Extension Background Content|Rango"
         )
         if not success:
             actions.user.menu_select(
-                "Develop|Web Extension Background Pages|Rango (not loaded)"
+                "Develop|Web Extension Background Content|Rango (not loaded)"
             )
 
 
@@ -105,4 +105,6 @@ class BrowserActions:
         actions.key("cmd-alt-l")
 
     def show_extensions():
-        actions.key("cmd-, tab:8 space")
+        raise NotImplementedError(
+            "Safari doesn't have a way to open the extension's preferences without using the mouse"
+        )
