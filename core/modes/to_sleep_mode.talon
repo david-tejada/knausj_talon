@@ -23,4 +23,4 @@ mode: dictation
     speech.disable()
     user.engine_sleep()
 
-^(drowse | trawse) [<phrase>]$: speech.disable()
+^drowsy [<phrase>]$: speech.disable()
