@@ -49,15 +49,6 @@ mac_ctx.matches = r"""
 os: mac
 app: vscode
 """
-mod.list("vscode_workspaces", desc="list of my most used vscode workspaces")
-
-ctx.lists["user.vscode_workspaces"] = {
-    "rango": "rango",
-    "rango talon": "rango-talon",
-    "nous": "knausj_talon",
-    "cursorless settings": "cursorless-settings",
-    "dendron": "dendron",
-}
 
 
 @ctx.action_class("app")
