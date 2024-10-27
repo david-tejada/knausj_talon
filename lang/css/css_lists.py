@@ -4,11 +4,6 @@ from typing import List, Any
 mod = Module()
 ctx = Context()
 
-ctx.matches = r"""
-code.language: css
-tag: user.devtools
-"""
-
 mod.list("css_properties", desc="list of CSS properties")
 mod.list("css_units", desc="list of CSS units")
 mod.list("css_values", desc="list of CSS values")
