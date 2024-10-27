@@ -1,15 +1,16 @@
 URL Template,Name
-https://www.amazon.com/s/?field-keywords=%s,amazon
-https://www.google.com/search?q=%s,google
+https://duckduckgo.com/?q=%5Csite%3Adeveloper.mozilla.org+%s, moz
+https://duckduckgo.com/?q=%s&ia=web,duckduckgo
+https://en.wikipedia.org/w/index.php?search=%s,wiki
+https://eztv.re/search/%s,series
+https://forvo.com/search/%s/,forvo
 https://maps.google.com/maps?q=%s,map
 https://scholar.google.com/scholar?q=%s,scholar
-https://en.wikipedia.org/w/index.php?search=%s,wiki
-https://www.subdivx.com/index.php?accion=5&masdesc=&buscar=%s&oxfecha=2,sub
-https://eztv.re/search/%s,series
-https://www.wordreference.com/es/translation.asp?tranword=%s,english
-https://www.npmjs.com/search?q=%s,node
-https://forvo.com/search/%s/,forvo
-https://www.youtube.com/results?search_query=%s,YouTube
 https://search.talonvoice.com/search/?q=%s&fold_case=auto&regex=false&context=false, talon
-https://duckduckgo.com/?q=%s&ia=web,duckduckgo
-https://duckduckgo.com/?q=%5Csite%3Adeveloper.mozilla.org+%s, moz
+https://socket.dev/search?e=&q=%s, socket
+https://www.amazon.com/s/?field-keywords=%s,amazon
+https://www.google.com/search?q=%s,google
+https://www.npmjs.com/search?q=%s,node
+https://www.subdivx.com/index.php?accion=5&masdesc=&buscar=%s&oxfecha=2,sub
+https://www.wordreference.com/es/translation.asp?tranword=%s,english
+https://www.youtube.com/results?search_query=%s,YouTube
