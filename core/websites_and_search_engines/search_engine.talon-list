@@ -1,7 +1,16 @@
 list: user.search_engine
 -
 amazon: https://www.amazon.com/s/?field-keywords=%s
+duckduckgo: https://duckduckgo.com/?q=%s&ia=web
+english: https://www.wordreference.com/es/translation.asp?tranword=%s
+forvo: https://forvo.com/search/%s/
 google: https://www.google.com/search?q=%s
-map: https://maps.google.com/maps?q=%s
-scholar: https://scholar.google.com/scholar?q=%s
+moz: https://duckduckgo.com/?q=%5Csite%3Adeveloper.mozilla.org+%s
+node: https://www.npmjs.com/search?q=%s
+series: https://eztv.re/search/%s
+socket: https://socket.dev/search?e=&q=%s
+sub: https://www.subdivx.com/index.php?accion=5&masdesc=&buscar=%s&oxfecha=2
+talon: https://search.talonvoice.com/search/?q=%s&fold_case=auto&regex=false&context=false
 wiki: https://en.wikipedia.org/w/index.php?search=%s
+wiki: https://en.wikipedia.org/w/index.php?search=%s
+YouTube: https://www.youtube.com/results?search_query=%s
