@@ -1,18 +1,69 @@
 list: user.website
 -
-talon home page: http://talonvoice.com
-talon slack: http://talonvoice.slack.com/messages/help
-talon wiki: https://talon.wiki/
-talon practice: https://chaosparrot.github.io/talon_practice/
-talon repository search: https://search.talonvoice.com/search/
+about addons: about:addons
+about config: about:config
+about debugging: about:debugging#/runtime/this-firefox
+about performance: about:performance
+about preferences: about:preferences
+about profiles: about:profiles
+amazon spain: https://www.amazon.es/
 amazon: https://www.amazon.com/
+area roles: https://www.w3.org/TR/html-aria/#docconformance
+bugzilla: https://bugzilla.mozilla.org/home
+cali move: https://www.calimove.com/courses/enrolled/592250
+can I use: https://caniuse.com/
+chrome extension API: https://developer.chrome.com/docs/extensions/reference/
+chrome extensions: chrome://extensions/
+chromium bugs: https://bugs.chromium.org/p/chromium/issues/list
+claude: https://claude.ai/
+codepen: https://codepen.io/
+color hunt: https://colorhunt.co/
+community github: https://github.com/talonhub/community
+cursorless GitHub: https://github.com/cursorless-dev/cursorless
+dendron wiki: https://wiki.dendron.so/
+dev gmail: https://mail.google.com/mail/u/1/#inbox
+discord: https://discord.com/channels/@me
 dropbox: https://dropbox.com/
-google: https://www.google.com/
+execute program: https://www.executeprogram.com/
+exercise log: https://docs.google.com/spreadsheets/d/10stJliUxiJ0xKZtQy1jtOXGQnSCQ46K9uGn67WEXVjc/edit#gid=1962446325
+fed mentor: https://fedmentor.dev/
+figma: https://www.figma.com/
+file tree github: https://github.com/paul-schaaf/talon-filetree
+firefox addons: https://addons.mozilla.org/en-US/developers/addons
+front end mentor: https://www.frontendmentor.io/
+github: https://github.com/
+gmail: https://mail.google.com/
 google calendar: https://calendar.google.com
+google docs: https://docs.google.com/
+google fonts: https://fonts.google.com/
 google maps: https://maps.google.com/
 google scholar: https://scholar.google.com/
-gmail: https://mail.google.com/
-github: https://github.com/
-gist: https://gist.github.com/
+google: https://www.google.com/
+GPT: https://chatgpt.com/
+jimmy joy: https://jimmyjoy.com/
+leet code: https://leetcode.com/
+level up: https://leveluptutorials.com/home
+linkedIn: https://linkedin.com/
+mozilla extension API: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions
+netlify: https://app.netlify.com/teams/david-tejada/overview
+notion: https://www.notion.so
+parrot: https://github.com/chaosparrot/parrot.py
+pokey YouTube: https://www.youtube.com/channel/UCML02pamUSxtbwAcrUdVmXg/videos
+rango GitHub: https://github.com/david-tejada/rango
+rango issues: https://github.com/david-tejada/rango/issues
+rango new issue: https://github.com/david-tejada/rango/issues/new
+rango talon GitHub: https://github.com/david-tejada/rango-talon
+react dev: https://react.dev
+regex: https://regex101.com/
+smashing magazine: https://www.smashingmagazine.com/
+smashing myosin: https://www.smashingmagazine.com/
+subs: https://www.subdivx.com/
+tailwind cheatsheet: https://nerdcave.com/tailwind-cheat-sheet
+talon slack: https://app.slack.com/client/T7FPSMV8F
+talon wiki: https://talon.wiki/
+type hero: https://typehero.dev/
+typescript playground: https://www.typescriptlang.org/play
 wikipedia: https://en.wikipedia.org/
+word search: https://www.onelook.com/
 youtube: https://www.youtube.com/
+zoo plus: https://www.zooplus.es/
