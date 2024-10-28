@@ -1,11 +1,91 @@
 list: user.vocabulary
 -
-N map: nmap
-under documented: under-documented
-nmap
 admin
+age ref: href
+alacrity: alacritty
+array
+async
+babble: babel
+bug
+cess: css
+changelog
+chat GPT: chatGPT
 Cisco
 Citrix
-VPN
+container
+coxes: coccyx
+cursorless
+cyan
+deaf tools: devtools
+debounce
+dendron
+desktop
 DNS
+dom
+draggable
+e s lint: eslint
+endpoint
+fahrenheit
+get
+git
+GPT four: GPT-4
+grid
+headless
+hintable
+hintables
+htop
+I three: i3
+iframe
+iframes
+init
+j s dock: jsdoc
+Jason: json
+javascript
+key
+keys
+linked in: linkedIn
+mac M one: Mac m1 
+main
 Minecraft
+naus: knausj
+Netlify
+next js: nextjs
+node
+node js: nodejs
+nodes
+note
+notes
+NPM: npm
+null
+P R: PR
+page
+parrot
+parse
+parsed
+pavucontrol
+picom
+pokey
+polybar
+pulseaudio
+puppeteer
+python three: python3
+queue
+rango
+raycast
+ripple: repl
+scratchpad
+stringify
+svelte
+symlink
+thunar
+transpilation
+tray
+under documented: under-documented
+v s code: vscode
+veet: vite
+vercel
+vimium
+VPN
+webpack
+z index: z-index
+zod
