@@ -1,0 +1,28 @@
+list: user.system_paths
+hostname: Davids-MacBook-Air
+-
+applications: /Applications
+code: /Users/david/Code
+completed: /Users/david/Torrents/Completed/
+desk: /Users/david/Desktop
+desktop: /Users/david/Desktop
+docks: /Users/david/Documents
+documents: /Users/david/Documents
+downloads: /Users/david/Downloads
+dropbox: /Users/david/Dropbox/
+home: /Users/david/.talon,talo
+movies: /media/david/Iomega/Movies/
+music: /Users/david/Music
+pictures: /Users/david/Pictures
+profile: /Users/david
+rango: /Users/david/Code/rango/
+recordings: /Users/david/.talon/recordings/,talo
+series: /media/david/Iomega/TV/
+talon home: /Users/david/.talon
+talon user: /Users/david/.talon/user
+talon: /Users/david/.talon/user/rango-talon/,rang
+temp: /Users/david/temp
+user: /Users/david
+user: /Users/david/.talon/user,talo
+videos: /Users/david/Videos
+volumes: /Volumes
