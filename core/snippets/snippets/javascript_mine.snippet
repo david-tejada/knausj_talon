@@ -1,0 +1,25 @@
+language: javascript
+---
+
+name: fancyComment
+phrase: fancy comment
+$1.insertionFormatter: ALL_CAPS
+-
+// =============================================================================
+// $1
+// =============================================================================
+$0
+---
+
+name: asyncFunctionDeclaration
+phrase: async funk
+insertionScope: namedFunction | statement
+
+$0.wrapperPhrase: async funk
+$0.wrapperScope: statement
+$1.insertionFormatter: PRIVATE_CAMEL_CASE
+-
+async function $1($2) {
+    $0
+}
+---
