@@ -197,6 +197,27 @@ symbol_key_words = {
     "pound": "£",
 }
 
+# Personal
+symbol_key_words_personal = {
+    "single": "'",
+    "double": '"',
+    "semi": ";",
+    "round": "(",
+    "rounder": ")",
+    "beam": "[",
+    "beamer": "]",
+    "wave": "{",
+    "waiver": "}",
+    "pack": "<",
+    "packer": ">",
+    "brow": "_",
+    "dolly": "$",
+    "pound sign": "£",
+    "euro sign": "€",
+}
+
+symbol_key_words.update(symbol_key_words_personal)
+
 # make punctuation words also included in {user.symbol_keys}
 symbol_key_words.update(punctuation_words)
 ctx.lists["self.punctuation"] = punctuation_words
