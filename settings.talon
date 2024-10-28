@@ -1,6 +1,6 @@
 settings():
     # Adjust the scale of the imgui
-    imgui.scale = 1.3
+    imgui.scale = 1.1
 
     # Uncomment to set the speech timeout. This is the amount of time after you stop
     # speaking until Talon starts processing the spoken audio. Default is 0.3s.
@@ -13,10 +13,10 @@ settings():
     user.file_manager_auto_show_pickers = false
 
     # Set the number of command lines to display per help page
-    user.help_max_command_lines_per_page = 50
+    user.help_max_command_lines_per_page = 75
 
     # Set the number of contexts to display per help page
-    user.help_max_contexts_per_page = 20
+    user.help_max_contexts_per_page = 55
 
     # Uncomment to always sort help contexts alphabetically.
     # user.help_sort_contexts_by_specificity = false
