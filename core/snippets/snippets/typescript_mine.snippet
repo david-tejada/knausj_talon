@@ -1,0 +1,16 @@
+language: typescript
+---
+
+name: tryCatchConsoleError
+phrase: try error
+insertionScope: statement
+
+$0.wrapperPhrase: try error
+$0.wrapperScope: statement
+-
+try {
+    $0
+} catch(error: unknown) {
+    console.error(error);
+}
+---
