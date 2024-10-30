@@ -14,3 +14,18 @@ try {
     console.error(error);
 }
 ---
+name: tryCatchStatement
+phrase: try catch
+insertionScope: statement
+
+$1.wrapperPhrase: try
+$1.wrapperScope: statement
+$0.wrapperPhrase: catch
+$0.wrapperScope: statement
+-
+try {
+    $1
+} catch(error: unknown) {
+    $0
+}
+---
