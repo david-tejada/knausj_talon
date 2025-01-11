@@ -83,6 +83,8 @@ def get_screens() -> Sequence[ui.Screen]:
     match screen:
         case "main":
             return [ui.main_screen()]
+        case "secondary":
+            return [ui.screens()[1]]
         case "all":
             return ui.screens()
         case "cursor":
