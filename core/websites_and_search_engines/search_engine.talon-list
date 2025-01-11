@@ -6,7 +6,7 @@ english: https://www.wordreference.com/es/translation.asp?tranword=%s
 forvo: https://forvo.com/search/%s/
 google: https://www.google.com/search?q=%s
 moz: https://duckduckgo.com/?q=%5Csite%3Adeveloper.mozilla.org+%s
-node: https://www.npmjs.com/search?q=%s
+node: https://socket.dev/search?e=npm&q=%s
 series: https://eztv.re/search/%s
 socket: https://socket.dev/search?e=&q=%s
 sub: https://www.subdivx.com/index.php?accion=5&masdesc=&buscar=%s&oxfecha=2
