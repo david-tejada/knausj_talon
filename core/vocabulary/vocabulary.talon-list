@@ -73,6 +73,7 @@ queue
 rango
 raycast
 ripple: repl
+sequel: sql
 scratchpad
 stringify
 svelte
