@@ -10,20 +10,22 @@ docks: /Users/david/Documents
 documents: /Users/david/Documents
 downloads: /Users/david/Downloads
 dropbox: /Users/david/Dropbox/
-home: /Users/david/.talon,talo
 movies: /media/david/Iomega/Movies/
 music: /Users/david/Music
 pictures: /Users/david/Pictures
+playground: /Users/david/Code/playground
 profile: /Users/david
 rango talon: /Users/david/.talon/user/rango-talon
 rango: /Users/david/Code/rango/
-recordings: /Users/david/.talon/recordings/,talo
+screenshots: /Users/david/Pictures/Screenshots
 series: /media/david/Iomega/TV/
 talon home: /Users/david/.talon
+talon home: /Users/david/.talon
+talon recordings: /Users/david/.talon/recordings/
 talon user: /Users/david/.talon/user
-talon: /Users/david/.talon/user/rango-talon/,rang
+talon user: /Users/david/.talon/user
+talon: /Users/david/.talon/user/rango-talon/
 temp: /Users/david/temp
 user: /Users/david
-user: /Users/david/.talon/user,talo
 videos: /Users/david/Videos
 volumes: /Volumes
