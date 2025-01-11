@@ -1,7 +1,7 @@
 list: user.letter
 -
 any: a
-bill: b
+bat: b
 cap: c
 drum: d
 each: e
@@ -20,7 +20,7 @@ quick: q
 rip: r
 sun: s
 trap: t
-urge: u
+urch: u
 vape: v
 wasp: w
 plex: x
